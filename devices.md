@@ -3,80 +3,103 @@
 Device model represent real devices, which means that there must be a correspondence with a user's device. Right now Android and iOS devices are supported.
 
 
-##devices - register POST
+##register
 
-`https://{{subdomain}}.twinpush.com/api/v2/apps/:app_id/devices/register`
+Creates or updates the subscription of a device in the platform.
 
-Creates or updates the subscription or a device in the platform.
+- __Path:__ 
 
-To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+ ```bash
+ POST /apps/:app_id/devices/register
+ ```
+- __Headers:__ To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
 
-__Input Parameters__
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ Content-Type: application/json; charset: utf-8
+ ```
 
-The register request accepts the following parameters:
+- __Input Parameters__
 
-- __udid__: an unique identifier of the device per application and platform. A good choice is the [ANDROID_ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) for Android and the [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) for iOS.
-- __platform__: device platform. Available values are
-  - "ios": for Apple iOS devices
-  - "android": for Google Android devices
-- __push_token__: the token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). If the push token is not provided, the device will not receive push notifications, but it will be able to report usage statistics.
-- __alias_device__: the alias is an __optional__ value to associate the device to a user of the client platform. Will be set to null if value is empty and will be ignored if not present in the request.
+ The register request accepts the following parameters:
 
-__Example request body__
+ **Required params**
 
-```javascript
-{
-  "udid": "002ebf12a1255ddfa73967c3c5d20177",
-  "platform": "ios",
-  "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
-  "alias_device": "techie4"
-}
-```
-```javascript
-{
-  "udid": "f12a1255ddfjd123",
-  "platform": "android",
-  "push_token": "APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjv9YtT8OvPWGJhQMRK3rZuJEcl7B38q",
-  "alias_device": "techie4"
-}
-```
+    | param | description |
+    |-------|-------------|
+    | udid  | unique identifier of the device per application and platform. A good choice is the [ANDROID_ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) for Android and the [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) for iOS |
+    | platform | Device platform. Available values are: `"ios"` for Apple iOS devices and `"android"` for Google Android devices
+    | push_token | Token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). If the push token is not provided, the device will not receive push notifications, but it will be able to report usage statistics.
 
-__Example request__
+ **Optional Params**
 
-```bash
-curl -X POST \
-  -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d '{ "udid": "002ebf12a1255ddfa73967c3c5d20177", "platform": "ios", "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",  "alias_device": "techie4"}' \
-  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
-```
+    Register service accepts some optional parameters that can be included or not in the request body. The associated properties to each param will be set to null if value is empty and will be ignored if not present in the request.
+    
+    | param     | description | example |
+    |-----------|-------------|---------|
+    | alias_device | value to associate the device to a user of the client platform |
+    | language  | Language and region, joined by undescore | "en\_ES", "en\_GB" |
+    | device_code | Código identificador del modelo dispositivo)
+    | device_model | Nombre comercial del dispositivo | "iPad 2", "iPhone 6S" |
+    | device_manufacturer | Fabricante | "Apple", "Samsung" |
+    | app_version | Versión de la aplicación cliente | "1.0", "2.0.1" |
+    | sdk_version | Versión del SDK de TwinPush | "2.1",  |
+    | os_version | Versión del sistema operativo | "9.1", "5.1" |
 
-__Output__
+- __Example request body__
 
-The request will return an array of object that will only contain the created (or updated) device.
-
-The `id` value of the device will be necessary to identify the device in subsequent requests.
-
-__Example response__
-
-```javascript
-{
-  "objects": [
+    ```javascript
     {
-      "alias_device": "techie4",
-      "app_id": "4d65532313a337a0",
-      "created_at": "2014-11-07 17:05:40 UTC",
-      "id": "a812cb78062ead53",
-      "last_registered_at": "2014-11-07 17:05:40 UTC",
+      "udid": "002ebf12a1255ddfa73967c3c5d20177",
       "platform": "ios",
       "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
-      "type": "Device",
-      "updated_at": "2014-11-07 17:05:40 UTC"
+      "alias_device": "techie4"
     }
-  ]
-}
-```
+    ```
+    ```javascript
+    {
+      "udid": "f12a1255ddfjd123",
+      "platform": "android",
+      "push_token": "APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjv9YtT8OvPWGJhQMRK3rZuJEcl7B38q",
+      "alias_device": "techie4"
+    }
+    ```
 
+- __Example request__
+
+    ```bash
+    curl -X POST \
+      -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
+      -H "Content-Type: application/json; charset: utf-8" \
+      -d '{ "udid": "002ebf12a1255ddfa73967c3c5d20177", "platform": "ios", "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",  "alias_device": "techie4"}' \
+      https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
+    ```
+
+- __Output__
+
+    The request will return an array of Device objects that will only contain the created (or updated) device.
+    
+    The `id` value of the device will be necessary to identify the device in subsequent requests.
+
+- __Example response__
+
+    ```javascript
+    {
+      "objects": [
+        {
+          "id": "a812cb78062ead53",        
+          "alias_device": "techie4",
+          "app_id": "4d65532313a337a0",
+          "created_at": "2014-11-07 17:05:40 UTC",
+          "last_registered_at": "2014-11-07 17:05:40 UTC",
+          "platform": "ios",
+          "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
+          "type": "Device",
+          "updated_at": "2014-11-07 17:05:40 UTC"
+        }
+      ]
+    }
+    ```
 
 ##devices - update badge POST
 
