@@ -37,14 +37,14 @@ Register service accepts some optional parameters that can be included or not in
     
 | param     | description | example |
 |-----------|-------------|---------|
-| alias_device | value to associate the device to a user of the client platform |
+| alias_device | Value to associate the device to a user of the client platform |
 | language  | Language and region, joined by undescore | "en\_ES", "en\_GB" |
-| device_code | Código identificador del modelo dispositivo)
-| device_model | Nombre comercial del dispositivo | "iPad 2", "iPhone 6S" |
-| device_manufacturer | Fabricante | "Apple", "Samsung" |
-| app_version | Versión de la aplicación cliente | "1.0", "2.0.1" |
-| sdk_version | Versión del SDK de TwinPush | "2.1",  |
-| os_version | Versión del sistema operativo | "9.1", "5.1" |
+| device_code | Device model code 
+| device_model | Device commercial name | "iPad 2", "iPhone 6S" |
+| device_manufacturer | Manufacturer | "Apple", "Samsung" |
+| app_version | Client application version | "1.0", "2.0.1" |
+| sdk_version | TwinPush SDK version | "2.1",  |
+| os_version | OS (Android or iOS) version | "9.1", "5.1" |
 
 - __Example request body__
 
