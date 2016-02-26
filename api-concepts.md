@@ -27,6 +27,10 @@ To access to a resource methods, URL must contain the correct path for the desir
 | Device              | `/apps/:app_id/devices/:device_id/method` |
 | Device Notifications| `/apps/:app_id/devices/:device_id/notifications/:notif_id/method` |
 
+## SSL
+
+All the requests will be done with SSL, though HTTPS secure protocol calls.
+
 ## Input & Output Format
 
 All API methods will return JSON objects as result and will expect JSON objects as body parameters in UTF-8 Character set.
