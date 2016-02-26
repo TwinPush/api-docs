@@ -1,69 +1,50 @@
-# API Structure
+# API Concepts
 
-All the important resources in TwinPush can be accesed by this API with simple requests using (index, new, edit show and delete actions).
+Twinpush is a platform designed and built with the goal of making the process of sending push notifications to users really easy and intuitive. With that goal in mind, we offer a REST API that offers a wide functionality to be consumed through simple Web Service calls.
 
-# Understanding TwinPush Resources
+##What is REST?
 
-In TwinPush your apps, notifications and devices are resources.
-An app has an id, a name, a certificate, a password and an icon and can have many devices.
-A device has a token and an alias and can have many notifications.
-A notification has a sound, and alert message, a badge, some custom properties and a sent_at timestamp.
+It is a style of software architecture for distributed systems based on representations of resources and the manipulation of these resources through those representations.
 
-# A note about RESTful routes
+##TwinPush Resources
 
-Unless otherwise stated, most objects on the API conform to the following routes:
+TwinPush handle the following resources:
 
-* <b>GET /collection</b> to list objects
+- **Application**: Is the first level of every API request. Represents a mobile application present in one or more platforms (iOS or Android).
+- **Device**: Is the representation of a mobile device registered in an Application of the platform.
+- **Notification**: A message created to be sent through a Push Notification to the devices of an Application. A notification is related to an application, but also with the devices to which it is targeted.
 
-* <b>GET /collection/id</b> to show an object
+##RESTful routes
 
-* <b>POST /collection</b> to create objects
+TwinPush offers the functionality through the API using RESTful routes that utlizes HTTP verbs to keep unique paths to a minimum, while making it easy to integrate and debug.
 
-* <b>PUT /collection/id</b> to update an object
+To access to a resource methods, URL must contain the correct path for the desired object:
 
-* <b>DELETE /collection/id</b> to delete an object
+| resource            | example path |
+|---------------------|--------------|
+| Application         | `/apps/:app_id/method` |
+| Notification        | `/apps/:app_id/notifications/:notif_id/method` |
+| Device              | `/apps/:app_id/devices/:device_id/method` |
+| Device Notifications| `/apps/:app_id/devices/:device_id/notifications/:notif_id/method` |
 
-# Format in API
+## Input & Output Format
 
-All API methods accept JSON as input, and will return JSON. For each request, please specify the following headers:
+All API methods will return JSON objects as result and will expect JSON objects as body parameters in UTF-8 Character set.
 
-<pre class="prettyprint lang-bash">
-Accept: application/json
-</pre>
+For POST and PUT requests, it is required to include the following header:
 
-# HTTP Status Codes
+```bash
+Content-Type: application/json; charset=utf-8
+```
 
-For each request you make to the this API, we will return an HTTP status
- code. Following convention, the following status codes can be returned:
+## Pagination
 
-* <span class="label label-success">200</span> Success. The object was found, created, updated or deleted successfully.
+In order to allow working with a big amount of records, TwinPush offers paginated results for every Web Service that returns a collection of objects.
 
-* <span class="label label-warning">404</span> The object you're looking for doesn't exist.
-
-* <span class="label label-warning">402</span> Not authorized to view this object.
-
-* <span class="label label-warning">406</span> Not Acceptable (invalid format). You're probably sending wrong JSON or you need to specify the HTTP headers correctly.
-
-* <span class="label label-warning">422</span> Unprocessable entity. Some of the given parameters is incorrect.
-
-* <span class="label label-important">500</span> Server Error (hopefully not!). This means our server has some sort of problem.
-
-# Pagination
-
-In order to provide paginated results we use a couple of parameters (both optionals):
-<table cellspacing="5" cellpadding="5" border="0" style="text-align:left">
-  <tbody>
-  <tr>
-    <th>per_page</th>
-    <td>The number or results per page. If the value of <tt>per_page</tt> is 0, 30 will be the limit. Default: 30</td>
-  </tr>
- 
-  <tr>
-    <th>page</th>
-    <td>The number of page. The first one is 1, not 0. If you pass 0 or a negative number the page number 1 will be returned. Default: 1</td>
-  </tr>
-</tbody></table>
-
+| param       | description | default |
+|-------------|-------------|---------|
+| _per\_page_ | The number or results per page | 30 |
+| _page_      | Current page. First page is 0. If 0 or negative value is given, page 1 will be returned | 1 |
 
 Let's see an example
 
@@ -109,11 +90,28 @@ The response will be:
 
 In some cases, when a page without results is requested the answer will be the error NotFound, with the HTTP code 404.
 
-**Note: The part of the pagination in the response will be removed in this documentation.**
+**Note:** For clarity, the pagination options will be omitted in the rest of the documentation.
+
+## HTTP Status Codes
+
+For each request you make to the this API, we will return an HTTP status code. Following convention, the following status codes can be returned:
+
+* <span class="label label-success">200</span> Success. The object was found, created, updated or deleted successfully.
+
+* <span class="label label-warning">404</span> The object you're looking for doesn't exist.
+
+* <span class="label label-warning">402</span> Not authorized to view this object.
+
+* <span class="label label-warning">406</span> Not Acceptable (invalid format). You're probably sending wrong JSON or you need to specify the HTTP headers correctly.
+
+* <span class="label label-warning">422</span> Unprocessable entity. Some of the given parameters is incorrect.
+
+* <span class="label label-important">500</span> Server Error (hopefully not!). This means our server has some sort of problem while processing the request.
  
 #Common error messages
 When an error in a request occurred, in addition to the HTTP error code, the system will try to return a detailed error message to help the developer to debug its integration.
 The details of the error will be returned as a JSON String in the response body with the following format:
+
 ```javascript
 {
   "errors": {
