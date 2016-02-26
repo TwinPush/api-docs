@@ -214,6 +214,7 @@ curl -X POST \
 ```
 
 __Example response__
+
 ```javascript
 {
   "objects": [
