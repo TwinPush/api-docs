@@ -8,18 +8,18 @@ To access to the full functionality of the devices resources, the following meth
 
 | method | name | description |
 |--------|------|-------------|
-|<span class="label label-success">GET</span>| [index](#index) | obtains the paginated list of application devices associated |
-|<span class="label label-primary">POST</span>| [register](#register) | create or update device registration in TwinPush |
-|<span class="label label-primary">POST</span>| [update badge](#update-badge) | updates the badge number of the device. |
-|<span class="label label-primary">POST</span>| [open app](#open-app) | reports that the user opened the application |
-|<span class="label label-primary">POST</span>| [close app](#close-app) | notifies that the application has been closed or went to background execution|
-|<span class="label label-primary">POST</span>| [update location](#update-location) | updates the current location of the device |
-|<span class="label label-primary">POST</span>| [search notifications](#search-device-notifications) | search of the notifications received by a device |
-|<span class="label label-danger">DELETE</span>| [delete device](#delete-device) | removes a previously registered device |
-|<span class="label label-primary">POST</span>| [set custom property](#set-custom-property) | assigns value for a device custom property|
-|<span class="label label-danger">DELETE</span>| [clear properties](#clear-custom-properties) | deletes all the properties values associated with a device |
+|<span class="label label-success">GET</span>| [index](#get-index) | obtains the paginated list of application devices associated |
+|<span class="label label-info">POST</span>| [register](#register) | create or update device registration in TwinPush |
+|<span class="label label-info">POST</span>| [update badge](#update-badge) | updates the badge number of the device. |
+|<span class="label label-info">POST</span>| [open app](#open-app) | reports that the user opened the application |
+|<span class="label label-info">POST</span>| [close app](#close-app) | notifies that the application has been closed or went to background execution|
+|<span class="label label-info">POST</span>| [update location](#update-location) | updates the current location of the device |
+|<span class="label label-info">POST</span>| [search notifications](#search-device-notifications) | search of the notifications received by a device |
+|<span class="label label-important">DELETE</span>| [delete device](#delete-device) | removes a previously registered device |
+|<span class="label label-info">POST</span>| [set custom property](#set-custom-property) | assigns value for a device custom property|
+|<span class="label label-important">DELETE</span>| [clear properties](#clear-custom-properties) | deletes all the properties values associated with a device |
 
-##index
+##<span class="label label-success">GET</span> index
 
 Obtains the paginated list of devices associated with the given application.
 
@@ -455,6 +455,7 @@ DELETE /apps/${app_id}/devices/${device_id}
  X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
  ```
 **Example request**
+
 ```bash
 curl -X DELETE \
   -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
