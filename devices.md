@@ -85,7 +85,7 @@ Response body will contain the array of application devices that match the inclu
 }
 ```
 
-##register
+##<span class="label label-info">POST</span> register
 
 Creates or updates the subscription of a device in the platform.
 
@@ -200,7 +200,7 @@ The `id` value of the device will be necessary to identify the device in subsequ
 }
 ```
 
-##update badge
+##<span class="label label-info">POST</span> update badge
 
 Updates the badge number of a device.
 
@@ -256,7 +256,7 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##open notification
+##<span class="label label-info">POST</span> open notification
 
 Notifies that the user interacted with a sent Notification (usually opened fom notifications center). It is usefull to determine the success of a sent notification based on its opening rate.
 
@@ -279,7 +279,7 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##open app
+##<span class="label label-info">POST</span> open app
 
 Notifies that the user opened the application. This info is used for statistics and activity reports and it is important to determinate wether a device is active or inactive for license limit purposes.
 
@@ -302,7 +302,7 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##close app
+##<span class="label label-info">POST</span> close app
 
 Notifies that the application has been closed or went to background. This info is used for statistics and activity reports.
 
@@ -325,7 +325,7 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##update location
+##<span class="label label-info">POST</span> update location
 
 Updates the current location (latitude and longitude) of a device. The location can be used for statistics or segmentation purposes.
 
@@ -361,7 +361,7 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/report_statistics
 ```
 
-##search device notifications
+##<span class="label label-info">POST</span> search device notifications
 
 Makes a paginated search of the notifications received by a device. It allows filtering by notification tags.
 
@@ -438,7 +438,7 @@ It returns a paginated array of notification objects:
 }
 ```
 
-##delete device
+##<span class="label label-important">DELETE</span> delete device
 
 Removes the selected device from the platform. This action can not be undone.
 
@@ -466,7 +466,7 @@ curl -X DELETE \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##set custom property
+##<span class="label label-info">POST</span> set custom property
 
 Assign the value for the given custom property at the selected device.
 Custom properties are useful to create segmented targets and to obtain statistics based on custom information.
@@ -527,7 +527,7 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##clear custom properties
+##<span class="label label-important">DELETE</span> clear custom properties
 
 Deletes all the custom property values associated with the given device.
 
