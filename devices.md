@@ -2,28 +2,111 @@
 
 Device model represent real devices, which means that there must be a correspondence with a user's device. Right now Android and iOS devices are supported.
 
+**Available methods**
+
+To access to the full functionality of the devices resources, the following methods are available:
+
+| method | name | description |
+|--------|------|-------------|
+|<span class="label label-success">GET</span>| [index](#index) | obtains the paginated list of application devices associated |
+|<span class="label label-primary">POST</span>| [register](#register) | create or update device registration in TwinPush |
+|<span class="label label-primary">POST</span>| [update badge](#update-badge) | updates the badge number of the device. |
+|<span class="label label-primary">POST</span>| [open app](#open-app) | reports that the user opened the application |
+|<span class="label label-primary">POST</span>| [close app](#close-app) | notifies that the application has been closed or went to background execution|
+|<span class="label label-primary">POST</span>| [update location](#update-location) | updates the current location of the device |
+|<span class="label label-primary">POST</span>| [search notifications](#search-device-notifications) | search of the notifications received by a device |
+|<span class="label label-danger">DELETE</span>| [delete device](#delete-device) | removes a previously registered device |
+|<span class="label label-primary">POST</span>| [set custom property](#set-custom-property) | assigns value for a device custom property|
+|<span class="label label-danger">DELETE</span>| [clear properties](#clear-custom-properties) | deletes all the properties values associated with a device |
+
+##index
+
+Obtains the paginated list of devices associated with the given application.
+
+###Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices
+```
+**Headers:** It is required to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ ```
+
+**Optional Params**
+
+The following URL parameters are optional:
+    
+| param | description |
+|-------|-------------|
+| date | If present, it will only return devices which registration info has changed since given date. Valid date formats are("2014-04-21" or "2014-04-21T13:00:43+02:00"). Registration info will be considered changed when any of the following fields is updated: active, alias\_device, push\_token, custom\_properties |
+| alias | If present, it will only return devices whose alias_device property match with the given parameter (ignoring case). Can be used to obtain the active devices associated to a given alias |
+
+**Example request**
+
+```bash
+curl -X GET "https://app.twinpush.com/api/v2/apps/12mj18sja89/devices?date=2014-11-01&page=1&per_page=50" \
+  -H "X-TwinPush-REST-API-Token: xxxx
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
+```
+
+###Response
+
+Response body will contain the array of application devices that match the included filters (if any).
+
+**Example response**
+
+```javascript
+{
+  "objects": [
+    {
+      "id": "a7c9dc0555019759",
+      "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
+      "last_registered_at": "2016-03-01 12:47:25 UTC",
+      "created_at": "2016-03-01 12:47:25 UTC",
+      "updated_at": "2016-03-01 12:47:25 UTC",
+      "app_id": "816b6f7f555b5982",
+      "platform": "ios",
+      "language": "en_GB",
+      "device_code": "iPad2",
+      "device_model": "iPad 2",
+      "device_manufacturer": "Apple",
+      "app_version": "1.4.2",
+      "sdk_version": "1.0",
+      "os_version": "9.1",
+      "alias_device": "techie4",
+      "type": "Device"
+    }
+  ],
+  "references": []
+}
+```
 
 ##register
 
 Creates or updates the subscription of a device in the platform.
 
-- __Path:__ 
+###Request
 
- ```bash
- POST /apps/:app_id/devices/register
- ```
-- __Headers:__ To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/register
+```
+
+**Headers:** To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
 
  ```bash
  X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
  Content-Type: application/json; charset: utf-8
  ```
 
-- __Input Parameters__
-
-The register request accepts the following parameters:
-
 **Required params**
+
+The register request requires the following parameters:
 
 | param | description |
 |-------|-------------|
@@ -37,23 +120,31 @@ Register service accepts some optional parameters that can be included or not in
     
 | param     | description | example |
 |-----------|-------------|---------|
-| alias_device | Value to associate the device to a user of the client platform |
+| alias_device | Value to associate the device to a user of the client platform | "username"
 | language  | Language and region, joined by undescore | "en\_ES", "en\_GB" |
-| device_code | Device model code 
+| device_code | Device model code | "osprey_umts" |
 | device_model | Device commercial name | "iPad 2", "iPhone 6S" |
 | device_manufacturer | Manufacturer | "Apple", "Samsung" |
 | app_version | Client application version | "1.0", "2.0.1" |
-| sdk_version | TwinPush SDK version | "2.1",  |
+| sdk_version | TwinPush SDK version | "2.0.3", "3.1"  |
 | os_version | OS (Android or iOS) version | "9.1", "5.1" |
 
-- __Example request body__
+**Example request body**
 
 ```javascript
 {
   "udid": "002ebf12a1255ddfa73967c3c5d20177",
   "platform": "ios",
   "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
-  "alias_device": "techie4"
+  "alias_device": "techie4",
+  "platform": "ios",
+  "language": "en_GB",
+  "device_code": "iPad2",
+  "device_model": "iPad 2",
+  "device_manufacturer": "Apple",
+  "app_version": "1.4.2",
+  "sdk_version": "1.0",
+  "os_version": "9.1"
 }
 ```
 ```javascript
@@ -65,7 +156,7 @@ Register service accepts some optional parameters that can be included or not in
 }
 ```
 
-- __Example request__
+**Example request**
 
 ```bash
 curl -X POST \
@@ -75,60 +166,107 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
 ```
 
-- __Output__
+###Response
 
 The request will return an array of Device objects that will only contain the created (or updated) device.
     
 The `id` value of the device will be necessary to identify the device in subsequent requests.
 
-- __Example response__
+**Example response**
 
 ```javascript
 {
   "objects": [
     {
-      "id": "a812cb78062ead53",        
-      "alias_device": "techie4",
-      "app_id": "4d65532313a337a0",
-      "created_at": "2014-11-07 17:05:40 UTC",
-      "last_registered_at": "2014-11-07 17:05:40 UTC",
-      "platform": "ios",
+      "id": "a7c9dc0555019759",
       "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",
-      "type": "Device",
-      "updated_at": "2014-11-07 17:05:40 UTC"
+      "last_registered_at": "2016-03-01 12:47:25 UTC",
+      "created_at": "2016-03-01 12:47:25 UTC",
+      "updated_at": "2016-03-01 12:47:25 UTC",
+      "app_id": "816b6f7f555b5982",
+      "platform": "ios",
+      "language": "en_GB",
+      "device_code": "iPad2",
+      "device_model": "iPad 2",
+      "device_manufacturer": "Apple",
+      "app_version": "1.4.2",
+      "sdk_version": "1.0",
+      "os_version": "9.1",
+      "alias_device": "techie4",
+      "type": "Device"
     }
-  ]
+  ],
+  "references": []
 }
 ```
 
-##devices - update badge POST
+##update badge
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/update_badge`
+Updates the badge number of a device.
 
-Updates the badge number of a device. The possible values are:
+###Request
 
-* A number, like 4, 5 or 900. The badge will be updated to that number.
-* A plus sign and a number, like +1 or +400. The badge will be updated to the previous value plus the passed one.
-* A minus sign and a number, like -1 or -400. The badge will be updated to the previous value minus the passed one.
+**Path**
 
-If the new value is negative it will be set to 0.
+ ```bash
+ POST /apps/:app_id/devices/:device_id/update_badge
+ ```
+**Headers**
+
+ ```bash
+ Content-Type: application/json; charset: utf-8
+ ```
+
+**Required params**
+
+Update badge request requires a single parameter:
+
+| param | description |
+|-------|-------------|
+| badge | New value for device badge |
+
+Depending on the value set the behavior may change:
+
+|  value  | description | example |
+|---------|-------------|---------|
+| numeric | The badge will be updated to given value | `0`, `1` |
+| plus sign and number | Device badge will be incremented by given amount | `"+1"`, `"+2"` |
+| minus sign and number | Device badge will be decreased by given amount | `"-1"`, `"-2"` |
+
+If the result value is negative it will be set to 0.
+
+**Example request body**
+
+```javascript
+{
+  "badge": "+1"
+}
+```
 
 __Example request__
 
 ```bash
 curl -X POST \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/json; charset: utf-8" \
   -d '{ "badge": 12 }' \
   https://{{subdomain}}.twinpush.com/api/{{version}}/update_badge
 ```
 
-##devices - open notification POST
+###Response
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/notifications/:notification_id/open_notification`
+It will return an OK (HTTP 200) code if request is successful.
 
-The user opens a notification.
+##open notification
 
-The open_at parameter should be a timestamp, if it is in another format an error code will be returned.
+Notifies that the user interacted with a sent Notification (usually opened fom notifications center). It is usefull to determine the success of a sent notification based on its opening rate.
+
+### Request
+
+**Path**
+
+ ```bash
+ POST /apps/${app_id}/devices/${device_id}/notifications/${notif_id}/open_notification
+ ```
 
 __Example request__
 
@@ -137,84 +275,119 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/notifications/1441befd34f112/open_notification
 ```
 
-##devices - open app POST
+###Response
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/open_app`
+It will return an OK (HTTP 200) code if request is successful.
 
-The user opens the app. This is useful to get statistics of use.
+##open app
 
-The open_at parameter should be a timestamp, if it is in another format an error code will be returned.
+Notifies that the user opened the application. This info is used for statistics and activity reports and it is important to determinate wether a device is active or inactive for license limit purposes.
 
-__Example request__
+###Request
+
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/${device_id}/open_app
+```
+
+**Example request**
 
 ```bash
 curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/open_app
 ```
 
-##devices - close app POST
+###Response
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/close_app`
+It will return an OK (HTTP 200) code if request is successful.
 
-The user closes the app. This is useful to get statistics of use.
+##close app
 
-The closed_at parameter should be a timestamp, if it is in another format an error code will be returned.
+Notifies that the application has been closed or went to background. This info is used for statistics and activity reports.
 
-__Example request__
+###Request
+
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/${device_id}/close_app
+```
+
+**Example request**
 
 ```bash
 curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/close_app
 ```
 
-##devices - report statistics POST
+###Response
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/report_statistics`
+It will return an OK (HTTP 200) code if request is successful.
 
-Updated the statistics of a device. The following attributes are avaliable:
+##update location
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Range</th>
-    </tr>
-  </thead>
+Updates the current location (latitude and longitude) of a device. The location can be used for statistics or segmentation purposes.
 
-  <tbody>
-    <tr>
-      <td>Latitude</td>
-      <td>The latitude attribute of the localization of the device</td>
-      <td>Float</td>
-      <td>-90 to 90</td>
-    </tr>
-    <tr>
-      <td>Longitude</td>
-      <td>The longitude attribute of the localization of the device</td>
-      <td>Float</td>
-      <td>-180 to 180</td>
-    </tr>
-  </tbody>
-</table>
+###Request
+
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/${device_id}/report_statistics
+```
+
+**Headers**
+
+```bash
+Content-Type: application/json; charset: utf-8
+```
+
+**Required params**
+
+The following attributes are required, wrapped in a `device` JSON object:
+
+| param | description | range |
+|-------|-------------|-------|
+| latitude | The latitude attribute of the device location | -90 to 90 |
+| longitude | The longitude attribute of the device location | -180 to 180 | 
 
 __Example request__
 
 ```bash
 curl -X POST \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/json; charset: utf-8" \
   -d '{ "device": {"latitude": 4.111, "longitude": 10.111} }' \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/report_statistics
 ```
 
-##search notifications of a device - POST
+##search device notifications
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/search_notifications`
+Makes a paginated search of the notifications received by a device. It allows filtering by notification tags.
 
-Search notifications with tags.
+###Request
 
-__Parameters you should pass:__
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/${device_id}/search_notifications
+```
+**Headers**
+
+ ```bash
+ Content-Type: application/json; charset: utf-8
+ ```
+
+**Optional Params**
+
+The request allows the inclusion of the following optional parameters:
+    
+| param | description | example |
+|-------|-------------|---------|
+| tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
+| no_tags  | Returns notifications that does not contains any of the given tags | `["main_inbox"]` |
+
+**Example request body**
 
 ```javascript
 {
@@ -223,11 +396,7 @@ __Parameters you should pass:__
 }
 ```
 
-This will return all the notifications that have the tag __moritaka__ AND __one__ and don't have the tag __two__.
-
-If tags and no_tags are not specified returns all the notifications.
-
-__Example request__
+**Example request**
 
 ```bash
 curl -X POST \
@@ -236,104 +405,138 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/search_notifications
 ```
 
-__Example response__
+###Response
+
+It returns a paginated array of notification objects:
+
+**Example response**
 
 ```javascript
 {
   "objects": [
     {
-      "id": "623c8befd3f1b7f3",
-      "sound": "sound.aiff",
-      "alert": "Test!",
-      "badge": "4",
-      "tags": [
-        "moritaka",
-        "one"
-      ],
-      "last_sent_at": "2013-12-1 20:16:55 UTC",
+      "id": "fd99bf658771385a",
+      "sound": null,
+      "alert": "Notification message",
+      "title": "Title for Android",
+      "badge": "+1",
       "custom_properties": {
-        "callback": "cleanNotifications",
-        "rich_url": "http://www.inception-explained.com/"
+        "scope": "public",
+        "campaign": "001"
       },
+      "tp_rich_url": "http://twincoders.com/",
+      "delivery_speed": "normal",
+      "group_name": "API Deliveries",
+      "send_since": "2016-03-01 13:34:50 UTC",
+      "last_sent_at": "2016-03-01 13:34:51 UTC",
+      "tags": [
+        "tp_rich"
+      ],
       "type": "Notification"
     }
-  ],
-  "references": []
+  ]
 }
 ```
 
-##devices - destroy DELETE
+##delete device
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id`
+Removes the selected device from the platform. This action can not be undone.
 
-Destroys an existing device.
+###Request
 
-To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+**Path**
 
+```bash
+DELETE /apps/${app_id}/devices/${device_id}
+```
+**Headers:** To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ ```
+**Example request**
 ```bash
 curl -X DELETE \
   -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
   -H "Content-Type: application/json" \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f
 ```
+###Response
 
-##set custom property - POST
+It will return an OK (HTTP 200) code if request is successful.
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/set_custom_property`
+##set custom property
 
 Assign the value for the given custom property at the selected device.
+Custom properties are useful to create segmented targets and to obtain statistics based on custom information.
 
-If a __null__ value is given, the custom property will be deleted from the device.
+###Request
 
-The available values for custom property type are:
+**Path**
 
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Value</th>
-    <th>Description</th>
-    <th>Value examples</th>
-  </tr>
-  </thead>
+```bash
+POST /apps/${app_id}/devices/:device_id/set_custom_property
+```
+**Headers**
 
-  <tbody>
-  <tr>
-    <td><i>string</i></td>
-    <td>A text as a sequence of characters. On JSON, is usually represented surrounded by double quote character (")</td>
-    <td><i>"Male"</i>, <i>"New York"</i></td>
-  </tr>
-  <tr>
-    <td><i>boolean</i></td>
-    <td>A logic data type with two possible values: true or false</td>
-    <td><i>true</i>, <i>false</i></td>
-  </tr>
-  <tr>
-    <td><i>integer</i></td>
-    <td>A number without fractional component</td>
-    <td><i>25</i>, <i>-6</i>, <i>10500</i></td>
-  </tr>
-  <tr>
-    <td><i>float</i></td>
-    <td>A number with fraction precision using floating point. The decimal separator is the '.' (dot) character.</td>
-    <td><i>25.0</i>, <i>3.141592</i>, <i>-1,900.45</i></td>
-  </tr>
-  </tbody>
-</table>
+ ```bash
+ Content-Type: application/json; charset: utf-8
+ ```
 
-The given value for a custom property must match with property type.
+**Required params**
 
-__Example request__
+The following parameters are required:
+
+| param | description |
+|-------|-------------|
+| name | name of the custom property to assign value to. If property does not exist, it will be created |
+| type | type of the value of the property. Available types are described below |
+| value | value to assign to the property. If null, property will be deleted from device
+
+The available custom property types are:
+
+| type | description | value example |
+|------|-------------|---------------|
+| string | A text as a sequence of characters | `"Male"`, `"New York"` |
+| boolean | Logic data type with two possible values: true or false | `true`, `false` | 
+| integer | A number without fractional component | `26`, `-6` |
+| float | A number with fraction precision using floating point. The decimal separator is the '.' (dot) character. | `25.0`, `-1,999.95` |
+
+
+**Example request body**
+
+```javascript
+{
+  "name": "age",
+  "type": "integer",
+  "value": 43
+}
+```
+
+**Example request**
 
 ```bash
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{ "name": "age", "type": "integer", "value": 43 }' \
-  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/923c8befd3f1b7f1/set_custom_property
+  https://app.twinpush.com/api/v2/apps/623c8befd3f1b7f3/devices/923c8befd3f1b7f1/set_custom_property
 ```
 
-##clear custom properties - DELETE
+###Response
 
-`https://{{subdomain}}.twinpush.com/api/{{version}}/apps/:app_id/devices/:device_id/clear_custom_properties`
+It will return an OK (HTTP 200) code if request is successful.
+
+##clear custom properties
+
+Deletes all the custom property values associated with the given device.
+
+###Request
+
+**Path**
+
+```bash
+DELETE /apps/${app_id}/devices/${device_id}/clear_custom_properties
+```
 
 Deletes all the custom property values associated with the given device
 
@@ -344,3 +547,7 @@ curl -X DELETE \
   -H "Content-Type: application/json" \
   http://{{subdomain}}.twinpush.com/api/v2/apps/12mj18sja89/devices/1a2b3c4d5f/clear_custom_properties
 ```
+
+###Response
+
+It will return an OK (HTTP 200) code if request is successful.

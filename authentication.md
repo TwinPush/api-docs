@@ -14,8 +14,8 @@ TwinPush requires the inclusion of some parameters in the request to grant acces
 
 All the requests must identify the application by providing the Application ID as an URL parameter:
 
-```
-https://app.twinpush.com/api/v2/apps/:APP_ID/...
+```bash
+https://app.twinpush.com/api/v2/apps/${app_id}/...
 ```
 
 The Application ID is a 16 alphanumeric characters string that can be obtained from the TwinPush console and that will be different for every registered application.
@@ -47,8 +47,8 @@ The Device ID is a 16 characters alphanumeric string that is provided from TwinP
 
 It is set in every request as a request parameter:
 
-```
-https://app.twinpush.com/api/v2/apps/:app_id/devices/:DEVICE_ID/...
+```bash
+https://app.twinpush.com/api/v2/apps/${app_id}/devices/${device_id}/...
 ```
 
 
