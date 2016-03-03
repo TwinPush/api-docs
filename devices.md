@@ -1,6 +1,6 @@
 # Devices
 
-Device model represent real devices, which means that there must be a correspondence with a user's device. Right now Android and iOS devices are supported.
+The _device_ model is a representation of a phisical device that can be registered in the TwinPush platform (like a smartphone or a tablet). Android and iOS devices are supported.
 
 **Available methods**
 
@@ -18,6 +18,27 @@ To access to the full functionality of the devices resources, the following meth
 |<span class="label label-important">DELETE</span>| [delete device](#delete-delete-device) | removes a previously registered device |
 |<span class="label label-info">POST</span>| [set custom property](#post-set-custom-property) | assigns value for a device custom property|
 |<span class="label label-important">DELETE</span>| [clear properties](#delete-clear-custom-properties) | deletes all the properties values associated with a device |
+
+**Model**
+
+Device resources will contain the following information:
+
+| attribute | type | description |
+|-----------|------|-------------|
+| id | string | Unique identifier device in the platform |
+| alias_device | string | Alias assigned to device. It is commonly used as a link with bussiness logic |
+| platform | string | OS platform of the registered device. Available values are `"ios"` or `"android"`.
+| created_at | datetime | Device first registration date |
+| updated_at | datetime | Device last update date. This field will change when any device usage stat is reported, and will represent the last usage time |
+| last\_registered\_at | datetime | Represents the last time that the device called register service to update its token, device alias or custom properties |
+| language | string | Language and region, joined by undescore |
+| device_code | string | Physical device model code |
+| device_model | string | Physical device commercial name |
+| device_manufacturer | string | Physical device manufacturer |
+| app_version | string | Client application version |
+| sdk_version | string | Version of the TwinPush SDK integrated in the client application |
+| os_version | string | Android or iOS Operating System version |
+
 
 ##<span class="label label-success">GET</span> index
 
@@ -42,7 +63,7 @@ The following URL parameters are optional:
     
 | param | description |
 |-------|-------------|
-| date | If present, it will only return devices which registration info has changed since given date. Valid date formats are("2014-04-21" or "2014-04-21T13:00:43+02:00"). Registration info will be considered changed when any of the following fields is updated: active, alias\_device, push\_token, custom\_properties |
+| date | If present, it will only return devices which registration info has changed since given date. Valid date formats are ("2014-04-21" or "2014-04-21T13:00:43+02:00"). Registration info will be considered changed when any of the following fields is updated: active, alias\_device, push\_token, custom\_properties |
 | alias | If present, it will only return devices whose alias_device property match with the given parameter (ignoring case). Can be used to obtain the active devices associated to a given alias |
 
 **Example request**
@@ -120,14 +141,14 @@ Register service accepts some optional parameters that can be included or not in
     
 | param     | description | example |
 |-----------|-------------|---------|
-| alias_device | Value to associate the device to a user of the client platform | "username"
-| language  | Language and region, joined by undescore | "en\_ES", "en\_GB" |
-| device_code | Device model code | "osprey_umts" |
-| device_model | Device commercial name | "iPad 2", "iPhone 6S" |
-| device_manufacturer | Manufacturer | "Apple", "Samsung" |
-| app_version | Client application version | "1.0", "2.0.1" |
-| sdk_version | TwinPush SDK version | "2.0.3", "3.1"  |
-| os_version | OS (Android or iOS) version | "9.1", "5.1" |
+| alias_device | Value to associate the device to a user of the client platform | `"username"`
+| language  | Language and region, joined by undescore | `"en_ES"`, `"en_GB"` |
+| device_code | Device model code | `"osprey_umts"` |
+| device_model | Device commercial name | `"iPad 2"`, `"iPhone 6S"` |
+| device_manufacturer | Manufacturer | `"Apple"`, `"Samsung"` |
+| app_version | Client application version | `"1.0"`, `"2.0.1"` |
+| sdk_version | TwinPush SDK version | `"2.0.3"`, `"3.1"`  |
+| os_version | OS (Android or iOS) version | `"9.1"`, `"5.1"` |
 
 **Example request body**
 
@@ -352,7 +373,18 @@ The following attributes are required, wrapped in a `device` JSON object:
 | latitude | The latitude attribute of the device location | -90 to 90 |
 | longitude | The longitude attribute of the device location | -180 to 180 | 
 
-__Example request__
+**Example request body**
+
+```javascript
+{
+  "device": {
+    "latitude": 4.111, 
+    "longitude": 10.111
+  }
+}
+```
+
+**Example request**
 
 ```bash
 curl -X POST \
