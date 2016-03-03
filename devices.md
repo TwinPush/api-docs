@@ -27,7 +27,7 @@ Device resources will contain the following information:
 |-----------|------|-------------|
 | id | string | Unique identifier device in the platform |
 | alias_device | string | Alias assigned to device. It is commonly used as a link with bussiness logic |
-| platform | string | OS platform of the registered device. Available values are `"ios"` or `"android"`.
+| platform | string | Physical device platform. Available values are `ios` or `android`.
 | created_at | datetime | Device first registration date |
 | updated_at | datetime | Device last update date. This field will change when any device usage stat is reported, and will represent the last usage time |
 | last\_registered\_at | datetime | Represents the last time that the device called register service to update its token, device alias or custom properties |
