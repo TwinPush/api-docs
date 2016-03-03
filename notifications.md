@@ -8,10 +8,10 @@ To access to the full functionality of the notification resources, the following
 
 | method | name | description |
 |--------|------|-------------|
-|<span class="label label-info">GET</span>| [show](#get-show) | obtains details from a previously created notification |
-|<span class="label label-primary">POST</span>| [create](#post-create) | creates a new notification to be delivered from the platform |
-|<span class="label label-info">GET</span>| [report](#get-report) | obtains delivery statistics for a given notification |
-|<span class="label label-info">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
+|<span class="label label-success">GET</span>| [show](#get-show) | obtains details from a previously created notification |
+|<span class="label label-info">POST</span>| [create](#post-create) | creates a new notification to be delivered from the platform |
+|<span class="label label-success">GET</span>| [report](#get-report) | obtains delivery statistics for a given notification |
+|<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
 
 **Model**
 
@@ -32,7 +32,7 @@ Notification representation objects will contain the following information:
 | delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
 
 
-##<span class="label label-info">GET</span> show
+##<span class="label label-success">GET</span> show
 
 Returns all the details of a previously created notification.
 
@@ -87,7 +87,7 @@ It returns a single notification object:
 }
 ```
 
-##<span class="label label-primary">POST</span> create
+##<span class="label label-info">POST</span> create
 
 Creates a new notification to be delivered from the platform. It requires at least the specification of the message that will be displayed and a target to be delivered to.
 
@@ -268,7 +268,7 @@ It will return an array of notifications with a single object that represents th
 }
 ```
 
-##<span class="label label-info">GET</span> report
+##<span class="label label-success">GET</span> report
 
 Obtains delivery statistics for a given notification.
 
@@ -340,7 +340,7 @@ The response body contains an object with the following fields:
 }
 ```
 
-##<span class="label label-info">GET</span> deliveries
+##<span class="label label-success">GET</span> deliveries
 
 Obtains paginated list of all the deliveries for a given notification. This is useful to obtain exactly who has been the recipient of the notification and also who has opened it.
 
