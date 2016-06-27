@@ -11,7 +11,9 @@ To access to the full functionality of the notification resources, the following
 |<span class="label label-success">GET</span>| [show](#get-show) | obtains details from a previously created notification |
 |<span class="label label-info">POST</span>| [create](#post-create) | creates a new notification to be delivered from the platform |
 |<span class="label label-success">GET</span>| [report](#get-report) | obtains delivery statistics for a given notification |
+|<span class="label label-success">GET</span>| [report index](#get-report-index) | obtains delivery statistics for sent notifications from a given date |
 |<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
+|<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
 
 **Model**
 
@@ -340,6 +342,80 @@ The response body contains an object with the following fields:
 }
 ```
 
+##<span class="label label-success">GET</span> reports index
+
+Returns a paginated array of notifications sent by an application. Results can be filtered by date.
+
+###Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices/${device_id}/notifications/reports
+```
+
+**Headers:** It is required to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ ```
+
+**Optional Params**
+
+The request allows the inclusion of the following optional parameters:
+    
+| param | description | example |
+|-------|-------------|---------|
+| date | If present, it will only return notifications created since given date | "2014-04-21" or "2014-04-21T13:00:43+02:00"
+
+**Example request**
+
+```bash
+curl -X GET \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/notifications/reports?date=2016-10-29
+```
+
+###Response
+
+It returns a paginated array of notification report objects (see [report](#get-report)) :
+
+**Example response**
+
+```javascript
+{
+  "objects": [
+    {
+      "status": "sent",
+      "delivery_count": 82640,
+      "opening_count": 17534,
+      "errors": [
+        {
+          "platform": "ios"
+          "level": "critical",
+          "key": "InvalidToken",
+          "message": "Provided token is not valid",
+          "created_at": "2015-01-14 10:31:57 UTC",
+        }
+      ],
+      "notification": {
+        "title": "Welcome to TwinPush",
+        "alert": "Welcome to the Push notification platform TwinPush",
+        "badge": "+1",
+        "custom_properties": {},
+        "id": "12342a1234b74abc",
+        "sound": "",
+        "tags": [
+          "tp_rich",
+          "vip-inbox"
+        ],
+        "tp_rich_url": "http://goo.gl/kf7bgq",
+        "send_since": "2014-11-07 11:24:12 UTC"
+      }
+    }
+  ]
+}
+```
+
 ##<span class="label label-success">GET</span> deliveries
 
 Obtains paginated list of all the deliveries for a given notification. This is useful to obtain exactly who has been the recipient of the notification and also who has opened it.
@@ -398,6 +474,67 @@ Response body will contain a paginated array of delivery objects. Each delivery 
         "alias_device": "user@mail.com",
         "type": "Device"
       }
+    }
+  ]
+}
+```
+
+##<span class="label label-success">GET</span> inbox
+
+Makes a paginated search of the notifications sent to an user through the device alias. It allows filtering by notification tags.
+
+###Request
+
+**Path**
+
+```bash
+POST /apps/${app_id}/devices/${device_id}/inbox
+```
+
+**Optional Params**
+
+The request allows the inclusion of the following optional parameters:
+    
+| param | description | example |
+|-------|-------------|---------|
+| tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
+| no_tags  | Returns notifications that does not contains any of the given tags | `["main_inbox"]` |
+
+**Example request**
+
+```bash
+curl -X GET \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/inbox?tags[]=alerts&tags[]=critical
+```
+
+###Response
+
+It returns a paginated array of notification objects:
+
+**Example response**
+
+```javascript
+{
+  "objects": [
+    {
+      "id": "fd99bf658771385a",
+      "sound": null,
+      "alert": "Notification message",
+      "title": "Title for Android",
+      "badge": "+1",
+      "custom_properties": {
+        "scope": "public",
+        "campaign": "001"
+      },
+      "tp_rich_url": "http://twincoders.com/",
+      "delivery_speed": "normal",
+      "group_name": "API Deliveries",
+      "send_since": "2016-03-01 13:34:50 UTC",
+      "last_sent_at": "2016-03-01 13:34:51 UTC",
+      "tags": [
+        "tp_rich"
+      ],
+      "type": "Notification"
     }
   ]
 }
