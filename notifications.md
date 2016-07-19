@@ -488,7 +488,7 @@ Makes a paginated search of the notifications sent to an user through the device
 **Path**
 
 ```bash
-POST /apps/${app_id}/devices/${device_id}/inbox
+GET /apps/${app_id}/devices/${device_id}/inbox
 ```
 
 **Optional Params**
@@ -509,7 +509,7 @@ curl -X GET \
 
 ###Response
 
-It returns a paginated array of notification objects:
+It returns a paginated array of objects that offers delivery information and wraps a notification object:
 
 **Example response**
 
@@ -517,24 +517,27 @@ It returns a paginated array of notification objects:
 {
   "objects": [
     {
-      "id": "fd99bf658771385a",
-      "sound": null,
-      "alert": "Notification message",
-      "title": "Title for Android",
-      "badge": "+1",
-      "custom_properties": {
-        "scope": "public",
-        "campaign": "001"
-      },
-      "tp_rich_url": "http://twincoders.com/",
-      "delivery_speed": "normal",
-      "group_name": "API Deliveries",
-      "send_since": "2016-03-01 13:34:50 UTC",
-      "last_sent_at": "2016-03-01 13:34:51 UTC",
-      "tags": [
-        "tp_rich"
-      ],
-      "type": "Notification"
+      "id": "2785b9d61574e029",
+      "created_at": "2016-03-01 13:34:50 UTC",
+      "open_at": "2016-03-01 13:34:50 UTC",
+      "notification": {
+        "id": "fd99bf658771385a",
+        "sound": null,
+        "alert": "Notification message",
+        "title": "Title for Android",
+        "badge": "+1",
+        "custom_properties": {
+          "scope": "public",
+          "campaign": "001"
+        },
+        "tp_rich_url": "http://twincoders.com/",
+        "delivery_speed": "normal",
+        "group_name": "API Deliveries",
+        "send_since": "2016-03-01 13:34:50 UTC",
+        "last_sent_at": "2016-03-01 13:34:51 UTC",
+        "tags": ["tp_rich"],
+        "type": "Notification"
+      }
     }
   ]
 }
