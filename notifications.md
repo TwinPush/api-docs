@@ -14,6 +14,7 @@ To access to the full functionality of the notification resources, the following
 |<span class="label label-success">GET</span>| [report index](#get-report-index) | obtains delivery statistics for sent notifications from a given date |
 |<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
 |<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
+|<span class="label label-success">DELETE</span>| [inbox](#delete-inbox) | removes a notification from the inbox of the associated user |
 
 **Model**
 
@@ -542,3 +543,26 @@ It returns a paginated array of objects that offers delivery information and wra
   ]
 }
 ```
+
+##<span class="label label-important">DELETE</span> inbox notification
+
+Removes the selected notification from the inbox of the user (or alias) associated to the device.
+
+###Request
+
+**Path**
+
+```bash
+DELETE /apps/${app_id}/devices/${device_id}/notifications/${notification_id}
+```
+
+__Example request__
+
+```bash
+curl -X DELETE \
+  http://{{subdomain}}.twinpush.com/api/v2/apps/12mj18sja89/devices/1a2b3c4d5f/notifications/8a2bdm1d50
+```
+
+###Response
+
+It will return an OK (HTTP 200) code if request is successful or a NotFound (HTTP 404) if notification can not be found.
