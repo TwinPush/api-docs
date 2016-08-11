@@ -14,7 +14,7 @@ To access to the full functionality of the notification resources, the following
 |<span class="label label-success">GET</span>| [report index](#get-report-index) | obtains delivery statistics for sent notifications from a given date |
 |<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
 |<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
-|<span class="label label-success">DELETE</span>| [inbox](#delete-inbox) | removes a notification from the inbox of the associated user |
+|<span class="label label-success">DELETE</span>| [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
 
 **Model**
 
