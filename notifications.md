@@ -144,6 +144,7 @@ The parameters that define the content and category of the notification are the 
 |send\_since| The time when the push notification will be sent, in format _yyyy-MM-dd HH:mm:ss Z_ |
 |tags| An array of strings to categorize or differentiate in the future this notification from others |
 |group\_name| Name of the group where the notification will be included. Notification Groups allows to display combined information and statistics of multiple notifications. |
+|inbox| Defines whether the notification will be included or not in the notifications inbox of the user associated with the target device. |
 
 
 **Simple target params**
