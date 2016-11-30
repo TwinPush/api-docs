@@ -184,7 +184,7 @@ curl -X POST \
   -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
   -H "Content-Type: application/json; charset: utf-8" \
   -d '{ "udid": "002ebf12a1255ddfa73967c3c5d20177", "platform": "ios", "push_token": "5geamqy5 6xmrxfk1 5zpbcxmw ez3w7ksf cscpr55t trknkzap 7yyt41ss g6jrw7qz",  "alias_device": "techie4"}' \
-  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/register
 ```
 
 ###Response
