@@ -11,6 +11,7 @@ To access to the full functionality of the devices resources, the following meth
 |<span class="label label-success">GET</span>| [index](#get-index) | obtains the paginated list of application devices associated |
 |<span class="label label-info">POST</span>| [register](#post-register) | create or update device registration in TwinPush |
 |<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge number of the device. |
+|<span class="label label-info">POST</span>| [open notification](#post-open-notification) | notifies that the notification has been opened by the user |
 |<span class="label label-info">POST</span>| [open app](#post-open-app) | reports that the user opened the application |
 |<span class="label label-info">POST</span>| [close app](#post-close-app) | notifies that the application has been closed or went to background execution|
 |<span class="label label-info">POST</span>| [update location](#post-update-location) | updates the current location of the device |
