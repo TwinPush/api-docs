@@ -2,11 +2,11 @@
 
 Twinpush is a platform designed and built with the goal of making the process of sending push notifications to users really easy and intuitive. With that goal in mind, we offer a REST API that offers a wide functionality to be consumed through simple Web Service calls.
 
-##What is REST?
+## What is REST?
 
 It is a style of software architecture for distributed systems based on representations of resources and the manipulation of these resources through those representations.
 
-##TwinPush Resources
+## TwinPush Resources
 
 TwinPush handle the following resources:
 
@@ -14,7 +14,7 @@ TwinPush handle the following resources:
 - **Device**: Is the representation of a mobile device registered in an Application of the platform.
 - **Notification**: A message created to be sent through a Push Notification to the devices of an Application. A notification is related to an application, but also with the devices to which it is targeted.
 
-##RESTful routes
+## RESTful routes
 
 TwinPush offers the functionality through the API using RESTful routes that utlizes HTTP verbs to keep unique paths to a minimum, while making it easy to integrate and debug.
 
@@ -111,8 +111,8 @@ For each request you make to the this API, we will return an HTTP status code. F
 * <span class="label label-warning">422</span> Unprocessable entity. Some of the given parameters is incorrect.
 
 * <span class="label label-important">500</span> Server Error (hopefully not!). This means our server has some sort of problem while processing the request.
- 
-#Common error messages
+
+# Common error messages
 When an error in a request occurred, in addition to the HTTP error code, the system will try to return a detailed error message to help the developer to debug its integration.
 The details of the error will be returned as a JSON String in the response body with the following format:
 
@@ -127,7 +127,7 @@ The details of the error will be returned as a JSON String in the response body 
 
 The possible errors returned by the API Web Services are listed below:
 
-| Code 	| Error Type             	| Description                                                                     
+| Code 	| Error Type             	| Description
 |------	|------------------------	|---------------------------------------------------------
 | 403  	| InvalidToken           	| API Key Token is not valid or does not match with App ID
 | 403  	| InvalidCreatorToken    	| Creator API Key Token is not valid or does not match with App ID

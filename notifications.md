@@ -35,11 +35,11 @@ Notification representation objects will contain the following information:
 | delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
 
 
-##<span class="label label-success">GET</span> show
+## <span class="label label-success">GET</span> show
 
 Returns all the details of a previously created notification.
 
-###Request
+### Request
 
 **Path**
 
@@ -62,7 +62,7 @@ curl -X GET \
 https://{{subdomain}}.twinpush.com/api/{{version}}/devices/1a2b3c4d5f/notifications/2b3c4d5f6g
 ```
 
-###Response
+### Response
 
 It returns a single notification object:
 
@@ -90,7 +90,7 @@ It returns a single notification object:
 }
 ```
 
-##<span class="label label-info">POST</span> create
+## <span class="label label-info">POST</span> create
 
 Creates a new notification to be delivered from the platform. It requires at least the specification of the message that will be displayed and a target to be delivered to.
 
@@ -112,7 +112,7 @@ Each notification must have one (and only one) target parameter that defines wic
 * **Simple target**: Allows to specify a list of elements of many types to be addressee of the message
 * **Multiple target**: Offers the ability to customize the content of the message received by each addressee. This way each user may receive a different message customized for each within the same notification.
 
-###Request
+### Request
 
 **Path**
 
@@ -150,7 +150,7 @@ The parameters that define the content and category of the notification are the 
 **Simple target params**
 
 Allows to specify a list of elements of many types to be addressee of the Push Notification:
-    
+
 | param | description | type |
 |-------|-------------|------|
 | broadcast | If set to `true`, the notification will be sent to all the devices registered in the application | Boolean |
@@ -231,7 +231,7 @@ Notification with multiple target by alias:
 curl -X POST \
   -H "X-TwinPush-REST-API-Key-Creator: ${REST_API_TOKEN_CREATOR}" \
   -H "Content-Type: application/json; charset: utf-8" \
-  -d '{ 
+  -d '{
       "alert": "Test!",
       "send_since": "2013-10-10 15:14:33 +0000",
       "url": "http://www.inception-explained.com/",
@@ -240,7 +240,7 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/notifications
 ```
 
-###Response
+### Response
 
 It will return an array of notifications with a single object that represents the created notification:
 
@@ -272,11 +272,11 @@ It will return an array of notifications with a single object that represents th
 }
 ```
 
-##<span class="label label-success">GET</span> report
+## <span class="label label-success">GET</span> report
 
 Obtains delivery statistics for a given notification.
 
-###Request
+### Request
 
 **Path**
 
@@ -289,7 +289,7 @@ GET /apps/${app_id}/notifications/${notif_id}/report
 X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
 ```
 
-###Response
+### Response
 
 The response body contains an object with the following fields:
 
@@ -344,11 +344,11 @@ The response body contains an object with the following fields:
 }
 ```
 
-##<span class="label label-success">GET</span> reports index
+## <span class="label label-success">GET</span> reports index
 
 Returns a paginated array of notifications sent by an application. Results can be filtered by date.
 
-###Request
+### Request
 
 **Path**
 
@@ -365,7 +365,7 @@ GET /apps/${app_id}/devices/${device_id}/notifications/reports
 **Optional Params**
 
 The request allows the inclusion of the following optional parameters:
-    
+
 | param | description | example |
 |-------|-------------|---------|
 | date | If present, it will only return notifications created since given date | "2014-04-21" or "2014-04-21T13:00:43+02:00"
@@ -377,7 +377,7 @@ curl -X GET \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/notifications/reports?date=2016-10-29
 ```
 
-###Response
+### Response
 
 It returns a paginated array of notification report objects (see [report](#get-report)) :
 
@@ -418,11 +418,11 @@ It returns a paginated array of notification report objects (see [report](#get-r
 }
 ```
 
-##<span class="label label-success">GET</span> deliveries
+## <span class="label label-success">GET</span> deliveries
 
 Obtains paginated list of all the deliveries for a given notification. This is useful to obtain exactly who has been the recipient of the notification and also who has opened it.
 
-###Request
+### Request
 
 **Path**
 
@@ -435,7 +435,7 @@ POST /apps/${app_id}/notifications/${notif_id}/deliveries
  X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
  ```
 
-###Response
+### Response
 
 Response body will contain a paginated array of delivery objects. Each delivery will contain the following information:
 
@@ -481,11 +481,11 @@ Response body will contain a paginated array of delivery objects. Each delivery 
 }
 ```
 
-##<span class="label label-success">GET</span> inbox
+## <span class="label label-success">GET</span> inbox
 
 Makes a paginated search of the notifications sent to an user through the device alias. It allows filtering by notification tags.
 
-###Request
+### Request
 
 **Path**
 
@@ -496,7 +496,7 @@ GET /apps/${app_id}/devices/${device_id}/inbox
 **Optional Params**
 
 The request allows the inclusion of the following optional parameters:
-    
+
 | param | description | example |
 |-------|-------------|---------|
 | tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
@@ -509,7 +509,7 @@ curl -X GET \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/inbox?tags[]=alerts&tags[]=critical
 ```
 
-###Response
+### Response
 
 It returns a paginated array of objects that offers delivery information and wraps a notification object:
 
@@ -545,11 +545,11 @@ It returns a paginated array of objects that offers delivery information and wra
 }
 ```
 
-##<span class="label label-important">DELETE</span> inbox notification
+## <span class="label label-important">DELETE</span> inbox notification
 
 Removes the selected notification from the inbox of the user (or alias) associated to the device.
 
-###Request
+### Request
 
 **Path**
 
@@ -564,6 +564,6 @@ curl -X DELETE \
   http://{{subdomain}}.twinpush.com/api/v2/apps/12mj18sja89/devices/1a2b3c4d5f/notifications/8a2bdm1d50
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful or a NotFound (HTTP 404) if notification can not be found.

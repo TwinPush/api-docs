@@ -41,11 +41,11 @@ Device resources will contain the following information:
 | os_version | string | Android or iOS Operating System version |
 
 
-##<span class="label label-success">GET</span> index
+## <span class="label label-success">GET</span> index
 
 Obtains the paginated list of devices associated with the given application.
 
-###Request
+### Request
 
 **Path**
 
@@ -61,7 +61,7 @@ GET /apps/${app_id}/devices
 **Optional Params**
 
 The following URL parameters are optional:
-    
+
 | param | description |
 |-------|-------------|
 | date | If present, it will only return devices which registration info has changed since given date. Valid date formats are ("2014-04-21" or "2014-04-21T13:00:43+02:00"). Registration info will be considered changed when any of the following fields is updated: active, alias\_device, push\_token, custom\_properties |
@@ -75,7 +75,7 @@ curl -X GET "https://app.twinpush.com/api/v2/apps/12mj18sja89/devices?date=2014-
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices
 ```
 
-###Response
+### Response
 
 Response body will contain the array of application devices that match the included filters (if any).
 
@@ -107,11 +107,11 @@ Response body will contain the array of application devices that match the inclu
 }
 ```
 
-##<span class="label label-info">POST</span> register
+## <span class="label label-info">POST</span> register
 
 Creates or updates the subscription of a device in the platform.
 
-###Request
+### Request
 
 **Path**
 
@@ -139,7 +139,7 @@ The register request requires the following parameters:
 **Optional Params**
 
 Register service accepts some optional parameters that can be included or not in the request body. The associated properties to each param will be set to null if value is empty and will be ignored if not present in the request.
-    
+
 | param     | description | example |
 |-----------|-------------|---------|
 | alias_device | Value to associate the device to a user of the client platform | `"username"`
@@ -188,10 +188,10 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/register
 ```
 
-###Response
+### Response
 
 The request will return an array of Device objects that will only contain the created (or updated) device.
-    
+
 The `id` value of the device will be necessary to identify the device in subsequent requests.
 
 **Example response**
@@ -222,11 +222,11 @@ The `id` value of the device will be necessary to identify the device in subsequ
 }
 ```
 
-##<span class="label label-info">POST</span> update badge
+## <span class="label label-info">POST</span> update badge
 
 Updates the badge number of a device.
 
-###Request
+### Request
 
 **Path**
 
@@ -274,11 +274,11 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/update_badge
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-info">POST</span> open notification
+## <span class="label label-info">POST</span> open notification
 
 Notifies that the user interacted with a sent Notification (usually opened fom notifications center). It is usefull to determine the success of a sent notification based on its opening rate.
 
@@ -297,15 +297,15 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/notifications/1441befd34f112/open_notification
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-info">POST</span> open app
+## <span class="label label-info">POST</span> open app
 
 Notifies that the user opened the application. This info is used for statistics and activity reports and it is important to determinate wether a device is active or inactive for license limit purposes.
 
-###Request
+### Request
 
 **Path**
 
@@ -320,15 +320,15 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/open_app
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-info">POST</span> close app
+## <span class="label label-info">POST</span> close app
 
 Notifies that the application has been closed or went to background. This info is used for statistics and activity reports.
 
-###Request
+### Request
 
 **Path**
 
@@ -343,15 +343,15 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/close_app
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-info">POST</span> update location
+## <span class="label label-info">POST</span> update location
 
 Updates the current location (latitude and longitude) of a device. The location can be used for statistics or segmentation purposes.
 
-###Request
+### Request
 
 **Path**
 
@@ -372,14 +372,14 @@ The following attributes are required, wrapped in a `device` JSON object:
 | param | description | range |
 |-------|-------------|-------|
 | latitude | The latitude attribute of the device location | -90 to 90 |
-| longitude | The longitude attribute of the device location | -180 to 180 | 
+| longitude | The longitude attribute of the device location | -180 to 180 |
 
 **Example request body**
 
 ```javascript
 {
   "device": {
-    "latitude": 4.111, 
+    "latitude": 4.111,
     "longitude": 10.111
   }
 }
@@ -394,11 +394,11 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/report_statistics
 ```
 
-##<span class="label label-info">POST</span> search device notifications
+## <span class="label label-info">POST</span> search device notifications
 
 Makes a paginated search of the notifications received by a device. It allows filtering by notification tags.
 
-###Request
+### Request
 
 **Path**
 
@@ -414,7 +414,7 @@ POST /apps/${app_id}/devices/${device_id}/search_notifications
 **Optional Params**
 
 The request allows the inclusion of the following optional parameters:
-    
+
 | param | description | example |
 |-------|-------------|---------|
 | tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
@@ -438,7 +438,7 @@ curl -X POST \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/search_notifications
 ```
 
-###Response
+### Response
 
 It returns a paginated array of notification objects:
 
@@ -471,11 +471,11 @@ It returns a paginated array of notification objects:
 }
 ```
 
-##<span class="label label-important">DELETE</span> delete device
+## <span class="label label-important">DELETE</span> delete device
 
 Removes the selected device from the platform. This action can not be undone.
 
-###Request
+### Request
 
 **Path**
 
@@ -495,16 +495,16 @@ curl -X DELETE \
   -H "Content-Type: application/json" \
   https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f
 ```
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-info">POST</span> set custom property
+## <span class="label label-info">POST</span> set custom property
 
 Assign the value for the given custom property at the selected device.
 Custom properties are useful to create segmented targets and to obtain statistics based on custom information.
 
-###Request
+### Request
 
 **Path**
 
@@ -556,15 +556,15 @@ curl -X POST \
   https://app.twinpush.com/api/v2/apps/623c8befd3f1b7f3/devices/923c8befd3f1b7f1/set_custom_property
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
 
-##<span class="label label-important">DELETE</span> clear custom properties
+## <span class="label label-important">DELETE</span> clear custom properties
 
 Deletes all the custom property values associated with the given device.
 
-###Request
+### Request
 
 **Path**
 
@@ -582,6 +582,6 @@ curl -X DELETE \
   http://{{subdomain}}.twinpush.com/api/v2/apps/12mj18sja89/devices/1a2b3c4d5f/clear_custom_properties
 ```
 
-###Response
+### Response
 
 It will return an OK (HTTP 200) code if request is successful.
