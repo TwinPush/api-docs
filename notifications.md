@@ -14,6 +14,7 @@ To access to the full functionality of the notification resources, the following
 |<span class="label label-success">GET</span>| [report index](#get-report-index) | obtains delivery statistics for sent notifications from a given date |
 |<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
 |<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
+|<span class="label label-success">GET</span>| [inbox_summary](#get-inbox-summary) | obtains the total and unopened count of the alias notifications inbox |
 |<span class="label label-success">DELETE</span>| [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
 
 **Model**
@@ -542,6 +543,44 @@ It returns a paginated array of objects that offers delivery information and wra
       }
     }
   ]
+}
+```
+
+## <span class="label label-success">GET</span> inbox summary
+
+Obtains a fast summary of the notification inbox associated to the current device alias. It offers the total notification count and the unopened notification count.
+
+### Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices/${device_id}/inbox_summary
+```
+
+**Example request**
+
+```bash
+curl -X GET \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/inbox_summary
+```
+
+### Response
+
+It returns a simple hash object with two attributes:
+
+| attribute | type | description |
+|-----------|------|-------------|
+| total_count | int | Total number of notifications present in the alias inbox |
+| unopened_count | int | Number of notifications that has not been checked as opened. Useful to display a badge indicating pending notifications |
+
+
+**Example response**
+
+```javascript
+{
+  "total_count": 67,
+  "unopened_count": 2
 }
 ```
 
