@@ -16,7 +16,6 @@ To access to the full functionality of the devices resources, the following meth
 |<span class="label label-info">POST</span>| [close app](#post-close-app) | notifies that the application has been closed or went to background execution|
 |<span class="label label-info">POST</span>| [update location](#post-update-location) | updates the current location of the device |
 |<span class="label label-info">POST</span>| [search notifications](#post-search-device-notifications) | search of the notifications received by a device |
-|<span class="label label-important">DELETE</span>| [delete device](#delete-delete-device) | removes a previously registered device |
 |<span class="label label-info">POST</span>| [set custom property](#post-set-custom-property) | assigns value for a device custom property|
 |<span class="label label-important">DELETE</span>| [clear properties](#delete-clear-custom-properties) | deletes all the properties values associated with a device |
 
@@ -470,34 +469,6 @@ It returns a paginated array of notification objects:
   ]
 }
 ```
-
-## <span class="label label-important">DELETE</span> delete device
-
-Removes the selected device from the platform. This action can not be undone.
-
-### Request
-
-**Path**
-
-```bash
-DELETE /apps/${app_id}/devices/${device_id}
-```
-**Headers:** To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
-
- ```bash
- X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
- ```
-**Example request**
-
-```bash
-curl -X DELETE \
-  -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
-  -H "Content-Type: application/json" \
-  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f
-```
-### Response
-
-It will return an OK (HTTP 200) code if request is successful.
 
 ## <span class="label label-info">POST</span> set custom property
 
