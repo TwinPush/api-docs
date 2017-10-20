@@ -136,12 +136,22 @@ In the Schedule tab, you choose when your notification will be sent out. You can
 
 * **Now**: The notification will send as soon as you click on Send, that you will find when clicking Save & Preview button.
 * **Schedule date**: The notification will be sent out at scheduled date and time set here.
-* **Setup campaign**: You will send the same notification, a number of times into a time period. You can set the number of repetitions, and the time period. You may also limit the number of notifications that a device will received into a period of time.
 
 [![](http://i.imgur.com/BuzqlUsl.png)](http://i.imgur.com/BuzqlUs.png)
 
 
+* **Setup campaign**: You will send the same notification, a number of times into a time period. You can set the number of repetitions, and the time period. You may also limit the number of notifications that a device will receive into a period of time.
 
+
+This configuration can set a period of time between two time/dates when TwinPush will automatically send the notifications, while making sure the devices meet the conditions previously set.
+
+* **Start and End date of the campaign**: The start date is the day when the campaign becomes active therefore TwinPush checks periodically (every 30 minutes max.) which devices should be notified. TwinPush will do so until the end date.
+* **Start and End time**: The business hours of the campaign.
+* **Week days**: You can choose the days of the week when the campaign should be send.
+* **Limits**: You can set here the notification limits for each device. The total number of notifications, the frequency and the minimum time between two notifications send to a same device.
+
+
+[![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
 
 #### Advanced
 In the Advanced tab, you can tie this notification to a group, you can set the delivery speed and you can also interact with the application installed in the smartphone.
