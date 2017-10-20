@@ -142,12 +142,12 @@ En Schedule eliges cuándo enviar tu notificación, también programar tu envío
 
 * **Crear campaña**: Se enviará la misma notificación repetida un número de veces dentro del periodo establecido, pudiendo establecer los límites de envíos a un mismo dispositivo en un periodo de tiempo.
 
- Esta configuración permite establecer un periodo de tiempo entre dos fechas donde          TwinPush realizará los envíos de manera automática, comprobando los dispositivos que cumplen con las condiciones establecidas.
+Esta configuración permite establecer un periodo de tiempo entre dos fechas donde TwinPush realizará los envíos de manera automática, comprobando los dispositivos que cumplen con las condiciones establecidas.
  
  * **Fecha de inicio y fin de campaña**: Día que la campaña pasará a estar activa, y por lo tanto TwinPush comprobará periodicamente (máximo cada 30 minutos) qué dispositivos deben ser notificados. Así como el día de fin de campaña.
  * **Horario**: Horario de actividad de la campaña.
  * **Días de la semana**: Permite seleccionar los días de la semana que la campaña debe ser envíada.
- * **Límites**:Se deben establecer los límites de envíos por cada dispositivo. Número de envíos totales, frecuancia mínima y el tiempo mínimo entre dos notificaciones a un mismo dispositivo.
+ * **Límites**: Se deben establecer los límites de envíos por cada dispositivo. Número de envíos totales, frecuancia mínima y el tiempo mínimo entre dos notificaciones a un mismo dispositivo.
  
  [![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
 
@@ -169,12 +169,12 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 
 [![](https://i.imgur.com/qT23gGR.png)](https://i.imgur.com/qT23gGR.png)
 
-* **iOS Advanced settinga**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
+* **iOS Advanced settings**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
 
 [![](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)
 
 
-###Guardar y Previsualizar
+### Guardar y Previsualizar
 
 Una vez hayas completado tu notificación, podrás salvarla y enviarla clicando sobre Guardar y previsualizar abajo a la derecha. TwinPush guardará tu notificación configurada y te mostrará una pantalla resumen. Comprueba que tu notificación este correcta y envíala con el boton Send. Si no lo está, podrás editarla con Edit, o borrarla con Delete. El botón Duplicate te será de gran utilidad para reutilizar notificaciones o para crear tus propias plantillas sobre las cuales puedas hacer variaciones sobre un duplicado de una plantilla original.
 
