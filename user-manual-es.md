@@ -147,9 +147,9 @@ Esta configuración permite establecer un periodo de tiempo entre dos fechas don
  * **Fecha de inicio y fin de campaña**: Día que la campaña pasará a estar activa, y por lo tanto TwinPush comprobará periodicamente (máximo cada 30 minutos) qué dispositivos deben ser notificados. Así como el día de fin de campaña.
  * **Horario**: Horario de actividad de la campaña.
  * **Días de la semana**: Permite seleccionar los días de la semana que la campaña debe ser envíada.
- * **Límites**: Se deben establecer los límites de envíos por cada dispositivo. Número de envíos totales, frecuancia mínima y el tiempo mínimo entre dos notificaciones a un mismo dispositivo.
+ * **Límites**: Se deben establecer los límites de envíos por cada dispositivo. Número de envíos totales, frecuencia mínima y el tiempo mínimo entre dos notificaciones a un mismo dispositivo.
  
- [![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
+[![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
 
 
 #### Advanced
