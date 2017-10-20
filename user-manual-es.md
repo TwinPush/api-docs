@@ -108,7 +108,7 @@ Si quieres que tus notificaciones llegue correctamente a la mayoría de disposit
 [![](http://i.imgur.com/Z5dK5ljl.png)](http://i.imgur.com/Z5dK5lj.png)
 
 
-#### Content
+#### Contenido
 En Content podrás seleccionar qué acción adicional realizará la notificación cuando el usuario la abra, de esta manera, podrás enviar a tus usuarios una pantalla con texto enriquecido o una URL externa, adicional a la notificación. Esta función es muy útil en campañas en dónde la notificación lleva un mensaje que despierta el interés del usuario y que puede derivar en acciones inmediatas.
 
 * **None**: Selecciona esta opción para que al abrir la notificación resulte en la apertura de tu App, de manera similar que si lo hiciera desde el ícono de tu App.
@@ -119,7 +119,8 @@ En Content podrás seleccionar qué acción adicional realizará la notificació
 
 
 
-#### Target
+
+#### Audiencia
 Utiliza la pestaña Target para seleccionar qué usuarios quieres que reciban esta notificación. Podrás enviar la notificación a todos los usuarios de tu App, a uno o más usuarios o dispositivos seleccionados manualmente, a tus segmentos, o también podrás importar un fichero que contenga una lista de usuarios o dispositivos.
 
 * **All**: Seleccionando All, la notificación se enviará a todos los usuarios registrados en la plataforma y activos en el momento del envío.
