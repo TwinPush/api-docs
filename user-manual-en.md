@@ -86,7 +86,7 @@ If you have already sent notifications using this App, the Push icon will take y
 By clicking on Create new notification you get into the Push Composer.
 
 
-The Push Composer will show you as a series of tabs: Push, Content, Target, Schedule, Advanced and Summary and will take you by default to the first tab, Push.  The composer will also show you a phone simulation on the right side of the screen, where you see how your notification will show to the user when receive it from an Android or iOS device. 
+The Push Composer will show you a series of tabs: Push, Content, Target, Schedule, Advanced and Summary and will take you by default to the Psuh tab.  The composer will also show you a phone simulation on the right side of the screen, where you can see how your notification will show to users when receive it in an Android or iOS device. 
 
 To send a notification, the minimum required fields to complete are: the Alert, under the Push tab, and at least one Target, other options will help you to enhace your notifications, to perform different actions when the user clicks over the notification, to choose your target users or to schedule your notifications so you can send them whenever you want.
 
@@ -94,7 +94,7 @@ To send a notification, the minimum required fields to complete are: the Alert, 
 
 
 #### Push 
-Use this tab to write your notification. The notification itselft is sent in plain text. When composing the message take into account that smartphones with outdated operative systems are limited to notifications size of arround 250 characters, in those 250 characters are included the plain text of the message and the rich text or URL, that you may want to add at the *Content* tab.
+Use this tab to write your notification. The notification itself is sent in plain text. When composing the message take into account that smartphones with outdated operative systems are limited to notifications size of arround 250 characters, it means that in those 250 characters you should include your plain text message and the rich text or the URL, that you may want to add at the *Content* tab.
 
 If you want your notifications reach most devices correctly, try to create concise messages and use URL shorteners whenever you can.
 
@@ -108,7 +108,7 @@ If you want your notifications reach most devices correctly, try to create conci
 
 
 #### Content
-At the Content tab, you will be able to select which additional action the notification will do when the user opens it up. In this way, you will be able to send to your users a rich text screen or an external URL, besides the notification. This function is very useful in marketing campaigns, where the notification message arouses the user's interest that could evolve into an immediat action.
+At the Content tab, you can select which additional action the notification will do when the user opens it up. In this way, you will be able to send to your users a rich text screen or an external URL, besides the notification. This function is very useful in marketing campaigns, where the notification message arouses the user's interest that could evolve into an immediat action.
 
 * **None**: By choosing this option, when the user opens this notification, your App will open, in the same way as if he would open it up from your App icon.
 * **URL**: Write here an URL with a landing page that will open in the smartphone when the user opens this notification.
@@ -119,12 +119,12 @@ At the Content tab, you will be able to select which additional action the notif
 
 
 #### Target tab
-Use the Target tab to select the users you want them to receive this notification. You will be able to send this notification to all users of your App, to one or more users selected manually, to your segments, or you can also import a file with your own list of users or devices.
+Use the Target tab to select the users you want them to receive this notification. You can send this notification to all users of your App, to one or more users selected manually, to your segments, or you can also import a file with your own list of users or even devices.
 
 * **All**: By choosing All, the notification will be sent to all users registered in the platform and active at the time of sending this notitication.
 * **User**: Here you can manually select one or more users or devices, to do that, you should identify a user by its Alias, or a device by its Device ID. Remember that any user has a unique Alias, but one user can own one or more devices. 
-* **Segment**: Choose one or more segments here, you should have created first in the Target section. Just write the name of the segment one by one in the text box.
-* **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You will be able to customize the message to send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
+* **Segment**: Choose one or more segments here, you should have created them first in the Target section. Just write the name of the segment one by one in the text box.
+* **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You can also customize the message to send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
 
 [![](http://i.imgur.com/G6ePRXKl.png)](http://i.imgur.com/G6ePRXK.png)
 
@@ -132,7 +132,7 @@ Use the Target tab to select the users you want them to receive this notificatio
 
 
 #### Schedule
-In the Schedule tab, you choose when your notification will be sent out. You can send it now or scheduled at a particular date/time. TwinPush also offers a powerful tool to program marketing campaigns under Setup campaign. Into a campaign you will be able to send a notification that you can repeat the number of times you set into a time period. You can set up this period of time to start and end at any time/date, or give a number of days, you can even set a range of hours or the days of the week. 
+In the Schedule tab, you choose when your notification will be sent out. You can send it now or scheduled it at a particular date/time. TwinPush also offers you a powerful tool to program marketing campaigns under the Setup campaign tab. Into a campaign you can send a notification that you can repeat a number of times you previouly set into a period of time. You can set this period of time to start and end at any time/date, or simple during a given number of days, you can even set a range of hours or the days of the week. 
 
 * **Now**: The notification will send as soon as you click on Send, that you will find when clicking Save & Preview button.
 * **Schedule date**: The notification will be sent out at scheduled date and time set here.
