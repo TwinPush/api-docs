@@ -195,7 +195,7 @@ Y por último se debe aplicar el plugin de Google Services, que cargará automá
 
 **Nota:** Si el archivo de configuración `google-services.json` entra en conflicto con otro archivo existente, o se desea configurar Firebase sin hacer uso de él, TwinPush dispone de un método alternativo para hacerlo a través de recursos de tipo String ([ver documentación](http://developers.twinpush.com/developers/android#alternative-firebase-setup)).
 
-##6. Prueba de envío
+## 6. Prueba de envío
 
 Una vez seguidos todos los pasos, se puede compilar la aplicación, registrar el dispositivo en TwinPush y realizar una prueba de envío.
 
