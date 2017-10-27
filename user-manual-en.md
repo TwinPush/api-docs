@@ -25,7 +25,7 @@ From this screen you will be able to:
 ### Register
 Write your email address and password. Remmeber that when you are register, you are agreeing with the [terms and conditions](http://app.twinpush.com/res/terms-of-service-es.pdf).
 
-[![](http://i.imgur.com/bTWYU92l.png)](http://i.imgur.com/bTWYU92.png)
+[![](http://i.imgur.com/geaOqGVl.png)](http://i.imgur.com/geaOqGV.png)
 
 
 
@@ -33,7 +33,7 @@ Write your email address and password. Remmeber that when you are register, you 
 Just write the email address you used when registering and in short time you will received an email with instructions to recover your password.
 
 
-[![](http://i.imgur.com/oBKal8el.png)](http://i.imgur.com/oBKal8e.png)
+[![](http://i.imgur.com/sycnwEFl.png)](http://i.imgur.com/sycnwEF.png)
 
 
 
@@ -51,7 +51,7 @@ The first time you access to TwinPush, we will ask you to create your first App,
 ### Your First App
 Now the workspace of your App is already created in TwinPush, you will land into your App Dashboard. Next, you must integrate the TwinPush SDK into your mobile application and upload your certificate in order to send notifications. Follow the [SDK instructions here](http://www.twinpush.com/quickstart). 
 
-[![](http://i.imgur.com/DTKxllIl.png)](http://i.imgur.com/DTKxllI.png)
+[![](http://i.imgur.com/71nJWhBl.png)](http://i.imgur.com/71nJWhB.png)
 
 
 
