@@ -87,7 +87,7 @@ Si ya has enviado notificaciones con esa aplicación el botón Push te llevará 
 Al clicar sobre Crear nueva notificación entrarás en el Editor de notificaciones.
 
 
-El editor de notificaciones se presenta como una serie de pestañas: Push, Content, Target, Schedule, Advanced y Summary, llevándote por defecto a la primera pestaña, Push. También cuenta con una simulación, en la parte derecha de la pantalla, donde se muestra cómo se verá tu notificación al recibirla desde un dispositivo Android o iOS. 
+El editor de notificaciones se presenta como una serie de pestañas: Push, Contenido, Audiencia, Programación y Avanzado, llevándote por defecto a la primera pestaña, Push. También cuenta con una simulación, en la parte derecha de la pantalla, donde se muestra cómo se verá tu notificación al recibirla desde un dispositivo Android o iOS. 
 
 Para enviar una notificación cualquiera, los campos mínimos que hay que completar son: la Alerta, bajo la pestaña Push, y al menos un Target, el resto de opciones del editor te ayudarán a enriquecer tus notificaciones, a realizar acciones cuando el usuario pulse sobre la notificación, a segmentar tus envíos y a programar la hora y el día en que quieres que se envíen tus notificaciones.
 
@@ -109,9 +109,9 @@ Si quieres que tus notificaciones llegue correctamente a la mayoría de disposit
 
 
 #### Contenido
-En Content podrás seleccionar qué acción adicional realizará la notificación cuando el usuario la abra, de esta manera, podrás enviar a tus usuarios una pantalla con texto enriquecido o una URL externa, adicional a la notificación. Esta función es muy útil en campañas en dónde la notificación lleva un mensaje que despierta el interés del usuario y que puede derivar en acciones inmediatas.
+En Contenido podrás seleccionar qué acción adicional realizará la notificación cuando el usuario la abra, de esta manera, podrás enviar a tus usuarios una pantalla con texto enriquecido o una URL externa, adicional a la notificación. Esta función es muy útil en campañas en dónde la notificación lleva un mensaje que despierta el interés del usuario y que puede derivar en acciones inmediatas.
 
-* **None**: Selecciona esta opción para que al abrir la notificación resulte en la apertura de tu App, de manera similar que si lo hiciera desde el ícono de tu App.
+* **Ninguno**: Selecciona esta opción para que al abrir la notificación resulte en la apertura de tu App, de manera similar que si lo hiciera desde el ícono de tu App.
 * **URL**: introduce una URL con una landing page que se abrirá en el smartphone al momento de abrir la notificación enviada.
 * **HTML**: Define un mensaje en texto rico HTML, que podrá contener enlaces externos a URL's o imagenes que se presentará al usuario al momento de abrir la notificación.
 
@@ -121,19 +121,19 @@ En Content podrás seleccionar qué acción adicional realizará la notificació
 
 
 #### Audiencia
-Utiliza la pestaña Target para seleccionar qué usuarios quieres que reciban esta notificación. Podrás enviar la notificación a todos los usuarios de tu App, a uno o más usuarios o dispositivos seleccionados manualmente, a tus segmentos, o también podrás importar un fichero que contenga una lista de usuarios o dispositivos.
+Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban esta notificación. Podrás enviar la notificación a todos los usuarios de tu App, a uno o más usuarios o dispositivos seleccionados manualmente, a tus segmentos, o también podrás importar un fichero que contenga una lista de usuarios o dispositivos.
 
-* **All**: Seleccionando All, la notificación se enviará a todos los usuarios registrados en la plataforma y activos en el momento del envío.
-* **User**: Aquí podrás elegir uno o más usuarios o dispositivos escribiéndolos manualmente uno a uno, para ello, identifica a tus usuarios por su Alias, o a los dispositivos por su Device ID. Recuerda que un usuario tiene un Alias, pero puede tener uno o más dispositivos. 
-* **Segment**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
-* **File**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
+* **Todos**: Seleccionando Todos, la notificación se enviará a todos los usuarios registrados en la plataforma y activos en el momento del envío.
+* **Usuario**: Aquí podrás elegir uno o más usuarios o dispositivos escribiéndolos manualmente uno a uno, para ello, identifica a tus usuarios por su Alias, o a los dispositivos por su Device ID. Recuerda que un usuario tiene un Alias, pero puede tener uno o más dispositivos. 
+* **Segmento**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
+* **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
 
 [![](http://i.imgur.com/iAGxI3tl.png)](http://i.imgur.com/iAGxI3t.png)
 
 
 
-#### Schedule
-En Schedule eliges cuándo enviar tu notificación, también programar tu envío para que se realice a una hora o día determinados. Twinpush también pone a disposición una potente herramienta para programar campañas de marketing en Crear campaña. En una campaña podrás enviar una notificación, la que podrás repetir el número de veces que indiques, dentro de un periodo establecido. El periodo lo estableces tu mismo seleccionando la fecha de inicio y fin, o el número de días, el rango de horas, y los días de la semana. 
+#### Programación
+En Programación eliges cuándo enviar tu notificación, también programar tu envío para que se realice a una hora o día determinados. Twinpush también pone a disposición una potente herramienta para programar campañas de marketing en Crear campaña. En una campaña podrás enviar una notificación, la que podrás repetir el número de veces que indiques, dentro de un periodo establecido. El periodo lo estableces tu mismo seleccionando la fecha de inicio y fin, o el número de días, el rango de horas, y los días de la semana. 
 
 * **Ahora**: La notificación se enviará inmediatamente despues de clicar Enviar que encontrarás al pulsar Guardar y previsualizar.
 * **Elegir fecha**: La notificación se enviará en el día y hora establecidos.
@@ -153,24 +153,24 @@ Esta configuración permite establecer un periodo de tiempo entre dos fechas don
 [![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
 
 
-#### Advanced
-En Advanced, podemos establecer la velocidad de envío de la notificación y también interactuar con la aplicación residente en el smartphone.
+#### Avanzado
+En Avanzado, podemos establecer la velocidad de envío de la notificación y también interactuar con la aplicación residente en el smartphone.
 Podrás asociar esta notificación a un determinado grupo, de esta manera podrás agrupar tus notificaciones por campañas, periodos, productos, clientes objetivo o lo que tu quieras.
 
 La velocidad de envío es útil cuando se quiere enviar una notificación que conlleve a una acción en enlaces externos a un número elevado de usuarios. Es posible que el pico de tráfico generado por ese gran número de usuarios en ese instante repercuta en la disponibilidad de los servicios de los enlaces externos, perjudicando la experiencia del usuario. TwinPush nos permite distribuir en el tiempo el envío de una misma notificación a un gran número de usuarios. 
 
 Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo alterar el número de Badge de la App, (el badge es el número que aparece en el ícono de la App), el tono musical que sonará al recibir la notificación o la etiqueta que identifica en la App el tipo de notificación recibida, pudiendo configurar en la Aplicaciones acciones concretas según el Tag recibido.
 
-* **Group name**: Añade esta notificación a un grupo existente o a un nuevo grupo, escribe el nombre del grupo aquí.
-* **Delivery speed**: Elige la velocidad en que se distribuirá la notificación a tus usuarios.
+* **Grupo de notificaciones**: Añade esta notificación a un grupo existente o a un nuevo grupo, escribe el nombre del grupo aquí.
+* **Velocidad de envío**: Elige la velocidad en que se distribuirá la notificación a tus usuarios.
 * **Badge**: Escribe el badge que aparecerá en el Smartphone, por defecto +1 al número que ya tenga el ícono.
-* **Sound**: Elige el tono musical que sonará al recibir la notificación, en el caso que tu App disponga de varios sonidos.
+* **Sonido**: Elige el tono musical que sonará al recibir la notificación, en el caso que tu App disponga de varios sonidos.
 * **Tags**: Envía al Smartphone el tipo de notificación que estas enviando, en el caso que tu App disponga de diferentes tipos.
-* **Custom Properties**: Las propiedades añadidas a las notificaciones permiten enviar información (clave/valor) a la aplicación que puede ser interpretada para realizar ciertas acciones, como dirigir al usuario a una sección en concreto de la Aplicación o mostrar contenido o funcionalidades específicas.
+* **Propiedades personalizadas**: Las propiedades añadidas a las notificaciones permiten enviar información (clave/valor) a la aplicación que puede ser interpretada para realizar ciertas acciones, como dirigir al usuario a una sección en concreto de la Aplicación o mostrar contenido o funcionalidades específicas.
 
 [![](https://i.imgur.com/qT23gGR.png)](https://i.imgur.com/qT23gGR.png)
 
-* **iOS Advanced settings**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
+* **Ajustes avanzados de iOS**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
 
 [![](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)
 
