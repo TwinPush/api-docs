@@ -179,13 +179,24 @@ Through TwinPush, we can interact with the App installed in the user's smartphon
 
 ###Save & Preview
 
-Once you have completed your notification, you can save it and then send it, by clicking on Save & Preview at the bottom right of the page. TwinPush will save your notification with all your settings and will show you a summary page in your screen. Check your notification and settings and if it's fine, send it with the button Send. If not, you can edit and correct it with the Edit button, or you can also Delete it. The Duplicate button is very useful to reuse notifications, you can create your own templates and make variations over an existing template.
+Once you have completed your notification, you can save it and then send it, by clicking on Save & Preview at the bottom right of the page. TwinPush will save your notification with all your settings and will show you a summary page in your screen. Check your notification and settings and if everything is fine, send it with the Send button. If not, you can edit and correct it with the Edit button, or you can also Delete it. The Duplicate button is very useful to reuse notifications, you can create your own templates and make variations over an existing template.
 
 
 [![](http://i.imgur.com/fgztUpsl.png)](http://i.imgur.com/fgztUps.png)
 
 
+### Details of a Delivered Campaign
+When clicking over one of your campaigns you can see all the information related to the delivery.
 
+Campaign statistics
+
+* **Reached Devices**: The number of target devices of the campaign.
+* **Total of Push sent**: The number of devices to which the notification has been sent.
+* **Opening Ration**: ratio (%) of devices that have opened the notification from the phone main screen of from the notification center.
+* **Retention Impact**: ration (%) of improvement over the App retention (users that have accessed to the App in that moment) compared to the mean of user access in the last 30 previous days.
+* **Download a CSV file with the campaign results**: Generation and downloading a CSV file containing the results of the delivery, impacted users, data and received openings.
+
+[![](https://i.imgur.com/1WZ3vKL.png)](https://i.imgur.com/1WZ3vKL.png)
 
 
 
@@ -260,6 +271,9 @@ TwinPush provides you all the information gathered from the device from which yo
 TwinPush also allows you to segment your users according to the time they spend using your App. With this functionality you will be able to create campaigns to encourage the use of your App, you can reward your users with exclusive offers for that segment. To add a filter, click on Usage statistics and then Add in the upper right, it will pop up a window like the following screenshot. You can add filters on the total usage time, the inactivity period, the daily average usage time or the time lapsed from your app installation.
 
 [![](http://i.imgur.com/SPZbFJdl.png)](http://i.imgur.com/SPZbFJd.png)
+
+
+
 
 
 
