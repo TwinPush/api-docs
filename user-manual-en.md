@@ -11,7 +11,7 @@ Troubles? please visit our FAQ Section and find answers or just Contact us, we w
 
 
 ## Register and Login
-If you don't have a user's account in Twinpush yet, you can register at [app.twinpush.com](https://app.twinpush.com/). Enterpise customers, may have its own subdomain to accesss: yourcompany.twinpush.com, please [contact us](mailto:info@twincoders.com) to get your own subdomain.
+If you don't have a user's account in Twinpush yet, you can register at [app.twinpush.com](https://app.twinpush.com/). Business customers, may have their own subdomain to accesss: [yourcompany.twinpush.com](mailto:info@twincoders.com), please contact us to get your own subdomain.
 
 From this screen you will be able to:
 
@@ -38,9 +38,9 @@ Just write the email address you used when registering and in short time you wil
 
 
 ## Apps
-The first time you access to TwinPush, we will ask you to create your first App, by the moment we will only ask you your App Name and an Icon, just for your own reference. Later, you may modify these settings. When clicking to Creat App you wil be creating the workspace for your App.
+The first time you access to TwinPush, we will ask you to create your first App, by the moment we will only ask you your App Name and your App Icon, just for your own reference. Later, you may modify these settings. When clicking to Create App you wil be creating the workspace for your App.
 
-* **App name**: try to give a name which describe your app. A good name will help to easy identify that app to you and to your collegues. Example: Customers Premium EU Android Production.
+* **App name**: try to give a name that describes your app. A good name will help to easy identify that app to you and to your team. Example: Customers Premium EU Android Production.
 * **Icon**: It doesn't have to be the same icon that you use in the Market, it just allows you to quickly identify your app when you have many.
 
 [![](http://i.imgur.com/jPDcJEbl.png)](http://i.imgur.com/jPDcJEb.png)
@@ -49,7 +49,7 @@ The first time you access to TwinPush, we will ask you to create your first App,
 
 
 ### Your First App
-Now the workspace of your App is already created in TwinPush, you can see a Dashboard for your App. Next, you should integrate the TwinPush SDK into your mobile application and upload your certificate in order to send notifications. Follow the [SDK instructions here](http://www.twinpush.com/quickstart). 
+Now the workspace of your App is already created in TwinPush, you will land into your App Dashboard. Next, you must integrate the TwinPush SDK into your mobile application and upload your certificate in order to send notifications. Follow the [SDK instructions here](http://www.twinpush.com/quickstart). 
 
 [![](http://i.imgur.com/DTKxllIl.png)](http://i.imgur.com/DTKxllI.png)
 
@@ -57,7 +57,7 @@ Now the workspace of your App is already created in TwinPush, you can see a Dash
 
 
 ### More Apps
-Once you have created your first App, you can add more Apps at any time. If you want to add one more App and you are currently at the Dashboard of any App, click on the icon or name of your App in the upper bar and choose from the dropdown menu All applications. You will get a screen of all your Apps. By clicking down over the New Application icon you will be creating a new App. If you have two of more Apps already, you will get this screen as soon as you start session in TwinPush. Click over any App to get into the Dashboard of that App.
+Once you have created your first App, you can add more Apps at any time. If you want to add one more App and you currently are at the Dashboard of any App, click on the icon or name of your App in the upper bar and choose from the dropdown menu Create a new application option. You will get a screen of all your Apps. By clicking down over the New Application icon you will be creating a new App. If you have two of more Apps already, you will get this screen as soon as you start session in TwinPush. Click over any App to get into the Dashboard of that App.
 
 [![](http://i.imgur.com/Id54lKUl.png)](http://i.imgur.com/Id54lKU.png)
 
