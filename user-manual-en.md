@@ -158,17 +158,22 @@ In the Advanced tab, you can tie this notification to a group, you can set the d
 
 You can tie one or more notifications into a group, so you can create different groups according to your campaigns, seasons, products, targets, or whatever you want.
 
-The delivery speed is very useful when you send massive notifications that contains actions to external links. It's possible that a peak of generated traffic impacts over the service availability of those external links, damaging the user's experience, as a consequence. TwinPush allow us to distribute along the time the delivery of a massive notification. 
+The delivery speed is very useful when you send massive notifications that contains actions to external links. It's possible that the peak of the generated traffic impacts over the service availability of those external links, damaging the user's experience, as a consequence. TwinPush allow us to distribute the delivery of a massive notification along the time. 
 
-Through TwinPush, we can interact with the App installed in the user's smartphone, we could set the Application Badge number, (the badge, is the number shown in the App icon), the ringtone that is played when a notification is received or the tag that identifies the type os notification received in the App, so you can set in you App to take different actions according to the Tag received.
+Through TwinPush, we can interact with the App installed in the user's smartphone, we could set the Application Badge number, (the badge, is the number shown in the App icon), the ringtone that is played when a notification is received or the tag that identifies the type of notification received in the App, so you can set in your App to take different actions according to the Tag received.
 
-* **Group name**: Add here this notification into a group or create a new group, just type a group name.
-* **Delivery speed**: Choose the speed that a massive notification would be distributed along your users.
-* **Badge**: Write here the badge that will show into the Smartphone, by default +1 will add one to the current number.
-* **Sound**: Choose the ringtone that will play when this notification is received, use only in case your App was already set with a few ringtones.
-* **Tags**: Send to your App in the Smartphone the type of notification you are sending, use only in case your App was already prepared to receive different types.
+* **Group name**: Add here this notification into a group or create a new group by typing the group name here.
+* **Delivery speed**: Choose the speed that a massive notification would be distributed along the time to your users.
+* **Badge**: Write here the badge that will get showed into the Smartphone, by default +1 will add one to the current number.
+* **Sound**: Choose the ringtone that will get played when this notification is received, use only in case your App was already set with a few ringtones.
+* **Tags**: Let your App in the Smartphone know the type of notification you are sending, use only in case your App was already prepared to receive different types.
+* **Custom Properties**: They are properties added to notifications that allows you to send information (key/value) to the App that can be interpretated to perform different task, such as to address to the user to a particular section in the App or to show special content or specific functionalities.
 
-[![](http://i.imgur.com/mWeUQVyl.png)](http://i.imgur.com/mWeUQVy.png)
+[![](https://i.imgur.com/qT23gGR.png)](https://i.imgur.com/qT23gGR.png)
+
+* **iOS Advanced settings**: From iOS 10 is possible to send file attachments together with the notification itself in order to show to the user images, video, sound... That will get shown without opening the App.
+
+[![](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)
 
 
 
