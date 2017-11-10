@@ -273,6 +273,11 @@ TwinPush also allows you to segment your users according to the time they spend 
 [![](http://i.imgur.com/SPZbFJdl.png)](http://i.imgur.com/SPZbFJd.png)
 
 
+#### Segments to users with NOT matching values
+TwinPush offers the posibility to create conditions to send notifications to users that Not comply certain conditions.
+To set it, you just have to select the property and asign it a negative value.
+
+[![](https://i.imgur.com/XbcVmJXl.png)](https://i.imgur.com/XbcVmJX.png)
 
 
 
