@@ -108,8 +108,7 @@ Si quieres que tus notificaciones llegue correctamente a la mayoría de disposit
 * **Buzón**: Marca este checkbox para que la notificación se almacene en el buzón de mensajes del usuario, de esta manera el usuario podrá consultarla cuando quiera.
 
 
-[![](http://i.imgur.com/BA6trnil.png)](http://i.imgur.com/BA6trni.png)
-
+[![](http://i.imgur.com/frfnqNhl.png)](http://i.imgur.com/frfnqNh.png)
 
 
 #### Contenido
@@ -119,8 +118,7 @@ En Contenido podrás seleccionar qué acción adicional realizará la notificaci
 * **URL**: introduce una URL con una landing page que se abrirá en el smartphone al momento de abrir la notificación enviada.
 * **HTML**: Define un mensaje en texto rico HTML, que podrá contener enlaces externos a URL's o imagenes que se presentará al usuario al momento de abrir la notificación.
 
-[![](http://i.imgur.com/BQd7LY9l.png)](http://i.imgur.com/BQd7LY9.png)
-
+[![](http://i.imgur.com/IuzlnQMl.png)](http://i.imgur.com/IuzlnQM.png)
 
 
 
@@ -143,7 +141,7 @@ En Programación eliges cuándo enviar tu notificación, también programar tu e
 * **Elegir fecha**: La notificación se enviará en el día y hora establecidos.
 
 
-[![](http://i.imgur.com/9CkN3rJl.png)](http://i.imgur.com/9CkN3rJ.png)
+[![](http://i.imgur.com/8cIDa1ml.png)](http://i.imgur.com/8cIDa1m.png)
 
 * **Crear campaña**: Se enviará la misma notificación repetida un número de veces dentro del periodo establecido, pudiendo establecer los límites de envíos a un mismo dispositivo en un periodo de tiempo.
 
@@ -153,8 +151,9 @@ Esta configuración permite establecer un periodo de tiempo entre dos fechas don
  * **Horario**: Horario de actividad de la campaña.
  * **Días de la semana**: Permite seleccionar los días de la semana que la campaña debe ser envíada.
  * **Límites**: Se deben establecer los límites de envíos por cada dispositivo. Número de envíos totales, frecuencia mínima y el tiempo mínimo entre dos notificaciones a un mismo dispositivo.
- 
-[![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
+
+
+[![](https://i.imgur.com/yE7QKjAl.png)](https://i.imgur.com/yE7QKjA.png)
 
 
 #### Avanzado
@@ -172,7 +171,8 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 * **Tags**: Envía al Smartphone el tipo de notificación que estas enviando, en el caso que tu App disponga de diferentes tipos.
 * **Propiedades personalizadas**: Las propiedades añadidas a las notificaciones permiten enviar información (clave/valor) a la aplicación que puede ser interpretada para realizar ciertas acciones, como dirigir al usuario a una sección en concreto de la Aplicación o mostrar contenido o funcionalidades específicas.
 
-[![](https://i.imgur.com/qT23gGR.png)](https://i.imgur.com/qT23gGR.png)
+
+[![](https://i.imgur.com/0K9uIkBl.png)](https://i.imgur.com/0K9uIkB.png)
 
 * **Ajustes avanzados de iOS**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
 
@@ -183,7 +183,8 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 
 Una vez hayas completado tu notificación, podrás salvarla y enviarla clicando sobre Guardar y previsualizar abajo a la derecha. TwinPush guardará tu notificación configurada y te mostrará una pantalla resumen. Comprueba que tu notificación este correcta y envíala con el boton Send. Si no lo está, podrás editarla con Edit, o borrarla con Delete. El botón Duplicate te será de gran utilidad para reutilizar notificaciones o para crear tus propias plantillas sobre las cuales puedas hacer variaciones sobre un duplicado de una plantilla original.
 
-[![](http://i.imgur.com/hgMI9wll.png)](http://i.imgur.com/hgMI9wl.png)
+
+[![](http://i.imgur.com/CEWk6mol.png)](http://i.imgur.com/CEWk6mo.png)
 
 ### Detalle de Campaña Enviada
 Al clicar sobre una de las campañas podremos ver toda la información relativa al envío.
@@ -196,7 +197,7 @@ Estadísticos de la campaña
 * **Impacto en la Retención**: % de mejora en la retención de la Aplicación ( usuarios que han accedido a la Aplicación en ese momento) comparado conla media de accesos de usuarios en los últimos 30 días previos al envío.
 * **Descarga de CSV con resultados de la campaña**: Generación y descarga de un fichero CSV con los resultados de los envío, usuarios impactados, sus datos y las aperturas recibidas.
 
-[![](https://i.imgur.com/1WZ3vKL.png)](https://i.imgur.com/1WZ3vKL.png)
+[![](https://i.imgur.com/1WZ3vKLl.png)](https://i.imgur.com/1WZ3vKL.png)
 
 
 
@@ -273,7 +274,7 @@ TwinPush también te permite segmentar a tus usuarios según el tiempo que usan 
 TwinPush ofrece la posibilidad de crear condiciones destinadas a envíos de usuarios que NO cumplan ciertas condiciones.
 Para establecerlo, basta con selecionar la propiedad y asignarle el valor negativo.
 
-[![](https://i.imgur.com/XbcVmJX.png)](https://i.imgur.com/XbcVmJX.png)
+[![](https://i.imgur.com/wik5yH6l.png)](https://i.imgur.com/wik5yH6.png)
 
 
 #### Resumen
