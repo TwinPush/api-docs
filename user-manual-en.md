@@ -134,7 +134,7 @@ Use the Target tab to select the users you want them to receive this notificatio
 #### Schedule
 In the Schedule tab, you choose when your notification will be sent out. You can send it now or scheduled it at a particular date/time. TwinPush also offers you a powerful tool to program marketing campaigns under the Setup campaign tab. Into a campaign you can send a notification that you can repeat a number of times you previouly set into a period of time. You can set this period of time to start and end at any time/date, or simple during a given number of days, you can even set the range of hours or the days of the week. 
 
-* **Now**: The notification will send as soon as you click on Send, that you will find when clicking Save & Preview button.
+* **Now**: The notification will send as soon as you click on Send, that you will find after clicking Save & Preview button.
 * **Schedule date**: The notification will be sent out at scheduled date and time set here.
 
 [![](http://i.imgur.com/BuzqlUsl.png)](http://i.imgur.com/BuzqlUs.png)
