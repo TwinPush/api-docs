@@ -81,7 +81,9 @@ o también sobre Crear nueva notificación arriba a la derecha.
 
 Si ya has enviado notificaciones con esa aplicación el botón Push te llevará a la siguiente pantalla. Desde aquí podras ver estadísticas de tus notificaciones enviadas, tus grupos de notificaciones, tus últimas notificaciones, tus campañas, etc. También podras reutilizar grupos, notificaciones o campañas, más adelante te explicaremos cómo. Para crear una nueva notificación desde esta pantalla, clica sobre Crear nueva notificación arriba a la derecha.
 
-[![](http://i.imgur.com/lJMxU4il.png)](http://i.imgur.com/lJMxU4i.png)
+
+[![](http://i.imgur.com/UADyhoCl.png)](http://i.imgur.com/UADyhoC.png)
+
 
 ### Editor de Notificaciones
 Al clicar sobre Crear nueva notificación entrarás en el Editor de notificaciones.
@@ -92,7 +94,8 @@ El editor de notificaciones se presenta como una serie de pestañas: Push, Conte
 Para enviar una notificación cualquiera, los campos mínimos que hay que completar son: la Alerta, bajo la pestaña Push, y al menos un Target, el resto de opciones del editor te ayudarán a enriquecer tus notificaciones, a realizar acciones cuando el usuario pulse sobre la notificación, a segmentar tus envíos y a programar la hora y el día en que quieres que se envíen tus notificaciones.
 
 
-[![](http://i.imgur.com/vyVvopkl.png)](http://i.imgur.com/vyVvopk.png)
+[![](http://i.imgur.com/M7bDRCAl.png)](http://i.imgur.com/M7bDRCA.png)
+
 
 
 #### Push 
@@ -105,7 +108,8 @@ Si quieres que tus notificaciones llegue correctamente a la mayoría de disposit
 * **Buzón**: Marca este checkbox para que la notificación se almacene en el buzón de mensajes del usuario, de esta manera el usuario podrá consultarla cuando quiera.
 
 
-[![](http://i.imgur.com/Z5dK5ljl.png)](http://i.imgur.com/Z5dK5lj.png)
+[![](http://i.imgur.com/BA6trnil.png)](http://i.imgur.com/BA6trni.png)
+
 
 
 #### Contenido
