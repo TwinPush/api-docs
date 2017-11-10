@@ -414,35 +414,59 @@ In this section you can set and check your authentication keys with the server, 
 
 
 ### Team Management:
-TwinPush allows you to manage your own team to access to TwinPush platform. To invite a new member, as a guest, just write the new member's email address, TwinPush will send him or her an invitation email with instructions on how to get access to the platform.
+TwinPush allows you to manage your own team to access to TwinPush platform. To invite a new member, just click on Add new member and write his or her email address, TwinPush will send him or her an invitation email with instructions on how to get access to the platform.
 
-Guest users have complete access to:
-
-* Create and send Notifications.
-* All users information.
-
-Guest users have no access to:
-
-* Settings, they cannot even see the API Keys or configure the APNS or GCM.
-* Team Management.
-
-The Administrator, the one who created the account, is the only one capable to add new members and to revoke access to any guest user.
-
-[![](http://i.imgur.com/JKLo4unl.png)](http://i.imgur.com/JKLo4un.png)
+[![](http://i.imgur.com/1x9WJAcl.png)](http://i.imgur.com/1x9WJAc.png)
 
 
-### CGCM and APNS Settings:
 
-In the Settings screen, TwinPush provides you access to configure [Apple APNS](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW9/) and [Google GCM](https://developers.google.com/cloud-messaging/)services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](http://developers.twinpush.com/quickstart).
+#### User roles
+There are three user roles that the account owner or account administrators can set to each member of your team: Guest, User or Administrator.
+
+**Guest**: Guest users have access to:
+
+* Audience information.
+* List of registered devices.
+* Statistics of Push notifications.
+
+**User**: Users with the user role, have also complete access to:
+
+* Target managements, can create and edit existing segments.
+* Send Push notifications, can create, edit, send notifications and create, edit and activate campaigns.
+
+**Administrator**: Administrators have total control of the App and they can also access to:
+
+* Application settings, including viewing API Keys and configure APNS or FCM/GCM.
+* Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
+* Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
+
+[![](http://i.imgur.com/JoCnWVol.png)](http://i.imgur.com/JoCnWVo.png)
+
+
+
+### FCM (GCM) and APNS Settings:
+
+In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](http://help.apple.com/xcode/mac/current/#/dev11b059073) and [Google FCM](https://developers.google.com/cloud-messaging/)services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](http://developers.twinpush.com/quickstart).
+
+[![](http://i.imgur.com/ZhWy4lal.png)](http://i.imgur.com/ZhWy4la.png)
+
+The access to the Google Messaging Services is granted by the **API Key**, this can be provided by Firebase Cloud Messaging (FCM) or by the former Google Cloud Messaging (GCM) service. To set the API Key you need to click on the dropdown menu and choose the proper platform, paste the API Key and the Package name and finally click on the Update App button.
+
+[![](http://i.imgur.com/v33jOuOl.png)](http://i.imgur.com/v33jOuO.png)
+
+
+Apple messaging services is accessed with tieh **APNS certificate**, that expires after a year and must be renew, or by **token** that it does not expire.
+
+[![](https://i.imgur.com/SVbp9Txl.png)](https://i.imgur.com/SVbp9Tx.png)
+
 
 TwinPush keeps track on the expiration date of your APNS certificate and will show you an alert when the time left to expire gets short avoiding you to get errors of not valid certificate when sending notifications to iOS devices.
 
 
-[![](http://i.imgur.com/9nwWeDol.png)](http://i.imgur.com/9nwWeDo.png)
+**Uploading a APNS Certificate:** While uploading the APNS certificate (.p12 file) you should consider to set it as "Development" if you are compling and testing App versions in our platform, or "Production" if your App is already tested and ready for the Store.
 
+[![](http://i.imgur.com/Cd3mCxzl.png)](http://i.imgur.com/Cd3mCxz.png)
 
+**Token:** Similarly to the APNS, while uploading the token (.p8 file) you should consider if it goes to your Development or to your Production environment.
 
-### Uploading a APNS Certificate:
-While uploading the APNS certificate that Apple provides you, you should consider to set it as "Development" if you are compling and testing App versions in our platform, or "Production" if your App is already tested and ready for the Store.
-
-[![](http://i.imgur.com/B9bIhgdl.png)](http://i.imgur.com/B9bIhgd.png)
+[![](http://i.imgur.com/chuGkLhl.png)](http://i.imgur.com/chuGkLh.png)
