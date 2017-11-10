@@ -78,8 +78,8 @@ or you can also click on Create new notification on the upper right corner of th
 
 If you have already sent notifications using this App, the Push icon will take you to the following screen. From here you can see statistics of your sent notifications, your groups of notifications, your last notifications, your campaigns, etc. You can also reuse groups, notifications or campaigns, we will explain you later how to do that. To create a new nottification from this screen, click on Create new notification on the upper right corner of the screen.
 
-[![](http://i.imgur.com/YDpXFH9l.png)](http://i.imgur.com/YDpXFH9.png)
 
+[![](http://i.imgur.com/whN5VHQl.png)](http://i.imgur.com/whN5VHQ.png)
 
 
 ### Push Composer
@@ -151,7 +151,7 @@ This configuration can set a period of time between two time/dates when TwinPush
 * **Limits**: You can set here the notification limits for each device. The total number of notifications, the frequency and the minimum time between two notifications send to a same device.
 
 
-[![](https://i.imgur.com/GfJPk21.png)](https://i.imgur.com/GfJPk21.png)
+[![](https://i.imgur.com/GfJPk21l.png)](https://i.imgur.com/GfJPk21.png)
 
 #### Advanced
 In the Advanced tab, you can tie this notification to a group, you can set the delivery speed and you can also interact with the application installed in the smartphone.
@@ -169,9 +169,9 @@ Through TwinPush, we can interact with the App installed in the user's smartphon
 * **Tags**: Let your App in the Smartphone know the type of notification you are sending, use only in case your App was already prepared to receive different types.
 * **Custom Properties**: They are properties added to notifications that allows you to send information (key/value) to the App that can be interpretated to perform different task, such as to address to the user to a particular section in the App or to show special content or specific functionalities.
 
-[![](https://i.imgur.com/qT23gGR.png)](https://i.imgur.com/qT23gGR.png)
+[![](https://i.imgur.com/qT23gGRl.png)](https://i.imgur.com/qT23gGR.png)
 
-* **iOS Advanced settings**: From iOS 10 is possible to send file attachments together with the notification itself in order to show to the user images, video, sound... That will get shown without opening the App.
+* **Advanced iOS settings**: From iOS 10 is possible to send file attachments together with the notification itself in order to show to the user images, video, sound... That will get shown without opening the App.
 
 [![](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)](https://camo.githubusercontent.com/ffe9d4528c9e8a2d3bf35294b6e9fb731077bfcb/687474703a2f2f692e696d6775722e636f6d2f66526b55716b482e676966)
 
@@ -196,7 +196,7 @@ Campaign statistics
 * **Retention Impact**: ration (%) of improvement over the App retention (users that have accessed to the App in that moment) compared to the mean of user access in the last 30 previous days.
 * **Download a CSV file with the campaign results**: Generation and downloading a CSV file containing the results of the delivery, impacted users, data and received openings.
 
-[![](https://i.imgur.com/1WZ3vKL.png)](https://i.imgur.com/1WZ3vKL.png)
+[![](https://i.imgur.com/1WZ3vKLl.png)](https://i.imgur.com/1WZ3vKL.png)
 
 
 
