@@ -396,7 +396,7 @@ You can modify here basic information of your App, such as:
 * **Icon**: Upload here an image that will identify your App in TwinPush.
 * **Badge number**: This parameter sets the number displayed over the the icon of your App in iOS devices. This value is +1 by default.
 
-[![](http://i.imgur.com/mInigYol.png)](http://i.imgur.com/mInigYo.png)
+[![](http://i.imgur.com/qCbrAvSl.png)](http://i.imgur.com/qCbrAvS.png)
 
 
 
