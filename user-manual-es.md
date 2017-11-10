@@ -292,7 +292,7 @@ Finalmente, dale un nombre a tu segmento y guárdalo clicando Crear Segmento.
 ## Audiencia / Usuarios
 
 TwinPush muestra los datos estadísticos más relevantes de tus usuarios, agrupados en tres bloques de información, Datos de registros y uso de la Aplicación, datos de Usuarios y datos de Dispositivos.
-Para conocer más en detalle los datos de nuestros usuarios y tener la posibilidad de exportarlos para su estudio exhaustivo, deberemos hacerlo en la vista de ["Dispositivos"]()
+Para conocer más en detalle los datos de nuestros usuarios y tener la posibilidad de exportarlos para su estudio exhaustivo, deberemos hacerlo en la vista de ["Dispositivos"](#dispositivos)
 
 ### Registros y Uso de la Aplicación:
 **Nuevos registros**: Gráfica con los registros nuevos recibidos en los últimos 30 días.
@@ -438,8 +438,6 @@ Hay tres roles de usuarios que el propietario o los administradores de la cuenta
 * Claves de autenticación, para autenticar el acceso de la App móvil (SDK) y el API de TwinPush.
 * Gestión del equipo, pueden invitar nuevos usuarios, editar roles de usuarios existentes y revocar accesos de otros usuarios.
 
-
-
 [![](http://i.imgur.com/98u3GDAl.png)](http://i.imgur.com/98u3GDA.png)
 
 
@@ -454,6 +452,7 @@ En la vista de Ajustes de TwinPush también dispondremos del acceso a la configu
 El acceso a los servicios de mensajería de Google se realiza por el **API Key** que puede ser el proporcionado por el Servicio Firebase Cloud Messaging (FCM) o también por el anterior servicio Google Cloud Messaging (GCM). Para configurar el API Key es necesario desplegar el menu y seleccionar la plataforma adecuada, pegar el API Key y el nombre del Paquete y darle al botón Actualizar App.
 
 [![](https://i.imgur.com/0B1QppDl.png)](https://i.imgur.com/0B1QppD.png)
+
 
 Los servicios de mensajería de Apple se acceden con el **certificado APNS** que caduca anualmente y debe renovarse, o por **token** que no caduca. 
 
