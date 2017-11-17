@@ -291,11 +291,10 @@ Finalmente, dale un nombre a tu segmento y guárdalo clicando Crear Segmento.
 
 ## Audiencia / Usuarios
 
-TwinPush muestra los datos estadísticos más relevantes de tus usuarios, agrupados en tres bloques de información, Datos de registros y uso de la Aplicación, datos de Usuarios y datos de Dispositivos.
+TwinPush muestra los datos estadísticos más relevantes de tus usuarios, agrupados en tres bloques de información, Uso de la Aplicación, datos de Usuarios y datos de Dispositivos.
 Para conocer más en detalle los datos de nuestros usuarios y tener la posibilidad de exportarlos para su estudio exhaustivo, deberemos hacerlo en la vista de ["Dispositivos"](#dispositivos)
 
-### Registros y Uso de la Aplicación:
-**Nuevos registros**: Gráfica con los registros nuevos recibidos en los últimos 30 días.
+### Uso de la Aplicación:
 
 **Plataforma**: Número de dispositivos por plataforma, iOS o Android.
 
