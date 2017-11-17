@@ -130,8 +130,8 @@ Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban
 * **Segmento**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
 * **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
 
-[![](http://i.imgur.com/iAGxI3tl.png)](http://i.imgur.com/iAGxI3t.png)
 
+[![](http://i.imgur.com/TMrf4aTl.png)](http://i.imgur.com/TMrf4aT.png)
 
 
 #### Programación
@@ -308,13 +308,14 @@ Para conocer más en detalle los datos de nuestros usuarios y tener la posibilid
 * No ha usado la aplicación desde hace ...
 
 
-[![](http://i.imgur.com/zvULR6gl.png)](http://i.imgur.com/zvULR6g.png)
+[![](http://i.imgur.com/yPlwCdWl.png)](http://i.imgur.com/yPlwCdW.png)
+
 
 
 ### Propiedades de Usuario:
 Mediante la [Integración de la "custom properties" en el SDK](http://developers.twinpush.com/quickstart), TwinPush es capaz de recibir y mostrar los datos relativos a las propiedades de los usuarios, estas gráficas se configuran automáticamente según el tipo de propiedad.
 
-[![](http://i.imgur.com/QbrLVWcl.png)](http://i.imgur.com/QbrLVWc.png)
+[![](http://i.imgur.com/wL83pgPl.png)](http://i.imgur.com/wL83pgP.png)
 
 
 
@@ -324,7 +325,7 @@ Los datos de dispositivo que se muestran gráficamente son:
 * **Idioma** en el que está el dispositivo configurado.
 * **Fabricante** del dispositivo.
 
-[![](http://i.imgur.com/LYs388ll.png)](http://i.imgur.com/LYs388l.png)
+[![](http://i.imgur.com/yMS4Mall.png)](http://i.imgur.com/yMS4Mal.png)
 
 
 
@@ -367,7 +368,7 @@ Siempre que se haya realizado una [integración del SDK](http://developers.twinp
 #### Datos de Usuario (Custom Properties):
 El [SDK](http://developers.twinpush.com/quickstart) permite el registro de propiedades de usuario en TwinPush que también se mostrarán en la vista de Dispositivos.
 
-[![](http://i.imgur.com/foD7VQyl.png)](http://i.imgur.com/foD7VQy.png)
+[![](http://i.imgur.com/vqfEe5Ol.png)](http://i.imgur.com/vqfEe5O.png)
 
 
 
