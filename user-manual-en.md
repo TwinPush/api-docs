@@ -296,11 +296,10 @@ Finally, you can give a name to your target and save it by clicking on Create Ta
 
 ## Audience / Users
 
-TwinPush gives you the most relevat statistics from your users. Statistics are grouped in three blocks: Registered Users Data and Application usage, Users data and Devices data.
+TwinPush gives you the most relevat statistics from your users. Statistics are grouped in three blocks: Application usage, Users data and Devices data.
 Go to the "[Devices](#devices)" view to get a more detailed information of your users and to export this data for an exhaustive study of this information.
 
-### Registered User and Application usage:
-**New registrations**: This chart shows new registrations within the latest 30 days.
+### Application usage:
 
 **Platform**: The number of devices by platform: iOS or Android.
 
