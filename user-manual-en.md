@@ -103,7 +103,7 @@ If you want your notifications reach most devices correctly, try to create conci
 * **Mailbox**: Mark this checkbox to make this notification get saved in the user's mailbox, in this way the user can review it whenever he wants.
 
 
-[![](http://i.imgur.com/a1MCo4Vl.png)](http://i.imgur.com/a1MCo4V.png)
+[![](http://i.imgur.com/2DLRSBPl.png)](http://i.imgur.com/2DLRSBP.png)
 
 
 
@@ -114,7 +114,7 @@ At the Content tab, you can select which additional actions the notification wil
 * **URL**: Write here an URL with a landing page that will get opened in the smartphone when the user opens this notification.
 * **HTML**: Create here a rich text HTML message, it can contain other external URL or image links, that will get opened to the user when he opens this notification.
 
-[![](http://i.imgur.com/MlANILUl.png)](http://i.imgur.com/MlANILU.png)
+[![](http://i.imgur.com/0gHXux0l.png)](http://i.imgur.com/0gHXux0.png)
 
 
 
@@ -126,7 +126,7 @@ Use the Target tab to select the users you want them to receive this notificatio
 * **Segment**: Choose one or more segments here, you should have created them first in the Target section. Just write the name of the segment one by one in the text box.
 * **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You can also customize the message to be send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
 
-[![](http://i.imgur.com/G6ePRXKl.png)](http://i.imgur.com/G6ePRXK.png)
+[![](http://i.imgur.com/RoZLnMQl.png)](http://i.imgur.com/RoZLnMQ.png)
 
 
 
@@ -137,7 +137,8 @@ In the Schedule tab, you choose when your notification will be sent out. You can
 * **Now**: The notification will send as soon as you click on Send, that you will find after clicking Save & Preview button.
 * **Schedule date**: The notification will be sent out at scheduled date and time set here.
 
-[![](http://i.imgur.com/BuzqlUsl.png)](http://i.imgur.com/BuzqlUs.png)
+[![](http://i.imgur.com/kwmN1l6l.png)](http://i.imgur.com/kwmN1l6.png)
+
 
 
 * **Setup campaign**: You will send the same notification, a number of times into a time period. You can set the number of repetitions, and the time period. You may also limit the number of notifications that a device can receive into a period of time.
@@ -151,7 +152,8 @@ This configuration can set a period of time between two time/dates when TwinPush
 * **Limits**: You can set here the notification limits for each device. The total number of notifications, the frequency and the minimum time between two notifications send to a same device.
 
 
-[![](https://i.imgur.com/GfJPk21l.png)](https://i.imgur.com/GfJPk21.png)
+[![](https://i.imgur.com/JaTz7uMl.png)](https://i.imgur.com/JaTz7uM.png)
+
 
 #### Advanced
 In the Advanced tab, you can tie this notification to a group, you can set the delivery speed and you can also interact with the application installed in the smartphone.
@@ -169,7 +171,9 @@ Through TwinPush, we can interact with the App installed in the user's smartphon
 * **Tags**: Let your App in the Smartphone know the type of notification you are sending, use only in case your App was already prepared to receive different types.
 * **Custom Properties**: They are properties added to notifications that allows you to send information (key/value) to the App that can be interpretated to perform different task, such as to address to the user to a particular section in the App or to show special content or specific functionalities.
 
-[![](https://i.imgur.com/qT23gGRl.png)](https://i.imgur.com/qT23gGR.png)
+[![](https://i.imgur.com/XM1c7OKl.png)](https://i.imgur.com/XM1c7OK.png)
+
+
 
 * **Advanced iOS settings**: From iOS 10 is possible to send file attachments together with the notification itself in order to show to the user images, video, sound... That will get shown without opening the App.
 
@@ -182,7 +186,7 @@ Through TwinPush, we can interact with the App installed in the user's smartphon
 Once you have completed your notification, you can save it and then send it, by clicking on Save & Preview at the bottom right of the page. TwinPush will save your notification with all your settings and will show you a summary page in your screen. Check your notification and settings and if everything is fine, send it with the Send button. If not, you can edit and correct it with the Edit button, or you can also Delete it. The Duplicate button is very useful to reuse notifications, you can create your own templates and make variations over an existing template.
 
 
-[![](http://i.imgur.com/fgztUpsl.png)](http://i.imgur.com/fgztUps.png)
+[![](http://i.imgur.com/4lMAUbXl.png)](http://i.imgur.com/4lMAUbX.png)
 
 
 ### Details of a Delivered Campaign
