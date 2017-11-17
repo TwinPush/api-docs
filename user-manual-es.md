@@ -377,7 +377,7 @@ TwinPush permite la Descarga de toda nuestra base de usuarios mediante la Export
 
 Al tratarse de una tarea "pesada" TwinPush ofrece la posibilidad de descargarse siempre el último fichero generado así como lanzar el proceso de nuevo para actualizar el fichero.
 
-[![](http://i.imgur.com/QddY7XDl.png)](http://i.imgur.com/QddY7XD.png)
+[![](http://i.imgur.com/D3bhOful.png)](http://i.imgur.com/D3bhOfu.png)
 
 
 
