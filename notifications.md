@@ -11,7 +11,7 @@ To access to the full functionality of the notification resources, the following
 |<span class="label label-success">GET</span>| [show](#get-show) | obtains details from a previously created notification |
 |<span class="label label-info">POST</span>| [create](#post-create) | creates a new notification to be delivered from the platform |
 |<span class="label label-success">GET</span>| [report](#get-report) | obtains delivery statistics for a given notification |
-|<span class="label label-success">GET</span>| [report index](#get-report-index) | obtains delivery statistics for sent notifications from a given date |
+|<span class="label label-success">GET</span>| [reports index](#get-reports-index) | obtains delivery statistics for sent notifications from a given date |
 |<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
 |<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
 |<span class="label label-success">GET</span>| [inbox_summary](#get-inbox-summary) | obtains the total and unopened count of the alias notifications inbox |
