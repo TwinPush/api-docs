@@ -131,7 +131,6 @@ Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban
 * **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
 
 
-[![](http://i.imgur.com/TMrf4aTl.png)](http://i.imgur.com/TMrf4aT.png)
     * *Filtrar por segmento*: Puedes añadir uno o más filtros por segmento al fichero de usuarios o dispositivos que importes, en ese caso, la notificación se enviará sólo a los usuarios o dispositivos que cumplan las condiciones de los segmentos.
 
 [![](http://i.imgur.com/6iGQc4jl.png)](http://i.imgur.com/6iGQc4j.png)
@@ -170,6 +169,7 @@ La velocidad de envío es útil cuando se quiere enviar una notificación que co
 
 Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo alterar el número de Badge de la App, (el badge es el número que aparece en el ícono de la App), el tono musical que sonará al recibir la notificación o la etiqueta que identifica en la App el tipo de notificación recibida, pudiendo configurar en la Aplicaciones acciones concretas según el Tag recibido.
 
+* **Nombre**: Pon el nombre que quieras darle, para uso interno, para que puedas identificar tus propias campañas más facilmente.
 * **Grupo de notificaciones**: Añade esta notificación a un grupo existente o a un nuevo grupo, escribe el nombre del grupo aquí.
 * **Velocidad de envío**: Elige la velocidad en que se distribuirá la notificación a tus usuarios.
 * **Badge**: Escribe el badge que aparecerá en el Smartphone, por defecto +1 al número que ya tenga el ícono.
@@ -178,7 +178,9 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 * **Propiedades personalizadas**: Las propiedades añadidas a las notificaciones permiten enviar información (clave/valor) a la aplicación que puede ser interpretada para realizar ciertas acciones, como dirigir al usuario a una sección en concreto de la Aplicación o mostrar contenido o funcionalidades específicas.
 
 
-[![](https://i.imgur.com/0K9uIkBl.png)](https://i.imgur.com/0K9uIkB.png)
+[![](https://i.imgur.com/gCMX9JDl.png)](https://i.imgur.com/gCMX9JD.png)
+
+
 
 * **Ajustes avanzados de iOS**: A partir de iOS 10 es posible enviar adjuntos en la propia notificación para mostrar al usuario imágenes, videos, audios... Que se mostrarán sin necesidad de abrir la Aplicación
 

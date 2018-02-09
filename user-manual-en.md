@@ -165,6 +165,7 @@ The delivery speed is very useful when you send massive notifications that conta
 
 Through TwinPush, we can interact with the App installed in the user's smartphone, we could set the Application Badge number, (the badge, is the number shown in the App icon), the ringtone that is played when a notification is received or the tag that identifies the type of notification received in the App, so you can set in your App to take different actions according to the Tag received.
 
+* **Name**: Set the name you want, for internal use, so you can easily identify your own campaigns. 
 * **Group name**: Add here this notification into a group or create a new group by typing the group name here.
 * **Delivery speed**: Choose the speed that a massive notification would be distributed along the time to your users.
 * **Badge**: Write here the badge that will get showed into the Smartphone, by default +1 will add one to the current number.
@@ -172,7 +173,8 @@ Through TwinPush, we can interact with the App installed in the user's smartphon
 * **Tags**: Let your App in the Smartphone know the type of notification you are sending, use only in case your App was already prepared to receive different types.
 * **Custom Properties**: They are properties added to notifications that allows you to send information (key/value) to the App that can be interpretated to perform different task, such as to address to the user to a particular section in the App or to show special content or specific functionalities.
 
-[![](https://i.imgur.com/XM1c7OKl.png)](https://i.imgur.com/XM1c7OK.png)
+[![](https://i.imgur.com/gCMX9JDl.png)](https://i.imgur.com/gCMX9JD.png)
+
 
 
 
