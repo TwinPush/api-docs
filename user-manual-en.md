@@ -125,8 +125,9 @@ Use the Target tab to select the users you want them to receive this notificatio
 * **User**: Here you can manually select one or more users or devices, to do that, you should identify a user by its Alias, or a device by its Device ID. Remember that any user has a unique Alias, but one user can own one or more devices. 
 * **Segment**: Choose one or more segments here, you should have created them first in the Target section. Just write the name of the segment one by one in the text box.
 * **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You can also customize the message to be send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
+    * *Filter by segment*: You can add one or more filters by segment to the file of users or device you import, in this case, the push notification will only send to the users or devices that fit into the segments conditions.
 
-[![](http://i.imgur.com/RoZLnMQl.png)](http://i.imgur.com/RoZLnMQ.png)
+[![](http://i.imgur.com/6iGQc4jl.png)](http://i.imgur.com/6iGQc4j.png)
 
 
 

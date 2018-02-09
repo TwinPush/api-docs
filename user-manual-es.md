@@ -132,6 +132,12 @@ Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban
 
 
 [![](http://i.imgur.com/TMrf4aTl.png)](http://i.imgur.com/TMrf4aT.png)
+    * *Filtrar por segmento*: Puedes añadir uno o más filtros por segmento al fichero de usuarios o dispositivos que importes, en ese caso, la notificación se enviará sólo a los usuarios o dispositivos que cumplan las condiciones de los segmentos.
+
+[![](http://i.imgur.com/6iGQc4jl.png)](http://i.imgur.com/6iGQc4j.png)
+
+
+
 
 
 #### Programación
