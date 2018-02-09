@@ -127,7 +127,7 @@ Use the Target tab to select the users you want them to receive this notificatio
 * **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You can also customize the message to be send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
     * *Filter by segment*: You can add one or more filters by segment to the file of users or device you import, in this case, the push notification will only send to the users or devices that fit into the segments conditions.
 
-[![](http://i.imgur.com/1lfkV11l.png)](http://i.imgur.com/1lfkV11.png)
+[![](http://i.imgur.com/nHBjQy5l.png)](http://i.imgur.com/nHBjQy5.png)
 
 
 
