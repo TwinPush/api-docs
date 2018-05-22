@@ -32,6 +32,7 @@ Notification representation objects will contain the following information:
 | send\_since | datetime | Date and time of scheduled sending |
 | sound | string | Custom sound set to notification |
 | badge | string | Modifier for device badge count |
+| name | string | Internal name for campaign identification |
 | group_name| string | Name of the group where notification is included |
 | delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
 
@@ -144,9 +145,10 @@ The parameters that define the content and category of the notification are the 
 |sound| The name of the file you should have as a resource in your application, and it's the one that will be played when a notification is received |
 |send\_since| The time when the push notification will be sent, in format _yyyy-MM-dd HH:mm:ss Z_ |
 |tags| An array of strings to categorize or differentiate in the future this notification from others |
+| name | Internal campaign name. It makes easier to differentiate the notifications with a similar message.  |
 |group\_name| Name of the group where the notification will be included. Notification Groups allows to display combined information and statistics of multiple notifications. |
-|inbox| Defines whether the notification will be included or not in the notifications inbox of the user associated with the target device. |
-
+|inbox| Boolean value that defines whether the notification will be included or not in the notifications inbox of the user associated with the target device. |
+| protected_content | Boolean value. If set to `true` the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. This option allows sending private information that will only be visible by the receiver. |
 
 **Simple target params**
 
