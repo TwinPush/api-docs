@@ -35,7 +35,7 @@ Notification representation objects will contain the following information:
 | name | string | Internal name for campaign identification |
 | group_name| string | Name of the group where notification is included |
 | delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
-
+| protected_content | boolean | If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. |
 
 ## <span class="label label-success">GET</span> show
 
@@ -148,7 +148,7 @@ The parameters that define the content and category of the notification are the 
 | name | Internal campaign name. It makes easier to differentiate the notifications with a similar message.  |
 |group\_name| Name of the group where the notification will be included. Notification Groups allows to display combined information and statistics of multiple notifications. |
 |inbox| Boolean value that defines whether the notification will be included or not in the notifications inbox of the user associated with the target device. |
-| protected_content | Boolean value. If set to `true` the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. This option allows sending private information that will only be visible by the receiver. |
+| protected_content | Boolean value. If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. This option allows sending private information that will only be visible by the receiver. |
 
 **Simple target params**
 
