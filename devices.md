@@ -10,7 +10,8 @@ To access to the full functionality of the devices resources, the following meth
 |--------|------|-------------|
 |<span class="label label-success">GET</span>| [index](#get-index) | obtains the paginated list of application devices associated |
 |<span class="label label-info">POST</span>| [register](#post-register) | create or update device registration in TwinPush |
-|<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge number of the device. |
+|<span class="label label-success">GET</span>| [get badge](#get-badge) | obtains the current badge count of the device. |
+|<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge count of the device. |
 |<span class="label label-info">POST</span>| [open notification](#post-open-notification) | notifies that the notification has been opened by the user |
 |<span class="label label-info">POST</span>| [open app](#post-open-app) | reports that the user opened the application |
 |<span class="label label-info">POST</span>| [close app](#post-close-app) | notifies that the application has been closed or went to background execution|
@@ -221,9 +222,45 @@ The `id` value of the device will be necessary to identify the device in subsequ
 }
 ```
 
+## <span class="label label-success">GET</span> badge
+
+Obtains the current badge count associated with the current device. This value can be altered when notifications are sent to the device or when the `update_badge` API method is called.
+
+### Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices/${device_id}/badge
+```
+
+**Example request**
+
+```bash
+curl -X GET \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/12mj18sja89/devices/1a2b3c4d5f/badge
+```
+
+### Response
+
+It returns a simple hash object with one attribute:
+
+| attribute | type | description |
+|-----------|------|-------------|
+| badge     | int  | Badge count of current device |
+
+
+**Example response**
+
+```javascript
+{
+  "badge": 6
+}
+```
+
 ## <span class="label label-info">POST</span> update badge
 
-Updates the badge number of a device.
+Updates the badge count of a device.
 
 ### Request
 
