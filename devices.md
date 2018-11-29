@@ -539,11 +539,11 @@ The available custom property types are:
 
 | type | description | value example |
 |------|-------------|---------------|
-| string | A text as a sequence of characters | `"Male"`, `"New York"` |
+| string | A text as a sequence of characters | `"iPhone X"`, `"New York"` |
 | boolean | Logic data type with two possible values: true or false | `true`, `false` | 
 | integer | A number without fractional component | `26`, `-6` |
 | float | A number with fraction precision using floating point. The decimal separator is the '.' (dot) character. | `25.0`, `-1,999.95` |
-
+| enum | A string value that is contained on a small set of possible values. Enum properties can be later used for segmentation | `"Female"`, `"VIP client"` |
 
 **Example request body**
 
@@ -561,7 +561,7 @@ The available custom property types are:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{ "name": "age", "type": "integer", "value": 43 }' \
-  https://app.twinpush.com/api/v2/apps/623c8befd3f1b7f3/devices/923c8befd3f1b7f1/set_custom_property
+  https://{{subdomain}}.twinpush.com/api/v2/apps/623c8befd3f1b7f3/devices/923c8befd3f1b7f1/set_custom_property
 ```
 
 ### Response
