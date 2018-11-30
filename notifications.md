@@ -159,6 +159,9 @@ Allows to specify a list of elements of many types to be addressee of the Push N
 | devices_ids | Array of device identifiers to be target of the notification | String[] |
 | devices_aliases | Array of device alias to be target of the notification | String[] |
 | segments | Devices that fulfill the conditions of any of the previously created selected segments | String[] |
+| target_property | Devices that have any of the selected values for given property.<br>This param is a JSON object formed by two additional attributes:<br><ul><li>name: string property identifier</li><li>values: array of string values that devices will have to match to be selected as target of the notification</li></ul> | Object |
+
+
 
 **Multiple target params**
 
@@ -210,6 +213,21 @@ Notification by device IDs with instant delivery:
 {
   "alert": "This is the message displayed in Notifications Center",
   "devices_ids": ["1a2b3c4d5f","2b3c4d5f6g","3c4d5f6g7h"]
+}
+```
+
+Notification by custom property with emojis:
+
+```javascript
+{
+  "alert": "Everything is OK \ud83d\udc4c\ud83c\udffb",
+  "target_property": {
+    "name": "Civil status",
+    "values": [
+      "Single",
+      "Divorced"
+    ]
+  }
 }
 ```
 
