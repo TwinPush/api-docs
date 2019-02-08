@@ -66,6 +66,7 @@ The following URL parameters are optional:
 |-------|-------------|
 | date | If present, it will only return devices which registration info has changed since given date. Valid date formats are ("2014-04-21" or "2014-04-21T13:00:43+02:00"). Registration info will be considered changed when any of the following fields is updated: active, alias\_device, push\_token, custom\_properties |
 | alias | If present, it will only return devices whose alias_device property match with the given parameter (ignoring case). Can be used to obtain the active devices associated to a given alias |
+| active | Boolean. If present, it will filter the obtained devices to those which activity flag matches with the parameter value |
 
 **Example request**
 
