@@ -151,6 +151,7 @@ Register service accepts some optional parameters that can be included or not in
 | app_version | Client application version | `"1.0"`, `"2.0.1"` |
 | sdk_version | TwinPush SDK version | `"2.0.3"`, `"3.1"`  |
 | os_version | OS (Android or iOS) version | `"9.1"`, `"5.1"` |
+| device_id | If provided, TwinPush will update the info from a previously registered device with the given identifier. If no device with given *device_id* is found, a 404 error will be returned instead of creating a new entry. Useful for only-update method calls. | `"2f301234164852a"` |
 
 **Example request body**
 
