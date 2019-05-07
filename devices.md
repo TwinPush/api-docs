@@ -129,13 +129,14 @@ POST /apps/${app_id}/devices/register
 
 **Required params**
 
-The register request requires the following parameters:
+The register request requires the following parameters as a minimum information to register a new device:
 
 | param | description |
 |-------|-------------|
 | udid  | unique identifier of the device per application and platform. A good choice is the [ANDROID_ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) for Android and the [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) for iOS |
 | platform | Device platform. Available values are: `"ios"` for Apple iOS devices and `"android"` for Google Android devices
-| push_token | Token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). If the push token is not provided, the device will not receive push notifications, but it will be able to report usage statistics.
+
+If an existing device is already registered with given `udid-platform`, the record will be updated. Else, a new device will be registered.
 
 **Optional Params**
 
@@ -143,6 +144,7 @@ Register service accepts some optional parameters that can be included or not in
 
 | param     | description | example |
 |-----------|-------------|---------|
+| push_token | Token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). A device without push token will not receive push notifications, but it will be able to report usage statistics and check inbox. | `"eTPVpHwpWLw..."`
 | alias_device | Value to associate the device to a user of the client platform | `"username"`
 | language  | Language and region, joined by undescore | `"en_ES"`, `"en_GB"` |
 | device_code | Device model code | `"osprey_umts"` |
@@ -151,7 +153,17 @@ Register service accepts some optional parameters that can be included or not in
 | app_version | Client application version | `"1.0"`, `"2.0.1"` |
 | sdk_version | TwinPush SDK version | `"2.0.3"`, `"3.1"`  |
 | os_version | OS (Android or iOS) version | `"9.1"`, `"5.1"` |
+
+**Update-only params**
+
+As an alternative to `udid-platform` identifier to update an existing record, it is possible to include the `device_id` of the previously created device.
+
+If `device_id` is included, the `udid` and `platform` parameters are no longer mandatory, and the existing device will be updated with the information included on the request.
+
+| param     | description |
+|-----------|-------------|
 | device_id | If provided, TwinPush will update the info from a previously registered device with the given identifier. If no device with given *device_id* is found, a 404 error will be returned instead of creating a new entry. Useful for only-update method calls. | `"2f301234164852a"` |
+
 
 **Example request body**
 
@@ -175,6 +187,15 @@ Register service accepts some optional parameters that can be included or not in
 {
   "udid": "f12a1255ddfjd123",
   "platform": "android",
+  "push_token": "APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjv9YtT8OvPWGJhQMRK3rZuJEcl7B38q",
+  "alias_device": "techie4"
+}
+```
+For only update requests:
+
+```javascript
+{
+  "device_id": "39068e2378d700cb",
   "push_token": "APA91bHPRgkF3JUikC4ENAHEeMrd41Zxv3hVZjv9YtT8OvPWGJhQMRK3rZuJEcl7B38q",
   "alias_device": "techie4"
 }
