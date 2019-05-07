@@ -136,7 +136,7 @@ The register request requires the following parameters as a minimum information 
 | udid  | unique identifier of the device per application and platform. A good choice is the [ANDROID_ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) for Android and the [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) for iOS |
 | platform | Device platform. Available values are: `"ios"` for Apple iOS devices and `"android"` for Google Android devices
 
-If an existing device is already registered with given `udid-platform`, the record will be updated. Else, a new device will be registered.
+If an existing device is already registered with given `udid-platform`, the record will be updated. Otherwise, a new device will be registered.
 
 **Optional Params**
 
