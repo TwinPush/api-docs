@@ -35,6 +35,7 @@ Notification representation objects will contain the following information:
 | group_name| string | Name of the group where notification is included |
 | delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
 | protected_content | boolean | If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. |
+| mutable_content | boolean | If set to `true`, it enables the ability of iOS applications to mutate the notification content before displaying it to the user. See [documentation](http://developers.twinpush.com/developers/ios#notification-attachments). |
 
 ## <span class="label label-success">GET</span> show
 
