@@ -567,14 +567,27 @@ The available custom property types are:
 | integer | A number without fractional component | `26`, `-6` |
 | float | A number with fraction precision using floating point. The decimal separator is the '.' (dot) character. | `25.0`, `-1,999.95` |
 | enum | A string value that is contained on a small set of possible values. Enum properties can be later used for segmentation | `"Female"`, `"VIP client"` |
+| enum_list | Allows setting an array of enums as value for the device property. | `["Rock", "Blues", "Jazz"]` |
 
 **Example request body**
+
+This example will create the property `age` with the integer value `43` for the selected device:
 
 ```javascript
 {
   "name": "age",
   "type": "integer",
   "value": 43
+}
+```
+
+The following request will create the property `favorite_music` and will set the list of values for the selected device:
+
+```javascript
+{
+  "name": "favorite_music",
+  "type": "enum_list",
+  "value": ["Rock", "Blues", "Jazz"]
 }
 ```
 
