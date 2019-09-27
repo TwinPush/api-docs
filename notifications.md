@@ -142,7 +142,7 @@ The parameters that define the content and category of the notification are the 
 |  | **Additional params** | |
 |delivery\_speed | Determines the number of deliveries per minute to be send for the recipients of this notice. Slowing delivery speed will help to avoid overloading client servers due to many simultaneous app openings. Available values are:<ul><li>`instant`: will send all the notifications to the target as soon as possible</li><li>`fast`: will deliver 100.000 notifications per minute</li><li>`normal`: (default) will deliver 1.000 notifications per minute</li><li>`slow`: will deliver 100 notifications per minute</li></ul>|
 |sound| The name of the file you should have as a resource in your application, and it's the one that will be played when a notification is received |
-|send\_since| The time when the push notification will be sent, in format _yyyy-MM-dd HH:mm:ss Z_. If not set or null, the notification be sent inmediatly. |
+|send\_since| The time when the push notification will be sent, in format _yyyy-MM-dd HH:mm:ss Z_. If not set or if the value is `null`, the notification be sent inmediatly. |
 |tags| An array of strings to categorize or differentiate in the future this notification from others |
 | name | Internal campaign name. It makes easier to differentiate the notifications with a similar message.  |
 |group\_name| Name of the group where the notification will be included. Notification Groups allows to display combined information and statistics of multiple notifications. |
