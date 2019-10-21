@@ -99,8 +99,8 @@ Creates a new notification to be delivered from the platform. It requires at lea
 
 The maximum length for the fields of a notification is conditioned by the maximum payload size allowed for Push Services of Apple and Google:
 
-* **iOS**: 256 bytes. Increased to 2KB for iOS7 and above.
-* **Android**: 1 kilobyte
+* **iOS**: 2KB for iOS7 and above.
+* **Android**: 4 kilobytes
 
 Inside this size limit it is included all the notification info that is sent to the device: title, alert, sound, badge, custom_properties, etc. 
 
