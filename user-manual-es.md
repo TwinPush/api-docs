@@ -19,24 +19,18 @@ Desde esta pantalla podrás:
 3. **Iniciar sesión en TwinPush** con tu usuario y contraseña, si ya te has registrado previamente.
 
 
-[![](http://i.imgur.com/qzhBZ9Bl.png)](http://i.imgur.com/qzhBZ9B.png)
-
+[![](http://i.imgur.com/j1RPtbDl.png)](https://i.imgur.com/j1RPtbD.png)
 
 ### Registro
 Escribe tu correo electrónico y contraseña. Recuerda que al registrarte estas aceptando las [condiciones de uso](http://app.twinpush.com/res/terms-of-service-es.pdf).
 
-
-[![](http://i.imgur.com/bTWYU92l.png)](http://i.imgur.com/bTWYU92.png)
-
+[![](http://i.imgur.com/qFP0yhLl.png)](http://i.imgur.com/qFP0yhL.png)
 
 
 ### Recuperación de tu Contraseña
 Escribe la dirección de correo que usaste para registrarte y en breve tiempo recibirás un correo con instrucciones para restaurar tu contraseña.
 
-
-[![](http://i.imgur.com/oBKal8el.png)](http://i.imgur.com/oBKal8e.png)
-
-
+[![](http://i.imgur.com/VPCspd4l.png)](http://i.imgur.com/VPCspd4.png)
 
 
 ## Aplicaciones
