@@ -19,12 +19,12 @@ Desde esta pantalla podrás:
 3. **Iniciar sesión en TwinPush** con tu usuario y contraseña, si ya te has registrado previamente.
 
 
-[![](http://i.imgur.com/j1RPtbDl.png)](https://i.imgur.com/j1RPtbD.png)
+[![](https://i.imgur.com/j1RPtbDl.png)](https://i.imgur.com/j1RPtbD.png)
 
 ### Registro
-Escribe tu correo electrónico y contraseña. Recuerda que al registrarte estas aceptando las [condiciones de uso](http://app.twinpush.com/res/terms-of-service-es.pdf).
+Escribe tu correo electrónico y contraseña. Recuerda que al registrarte estas aceptando las [condiciones de uso](https://app.twinpush.com/res/terms-of-service-es.pdf).
 
-[![](http://i.imgur.com/qFP0yhLl.png)](http://i.imgur.com/qFP0yhL.png)
+[![](https://i.imgur.com/LWlppqTl.png)](https://i.imgur.com/LWlppqT.png)
 
 
 ### Recuperación de tu Contraseña
@@ -45,7 +45,7 @@ La primera vez que accedes, te pediremos que crees tu primera App, por el moment
 
 
 ### Tu Primera App
-El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla podrás ver el Dashboard o la Vista general de tu App. A continuación, deberás integrar el SDK de TwinPush en tus aplicaciones móviles y subir tu certificado para empezar a enviar notificaciones. Sigue las instrucciones del [SDK aquí](http://www.twinpush.com/quickstart). 
+El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla podrás ver el Dashboard o la Vista general de tu App. A continuación, deberás integrar el SDK de TwinPush en tus aplicaciones móviles y subir tu certificado para empezar a enviar notificaciones. Sigue las instrucciones del [SDK aquí](https://developers.twinpush.com/developers). 
 
 
 [![](https://i.imgur.com/jRaQHctl.png)](https://i.imgur.com/jRaQHct.png)
@@ -55,7 +55,7 @@ El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla p
 ### Tus Siguientes Apps
 Una vez creada tu primera App, podrás añadir más Apps en cualquier momento. Si sólo tienes una App, deberás clicar en sobre el ícono o el nombre de tu primera App que se ubica en la barra superior y se desplegará un menú, elige la opción Todas las aplicaciones, a continuación obtendrás una pantalla con todas tus aplicaciones. Clicando sobre Nueva App podrás añadir más Apps. Si ya tienes más de una App, llegarás a esta pantalla al iniciar sesión. Clica sobre una App para entrar en la Vista general de la misma.
 
-[![](http://i.imgur.com/NIiy0lDl.png)](http://i.imgur.com/NIiy0lD.png)
+[![](https://i.imgur.com/NIiy0lDl.png)](https://i.imgur.com/NIiy0lD.png)
 
 
 
@@ -64,12 +64,12 @@ Una vez creada tu primera App, podrás añadir más Apps en cualquier momento. S
 ### Tu Primera Notificación
 Para enviar notificiaciones, deberás acceder al Dashboard o Vista general de tu aplicación, clica sobre Push, en la barra lateral izquierda. Si es la primera vez que envías una notificación con esa aplicación verás una pantalla como la siguiente. Clica en Crear notificación:
 
-[![](http://i.imgur.com/nqQ8oapl.png)](http://i.imgur.com/nqQ8oap.png)
+[![](https://i.imgur.com/nqQ8oapl.png)](https://i.imgur.com/nqQ8oap.png)
 
 
 o también sobre Crear nueva notificación arriba a la derecha. 
 
-[![](http://i.imgur.com/EvNVdjxl.png)](http://i.imgur.com/EvNVdjx.png)
+[![](https://i.imgur.com/EvNVdjxl.png)](https://i.imgur.com/EvNVdjx.png)
 
 
 Si ya has enviado notificaciones con esa aplicación el botón Push te llevará a la siguiente pantalla. Desde aquí podras ver estadísticas de tus notificaciones enviadas, tus grupos de notificaciones, tus últimas notificaciones, tus campañas, etc. También podras reutilizar grupos, notificaciones o campañas, más adelante te explicaremos cómo. Para crear una nueva notificación desde esta pantalla, clica sobre Crear nueva notificación arriba a la derecha.
@@ -88,7 +88,7 @@ El editor de notificaciones se presenta como una serie de pestañas: Push, Conte
 Para enviar una notificación cualquiera, los campos mínimos que hay que completar son: la Alerta, bajo la pestaña Push, y al menos un Target, el resto de opciones del editor te ayudarán a enriquecer tus notificaciones, a realizar acciones cuando el usuario pulse sobre la notificación, a segmentar tus envíos y a programar la hora y el día en que quieres que se envíen tus notificaciones.
 
 
-[![](https://i.imgur.com/JDS3z9wl.png)](http://i.imgur.com/JDS3z9w.png)
+[![](https://i.imgur.com/JDS3z9wl.png)](https://i.imgur.com/JDS3z9w.png)
 
 
 
@@ -101,8 +101,7 @@ Si quieres que tus notificaciones llegue correctamente a la mayoría de disposit
 * **Alerta**: Escribe aquí el cuerpo de tu mensaje en texto plano.
 * **Buzón**: Marca este checkbox para que la notificación se almacene en el buzón de mensajes del usuario, de esta manera el usuario podrá consultarla cuando quiera.
 
-
-[![](http://i.imgur.com/frfnqNhl.png)](http://i.imgur.com/frfnqNh.png)
+[![](https://i.imgur.com/frfnqNhl.png)](https://i.imgur.com/frfnqNh.png)
 
 
 #### Contenido
@@ -112,7 +111,7 @@ En Contenido podrás seleccionar qué acción adicional realizará la notificaci
 * **URL**: introduce una URL con una landing page que se abrirá en el smartphone al momento de abrir la notificación enviada.
 * **HTML**: Define un mensaje en texto rico HTML, que podrá contener enlaces externos a URL's o imagenes que se presentará al usuario al momento de abrir la notificación.
 
-[![](http://i.imgur.com/IuzlnQMl.png)](http://i.imgur.com/IuzlnQM.png)
+[![](https://i.imgur.com/IuzlnQMl.png)](https://i.imgur.com/IuzlnQM.png)
 
 
 
@@ -124,10 +123,9 @@ Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban
 * **Segmento**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
 * **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
 
-
     * *Filtrar por segmento*: Puedes añadir uno o más filtros por segmento al fichero de usuarios o dispositivos que importes, en ese caso, la notificación se enviará sólo a los usuarios o dispositivos que cumplan las condiciones de los segmentos.
 
-[![](http://i.imgur.com/6iGQc4jl.png)](http://i.imgur.com/6iGQc4j.png)
+[![](https://i.imgur.com/6iGQc4jl.png)](https://i.imgur.com/6iGQc4j.png)
 
 
 
@@ -140,7 +138,7 @@ En Programación eliges cuándo enviar tu notificación, también programar tu e
 * **Elegir fecha**: La notificación se enviará en el día y hora establecidos.
 
 
-[![](http://i.imgur.com/8cIDa1ml.png)](http://i.imgur.com/8cIDa1m.png)
+[![](https://i.imgur.com/8cIDa1ml.png)](https://i.imgur.com/8cIDa1m.png)
 
 * **Crear campaña**: Se enviará la misma notificación repetida un número de veces dentro del periodo establecido, pudiendo establecer los límites de envíos a un mismo dispositivo en un periodo de tiempo.
 
@@ -186,7 +184,7 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 Una vez hayas completado tu notificación, podrás salvarla y enviarla clicando sobre Guardar y previsualizar abajo a la derecha. TwinPush guardará tu notificación configurada y te mostrará una pantalla resumen. Comprueba que tu notificación este correcta y envíala con el boton Send. Si no lo está, podrás editarla con Edit, o borrarla con Delete. El botón Duplicate te será de gran utilidad para reutilizar notificaciones o para crear tus propias plantillas sobre las cuales puedas hacer variaciones sobre un duplicado de una plantilla original.
 
 
-[![](http://i.imgur.com/CEWk6mol.png)](http://i.imgur.com/CEWk6mo.png)
+[![](https://i.imgur.com/CEWk6mol.png)](https://i.imgur.com/CEWk6mo.png)
 
 ### Detalle de Campaña Enviada
 Al clicar sobre una de las campañas podremos ver toda la información relativa al envío.
@@ -211,55 +209,55 @@ TwinPush incluye una potente herramienta para segmentar a los usuarios de tu App
 ### Tu Primer Segmento
 Para crear segmentos, accede al Dashboard o Vista general de tu aplicación y clica sobre Segmentos en la barra lateral izquierda. Si es la primera vez que crear un segmento en esa aplicación, verás una pantalla como la siguiente. 
 
-[![](http://i.imgur.com/DoqbGUil.png)](http://i.imgur.com/DoqbGUi.png)
+[![](https://i.imgur.com/DoqbGUil.png)](https://i.imgur.com/DoqbGUi.png)
 
 O también clica en Crear nuevo segmento arriba a la derecha.
 
-[![](http://i.imgur.com/TkkJ3kfl.png)](http://i.imgur.com/TkkJ3kf.png)
+[![](https://i.imgur.com/TkkJ3kfl.png)](https://i.imgur.com/TkkJ3kf.png)
 
 
 
 Si ya tienes segmentos creados en tu aplicación verás la siguiente pantalla. Desde aquí obtendrás una rápida vista de todos tus segmentos, donde se muestra para cada uno de ellos, el número de dispositivos, el porcentaje de dispositivos objetivo del segmento (barra verde) sobre el universo de dispositivos totales (barra gris de fondo) y el tipo de filtrado del segmento: por posición, por propiedades del dispositivo o por estadísticas de uso. Para crear un nuevo segmento desde esta pantalla, clica sobre Crear nuevo segmento arriba a la derecha.
 
-[![](https://i.imgur.com/mzb26tDl.png)](http://i.imgur.com/mzb26tD.png)
+[![](https://i.imgur.com/mzb26tDl.png)](https://i.imgur.com/mzb26tD.png)
 
 
 ### Editor de Segmentos
 Al clicar sobre Crear nuevo segmento entrarás en el Editor de Segmentos. El editor te llevará por defecto al filtro por Ubicación. El editor de segmentos se presenta como una lista de filtros sobre el margen izquierdo de la pantalla, que podrás ir añadiendo al segmento creado. Los filtros son de tres tipos: por Ubicación, por Datos de Usuario o por Datos del Dispositivo. En el centro de la pantalla encontrarás las opciones de configuración del filtro seleccionado. Sobre la derecha de la pantalla podrás añadir una condición a todos los filtros seleccionados y dar un nombre al segmento recién creado. 
 Cada filtro que vas añadiendo al segmento se verá representado a través de un pequeño índice en su correspondiente sección. Este índice indica la cantidad total de filtros totales de esa sección. Así por ejemplo, si añades 2 idiomas distintos, el sub índice en la sección de idiomas será 2, y si añades 3 ciudades, el sub índice en ciudades será 3.
 
-[![](https://i.imgur.com/P1wCBq5l.png)](http://i.imgur.com/P1wCBq5.png)
+[![](https://i.imgur.com/P1wCBq5l.png)](https://i.imgur.com/P1wCBq5.png)
 
 #### Filtros por Ubicación
 TwinPush ofrece diferentes maneras de filtrar un grupo de usuarios de acuerdo a su ubicación: puedes crear uno o más geocercos, especificar uno o más países, estados, regiones, o ciudades, para ello clica sobre Coordenadas, País, Estado, Región o Ciudad.  
 
-[![](http://i.imgur.com/naXogjpl.png)](http://i.imgur.com/naXogjp.png)
+[![](https://i.imgur.com/naXogjpl.png)](https://i.imgur.com/naXogjp.png)
 
 
 
 ##### Creación de Geocercos
 Los geocercos no son más que una superficie circular determinada por una coordenada que identifica el centro del círculo y un radio especificado en metros. Para crear un nuevo geocerco, clica sobre Coordenadas a la izquierda para seleccionar este tipo de filtro y luego sobre Añadir, en la parte superior derecha del mapa. En la pantalla te aparecerá un mapa como muestra la siguiente imagen. En esta pantalla deberás ubicar el marcador o POI en la posición deseada y elegir un radio con la barra deslizante de la parte inferior.  La región seleccionada aparecerá sombreada en el mapa. En la parte superior hay un cuadro de búsqueda, en él puedes escribir el nombre de la ciudad que te interesa, también podrás navegar sobre el mapa con el ratón. Una vez establecida la región de interés sobre el mapa, clica sobre Añadir abajo a la derecha.
 
-[![](http://i.imgur.com/6CgZDVJl.png)](http://i.imgur.com/6CgZDVJ.png)
+[![](https://i.imgur.com/6CgZDVJl.png)](https://i.imgur.com/6CgZDVJ.png)
 
 
 #### Filtros por Datos de Usuario
-En esta sección podrás segmentar a tus usuarios de acuerdo a la información que tu aplicación haya obtenido del usuario. Para ello tu aplicación deberá registrar esta información en la plataforma Twinpush a través de los "Custom Properties", puedes ver cómo hacerlo en el manual descrito [aquí](http://www.twinpush.com/documentation/devices#post-set-custom-property). Por defecto Twinpush te ofrece información del idioma de tus usuarios.
+En esta sección podrás segmentar a tus usuarios de acuerdo a la información que tu aplicación haya obtenido del usuario. Para ello tu aplicación deberá registrar esta información en la plataforma Twinpush a través de los "Custom Properties", puedes ver cómo hacerlo en el manual descrito [aquí](https://developers.twinpush.com/developers/api?class=sidebar-header#post-set-custom-property). Por defecto Twinpush te ofrece información del idioma de tus usuarios.
 
-[![](http://i.imgur.com/OduTrRwl.png)](http://i.imgur.com/OduTrRw.png)
+[![](https://i.imgur.com/OduTrRwl.png)](https://i.imgur.com/OduTrRw.png)
 
 
 
 Con los "Custom Properties" podrás segmentar a tus usuarios por: edad, género, ocupación, intereses o cualquier otra información que quieras personalizar. Para añadir un filtro, clica sobre Otras propiedades, y luego sobre Añadir arriba a la derecha, te aparecerá una pantalla como la siguiente. En ella podrás añadir un filtro sobre cualquiera de las propiedades que encontrarás en un menu desplegable.
 
-[![](http://i.imgur.com/63WxCwNl.png)](http://i.imgur.com/63WxCwN.png)
+[![](https://i.imgur.com/63WxCwNl.png)](https://i.imgur.com/63WxCwN.png)
 
 
 
 #### Filtros por Datos del Dispositivo
 TwinPush pone a tu disposición la información obtenida del dispositivo con el cual el usuario accede a tu aplicación. Información como: Plataforma (iOS o Android), Fabricante, Modelo, Versión del sistema, Version de tu App, etc. Podrás segmentar a tus usuarios añadiendo un filtro sobre dicha información.
 
-[![](http://i.imgur.com/ywmGskIl.png)](http://i.imgur.com/ywmGskI.png)
+[![](https://i.imgur.com/ywmGskIl.png)](https://i.imgur.com/ywmGskI.png)
 
 
 
@@ -267,7 +265,7 @@ TwinPush pone a tu disposición la información obtenida del dispositivo con el 
 ##### Estadísticas de uso de tu App
 TwinPush también te permite segmentar a tus usuarios según el tiempo que usan tu App. Con esta funcionalidad podrás crear campañas que incentiven el uso de tu App, pudiendo premiar a tus usuarios con ofertas exclusivas para ese segmento. Para añadir un filtro de uso de tu App, clica sobre Estadísticas de uso, y luego sobre Añadir, arriba a la dechecha, a continuación verás una pantalla como la siguiente. Podrás añadir un filtro sobre: el tiempo total de uso, el periodo de inactividad, el tiempo medio de uso diario o el tiempo transcurrido desde la instalación.
 
-[![](http://i.imgur.com/syT86bBl.png)](http://i.imgur.com/syT86bB.png)
+[![](https://i.imgur.com/syT86bBl.png)](https://i.imgur.com/syT86bB.png)
 
 #### Segmentos a usuarios con valores NO coincidentes
 TwinPush ofrece la posibilidad de crear condiciones destinadas a envíos de usuarios que NO cumplan ciertas condiciones.
@@ -342,7 +340,7 @@ La vista muestra los dispositivos con actividad más reciente registrada, así c
 * **Fecha de Registro**: Fecha de primer registro del dispositivo.
 * **Fecha de última apertura**: Fecha de ultima apertura de la Aplicación.
 
-[![](http://i.imgur.com/qiBMdlVl.png)](http://i.imgur.com/qiBMdlV.png)
+[![](https://i.imgur.com/qiBMdlVl.png)](https://i.imgur.com/qiBMdlV.png)
 
 
 
@@ -357,16 +355,16 @@ Al hacer click sobre uno de los dispositivos se mostrará un modal con toda la i
 * Versión del SDK
 
 #### Información de Localización:
-Siempre que se haya realizado una [integración del SDK](http://developers.twinpush.com/quickstart) con la geolocalización activa de dispositivos, TwinPush mostrará información relativa a la ubicación del mismo.
+Siempre que se haya realizado una [integración del SDK](https://developers.twinpush.com/developers) con la geolocalización activa de dispositivos, TwinPush mostrará información relativa a la ubicación del mismo.
 
 * País
 * Estado
 * Ciudad
 
 #### Datos de Usuario (Custom Properties):
-El [SDK](http://developers.twinpush.com/quickstart) permite el registro de propiedades de usuario en TwinPush que también se mostrarán en la vista de Dispositivos.
+El [SDK](https://developers.twinpush.com/developers) permite el registro de propiedades de usuario en TwinPush que también se mostrarán en la vista de Dispositivos.
 
-[![](http://i.imgur.com/vqfEe5Ol.png)](http://i.imgur.com/vqfEe5O.png)
+[![](https://i.imgur.com/vqfEe5Ol.png)](https://i.imgur.com/vqfEe5O.png)
 
 
 
@@ -375,7 +373,7 @@ TwinPush permite la Descarga de toda nuestra base de usuarios mediante la Export
 
 Al tratarse de una tarea "pesada" TwinPush ofrece la posibilidad de descargarse siempre el último fichero generado así como lanzar el proceso de nuevo para actualizar el fichero.
 
-[![](http://i.imgur.com/D3bhOful.png)](http://i.imgur.com/D3bhOfu.png)
+[![](https://i.imgur.com/D3bhOful.png)](https://i.imgur.com/D3bhOfu.png)
 
 
 
