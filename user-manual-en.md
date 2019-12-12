@@ -19,22 +19,20 @@ From this screen you will be able to:
 2. **Create a new TwinPush account**:  Forgot password?
 3. **Start session in TwinPush** using your login and password, if you have already registered.
 
-[![](http://i.imgur.com/qzhBZ9Bl.png)](http://i.imgur.com/qzhBZ9B.png)
+[![](https://i.imgur.com/j1RPtbDl.png)](https://i.imgur.com/j1RPtbD.png)
 
 
 ### Register
-Write your email address and password. Remmeber that when you are register, you are agreeing with the [terms and conditions](http://app.twinpush.com/res/terms-of-service-es.pdf).
+Write your email address and password. Remmeber that when you are register, you are agreeing with the [terms and conditions](https://app.twinpush.com/res/terms-of-service-es.pdf).
 
-[![](http://i.imgur.com/geaOqGVl.png)](http://i.imgur.com/geaOqGV.png)
-
+[![](https://i.imgur.com/EXULWEml.png)](https://i.imgur.com/EXULWEm.png)
 
 
 ### Recover your password
 Just write the email address you used when registering and in short time you will received an email with instructions to recover your password.
 
 
-[![](http://i.imgur.com/sycnwEFl.png)](http://i.imgur.com/sycnwEF.png)
-
+[![](https://i.imgur.com/JMPDYx5l.png)](https://i.imgur.com/JMPDYx5.png)
 
 
 ## Apps
@@ -51,8 +49,7 @@ The first time you access to TwinPush, we will ask you to create your first App,
 ### Your First App
 Now the workspace of your App is already created in TwinPush, you will land into your App Dashboard. Next, you must integrate the TwinPush SDK into your mobile application and upload your certificate in order to send notifications. Follow the [SDK instructions here](http://www.twinpush.com/quickstart). 
 
-[![](http://i.imgur.com/71nJWhBl.png)](http://i.imgur.com/71nJWhB.png)
-
+[![](https://i.imgur.com/IzlGbbal.png)](https://i.imgur.com/IzlGbba.png)
 
 
 
@@ -79,7 +76,7 @@ or you can also click on Create new notification on the upper right corner of th
 If you have already sent notifications using this App, the Push icon will take you to the following screen. From here you can see statistics of your sent notifications, your groups of notifications, your last notifications, your campaigns, etc. You can also reuse groups, notifications or campaigns, we will explain you later how to do that. To create a new nottification from this screen, click on Create new notification on the upper right corner of the screen.
 
 
-[![](http://i.imgur.com/whN5VHQl.png)](http://i.imgur.com/whN5VHQ.png)
+[![](https://i.imgur.com/Yf2xgBal.png)](http://i.imgur.com/Yf2xgBa.png)
 
 
 ### Push Composer
@@ -90,7 +87,8 @@ The Push Composer will show you a series of tabs: Push, Content, Target, Schedul
 
 To send a notification, the minimum required fields to complete are: the Alert, under the Push tab, and at least one Target, other options will help you to enhace your notifications, to perform different actions when the user clicks over the notification, to choose your target users or to schedule your notifications so you can automatically send them whenever you want.
 
-[![](http://i.imgur.com/ScVSXx6l.png)](http://i.imgur.com/ScVSXx6.png)
+[![](https://i.imgur.com/kMAt9mXl.png)](http://i.imgur.com/kMAt9mX.png)
+
 
 
 #### Push 
@@ -224,9 +222,7 @@ or you can also click on Create new target on the upper right corner of the scre
 
 If you have already created segments in your app, you will get the following screen. From here you will get a quick view of all your segments. For each segment is shown: the number of devices, the rate of target devices (green bar) over your total number of devices (grey background bar) and the type of filter applied to the segment: by location, by device properties or by usage statistics. To create a new segments from this screen, just click on Create new target on the upper right corner.
 
-[![](http://i.imgur.com/aDJ3VmBl.png)](http://i.imgur.com/aDJ3VmB.png)
-
-
+[![](https://i.imgur.com/1i4Aek9l.png)](http://i.imgur.com/1i4Aek9.png)
 
 
 ### Segments Editor
@@ -234,8 +230,7 @@ By clicking over Create a new target, you get into the Segments Editor. The Edit
 
 Each filter will show a small superscript to its relevant section when added. This superscript shows the total number of filters in that section. In this way, if you add 2 different languages, the superscript will show 2 in the language section, and if you add 3 different cities the superscript will show 3 in that section.
 
-[![](http://i.imgur.com/sPiVl6Fl.png)](http://i.imgur.com/sPiVl6F.png)
-
+[![](https://i.imgur.com/S60w5ajl.png)](http://i.imgur.com/S60w5aj.png)
 
 
 #### Filters by Location
