@@ -351,13 +351,13 @@ Podremos modificar los datos principales de nuestra Aplicación, tales como:
 * **Badge number**: Este parámetro configura el número que aparece encima del icono de nuestra aplicación en los dispositivos iOS. Siendo por defecto +1.
 * **Buzón por defecto**: Esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
 
-[![](http://i.imgur.com/KDkEUntl.png)](http://i.imgur.com/KDkEUnt.png)
+[![](https://i.imgur.com/KDkEUntl.png)](https://i.imgur.com/KDkEUnt.png)
 
 
 
 ### Claves de Autenticación:
 
-En esta vista también podremos consultar nuestras claves de autenticación con el servidor, necesarias para la integración del [SDK de TwinPush](http://developers.twinpush.com/quickstart) en las aplicaciones.
+En esta vista también podremos consultar nuestras claves de autenticación con el servidor, necesarias para la integración del [SDK de TwinPush](https://developers.twinpush.com/developers) en las aplicaciones.
 
 * **Subdominio**: Mostrará el subdominio que debemos configurar en la integración del SDK, customizado en el caso de clientes Enterprise.
 * **Application ID**: Identificador de Aplicación de TwinPush.
@@ -365,14 +365,14 @@ En esta vista también podremos consultar nuestras claves de autenticación con 
 * **API Key Creator**: Parámetro de autenticación para la creación y envío de notificaciones desde otro servidor.
 
 
-[![](http://i.imgur.com/cANApZkl.png)](http://i.imgur.com/cANApZk.png)
+[![](https://i.imgur.com/cANApZkl.png)](https://i.imgur.com/cANApZk.png)
 
 
 
 ### Gestión de Equipo:
 TwinPush permite la gestión de las personas que tendrán acceso a tu aplicación. La invitación se realiza introduciendo el email de la persona a la que deseemos dar acceso y TwinPush se encargará de enviar un email al invitado indicándole los pasos a seguir para acceder a la aplicación.
 
-[![](http://i.imgur.com/9JLxmO3l.png)](http://i.imgur.com/9JLxmO3.png)
+[![](https://i.imgur.com/9JLxmO3l.png)](https://i.imgur.com/9JLxmO3.png)
 
 
 #### Roles de usuario
@@ -396,16 +396,16 @@ Hay tres roles de usuarios que el propietario o los administradores de la cuenta
 * Claves de autenticación, para autenticar el acceso de la App móvil (SDK) y el API de TwinPush.
 * Gestión del equipo, pueden invitar nuevos usuarios, editar roles de usuarios existentes y revocar accesos de otros usuarios.
 
-[![](http://i.imgur.com/98u3GDAl.png)](http://i.imgur.com/98u3GDA.png)
+[![](https://i.imgur.com/98u3GDAl.png)](https://i.imgur.com/98u3GDA.png)
 
 
 
 ### Configuración FCM (GCM) y APNS:
 
-En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](http://help.apple.com/xcode/mac/current/#/dev11b059073) y [FCM de Google](https://developers.google.com/cloud-messaging/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](http://developers.twinpush.com/quickstart).
+En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) y [FCM de Google](https://firebase.google.com/docs/cloud-messaging/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
 
 
-[![](http://i.imgur.com/xhMUPMwl.png)](http://i.imgur.com/xhMUPMw.png)
+[![](https://i.imgur.com/xhMUPMwl.png)](https://i.imgur.com/xhMUPMw.png)
 
 El acceso a los servicios de mensajería de Google se realiza por el **API Key** que puede ser el proporcionado por el Servicio Firebase Cloud Messaging (FCM) o también por el anterior servicio Google Cloud Messaging (GCM). Para configurar el API Key es necesario desplegar el menu y seleccionar la plataforma adecuada, pegar el API Key y el nombre del Paquete y darle al botón Actualizar App.
 
@@ -423,8 +423,8 @@ TwinPush mantiene un control sobre la fecha de caducidad de tu certificado APNS,
 **Subir Certificado APNS:** En la subida del certificado de APNS (fichero .p12) debemos tener en cuenta marcar nuestro certificado como "Desarrollo" si estamos compilando una versión de pruebas desde nuestro entorno o de "Producción" Si ya es una aplicación que va dirigida al Store.
 
 
-[![](http://i.imgur.com/U1gFV0bl.png)](http://i.imgur.com/U1gFV0b.png)
+[![](https://i.imgur.com/U1gFV0bl.png)](https://i.imgur.com/U1gFV0b.png)
 
 **Token:** Similarmente al APNS, el token (fichero .p8) se debe tener en cuenta si es para Desarrollo o Producción. 
 
-[![](http://i.imgur.com/zmcIDCFl.png)](http://i.imgur.com/zmcIDCF.png)
+[![](https://i.imgur.com/zmcIDCFl.png)](https://i.imgur.com/zmcIDCF.png)

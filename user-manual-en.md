@@ -401,19 +401,19 @@ There are three user roles that the account owner or account administrators can 
 * Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
 * Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
 
-[![](http://i.imgur.com/JoCnWVol.png)](http://i.imgur.com/JoCnWVo.png)
+[![](https://i.imgur.com/JoCnWVol.png)](https://i.imgur.com/JoCnWVo.png)
 
 
 
 ### FCM (GCM) and APNS Settings:
 
-In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](http://help.apple.com/xcode/mac/current/#/dev11b059073) and [Google FCM](https://developers.google.com/cloud-messaging/)services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](http://developers.twinpush.com/quickstart).
+In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) and [Google FCM](https://firebase.google.com/docs/cloud-messaging/)services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
 
-[![](http://i.imgur.com/ZhWy4lal.png)](http://i.imgur.com/ZhWy4la.png)
+[![](https://i.imgur.com/ZhWy4lal.png)](https://i.imgur.com/ZhWy4la.png)
 
 The access to the Google Messaging Services is granted by the **API Key**, this can be provided by Firebase Cloud Messaging (FCM) or by the former Google Cloud Messaging (GCM) service. To set the API Key you need to click on the dropdown menu and choose the proper platform, paste the API Key and the Package name and finally click on the Update App button.
 
-[![](http://i.imgur.com/v33jOuOl.png)](http://i.imgur.com/v33jOuO.png)
+[![](https://i.imgur.com/v33jOuOl.png)](https://i.imgur.com/v33jOuO.png)
 
 
 Apple messaging services is accessed with tieh **APNS certificate**, that expires after a year and must be renew, or by **token** that it does not expire.
