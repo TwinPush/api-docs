@@ -30,7 +30,7 @@ Escribe tu correo electrónico y contraseña. Recuerda que al registrarte estas 
 ### Recuperación de tu Contraseña
 Escribe la dirección de correo que usaste para registrarte y en breve tiempo recibirás un correo con instrucciones para restaurar tu contraseña.
 
-[![](http://i.imgur.com/VPCspd4l.png)](http://i.imgur.com/VPCspd4.png)
+[![](https://i.imgur.com/GXDfEmOl.png)](https://i.imgur.com/GXDfEmO.png)
 
 
 ## Aplicaciones
@@ -40,7 +40,7 @@ La primera vez que accedes, te pediremos que crees tu primera App, por el moment
 * **Icono**: No necesariamente tiene que ser el mismo icono que usarás en el Market sirve para que puedas identificar rápidamente tu app.
 
 
-[![](http://i.imgur.com/kg02TTel.png)](http://i.imgur.com/kg02TTe.png)
+[![](https://i.imgur.com/kg02TTel.png)](https://i.imgur.com/kg02TTe.png)
 
 
 
@@ -48,8 +48,7 @@ La primera vez que accedes, te pediremos que crees tu primera App, por el moment
 El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla podrás ver el Dashboard o la Vista general de tu App. A continuación, deberás integrar el SDK de TwinPush en tus aplicaciones móviles y subir tu certificado para empezar a enviar notificaciones. Sigue las instrucciones del [SDK aquí](http://www.twinpush.com/quickstart). 
 
 
-[![](http://i.imgur.com/CMETNINl.png)](http://i.imgur.com/CMETNIN.png)
-
+[![](https://i.imgur.com/jRaQHctl.png)](https://i.imgur.com/jRaQHct.png)
 
 
 
@@ -76,7 +75,8 @@ o también sobre Crear nueva notificación arriba a la derecha.
 Si ya has enviado notificaciones con esa aplicación el botón Push te llevará a la siguiente pantalla. Desde aquí podras ver estadísticas de tus notificaciones enviadas, tus grupos de notificaciones, tus últimas notificaciones, tus campañas, etc. También podras reutilizar grupos, notificaciones o campañas, más adelante te explicaremos cómo. Para crear una nueva notificación desde esta pantalla, clica sobre Crear nueva notificación arriba a la derecha.
 
 
-[![](http://i.imgur.com/UADyhoCl.png)](http://i.imgur.com/UADyhoC.png)
+[![](https://i.imgur.com/nKPzQoUl.png)](https://i.imgur.com/nKPzQoU.png)
+
 
 
 ### Editor de Notificaciones
@@ -88,7 +88,7 @@ El editor de notificaciones se presenta como una serie de pestañas: Push, Conte
 Para enviar una notificación cualquiera, los campos mínimos que hay que completar son: la Alerta, bajo la pestaña Push, y al menos un Target, el resto de opciones del editor te ayudarán a enriquecer tus notificaciones, a realizar acciones cuando el usuario pulse sobre la notificación, a segmentar tus envíos y a programar la hora y el día en que quieres que se envíen tus notificaciones.
 
 
-[![](http://i.imgur.com/M7bDRCAl.png)](http://i.imgur.com/M7bDRCA.png)
+[![](https://i.imgur.com/JDS3z9wl.png)](http://i.imgur.com/JDS3z9w.png)
 
 
 
@@ -221,17 +221,14 @@ O también clica en Crear nuevo segmento arriba a la derecha.
 
 Si ya tienes segmentos creados en tu aplicación verás la siguiente pantalla. Desde aquí obtendrás una rápida vista de todos tus segmentos, donde se muestra para cada uno de ellos, el número de dispositivos, el porcentaje de dispositivos objetivo del segmento (barra verde) sobre el universo de dispositivos totales (barra gris de fondo) y el tipo de filtrado del segmento: por posición, por propiedades del dispositivo o por estadísticas de uso. Para crear un nuevo segmento desde esta pantalla, clica sobre Crear nuevo segmento arriba a la derecha.
 
-[![](http://i.imgur.com/ApWNVOnl.png)](http://i.imgur.com/ApWNVOn.png)
-
-
+[![](https://i.imgur.com/mzb26tDl.png)](http://i.imgur.com/mzb26tD.png)
 
 
 ### Editor de Segmentos
 Al clicar sobre Crear nuevo segmento entrarás en el Editor de Segmentos. El editor te llevará por defecto al filtro por Ubicación. El editor de segmentos se presenta como una lista de filtros sobre el margen izquierdo de la pantalla, que podrás ir añadiendo al segmento creado. Los filtros son de tres tipos: por Ubicación, por Datos de Usuario o por Datos del Dispositivo. En el centro de la pantalla encontrarás las opciones de configuración del filtro seleccionado. Sobre la derecha de la pantalla podrás añadir una condición a todos los filtros seleccionados y dar un nombre al segmento recién creado. 
 Cada filtro que vas añadiendo al segmento se verá representado a través de un pequeño índice en su correspondiente sección. Este índice indica la cantidad total de filtros totales de esa sección. Así por ejemplo, si añades 2 idiomas distintos, el sub índice en la sección de idiomas será 2, y si añades 3 ciudades, el sub índice en ciudades será 3.
 
-[![](http://i.imgur.com/CTDBoGIl.png)](http://i.imgur.com/CTDBoGI.png)
-
+[![](https://i.imgur.com/P1wCBq5l.png)](http://i.imgur.com/P1wCBq5.png)
 
 #### Filtros por Ubicación
 TwinPush ofrece diferentes maneras de filtrar un grupo de usuarios de acuerdo a su ubicación: puedes crear uno o más geocercos, especificar uno o más países, estados, regiones, o ciudades, para ello clica sobre Coordenadas, País, Estado, Región o Ciudad.  
