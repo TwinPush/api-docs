@@ -291,46 +291,7 @@ Once you have set up all your filters, you can add a final condition to all of t
 
 Finally, you can give a name to your target and save it by clicking on Create Target.
 
-[![](http://i.imgur.com/vOgDLhSl.png)](http://i.imgur.com/vOgDLhS.png)
-
-
-
-## Audience / Users
-
-TwinPush gives you the most relevat statistics from your users. Statistics are grouped in three blocks: Application usage, Users data and Devices data.
-Go to the "[Devices](#devices)" view to get a more detailed information of your users and to export this data for an exhaustive study of this information.
-
-### Application usage:
-
-**Platform**: The number of devices by platform: iOS or Android.
-
-**Usage statistics**: This chart shows the usage time of your Application.
-
-* Has used the application more than ...
-* Has used the application less than ...
-* Has used the app on average of more than ...
-* Has used the app less than ...
-* Has used the application from ...
-
-
-[![](http://i.imgur.com/4pI2yx3l.png)](http://i.imgur.com/4pI2yx3.png)
-
-
-
-### User Properties:
-By integrating your App with the ["Custom Properties" in the SDK](http://developers.twinpush.com/quickstart), TwinPush is able to receive and show data related to the user properties, the following charts will automatically configure accordinf to the property type.
-
-[![](http://i.imgur.com/YVx9WBkl.png)](http://i.imgur.com/YVx9WBk.png)
-
-
-
-### Device Data:
-The device data will also be shown throught the following charts:
-
-* **Language** the one set in the device.
-* **Manufacturer** of the device.
-
-[![](http://i.imgur.com/1rJ3X6ul.png)](http://i.imgur.com/1rJ3X6u.png)
+[![](https://i.imgur.com/vOgDLhSl.png)](https://i.imgur.com/vOgDLhS.png)
 
 
 

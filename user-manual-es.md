@@ -282,46 +282,7 @@ Una vez establecidos tus filtros, podrás añadir una condición a todos ellos e
 
 Finalmente, dale un nombre a tu segmento y guárdalo clicando Crear Segmento.
 
-[![](http://i.imgur.com/1b4AEHal.png)](http://i.imgur.com/1b4AEHa.png)
-
-
-
-## Audiencia / Usuarios
-
-TwinPush muestra los datos estadísticos más relevantes de tus usuarios, agrupados en tres bloques de información, Uso de la Aplicación, datos de Usuarios y datos de Dispositivos.
-Para conocer más en detalle los datos de nuestros usuarios y tener la posibilidad de exportarlos para su estudio exhaustivo, deberemos hacerlo en la vista de ["Dispositivos"](#dispositivos)
-
-### Uso de la Aplicación:
-
-**Plataforma**: Número de dispositivos por plataforma, iOS o Android.
-
-**Datos de Uso**: Gráficas por tiempos de uso de la Aplicación.
-
-* Ha usado la Aplicación más de ...
-* Ha usado la Aplicación menos de ...
-* Ha usado la Aplicación de media más de ...
-* Ha instalado la Aplicación hace menos de ...
-* No ha usado la aplicación desde hace ...
-
-
-[![](http://i.imgur.com/yPlwCdWl.png)](http://i.imgur.com/yPlwCdW.png)
-
-
-
-### Propiedades de Usuario:
-Mediante la [Integración de la "custom properties" en el SDK](http://developers.twinpush.com/quickstart), TwinPush es capaz de recibir y mostrar los datos relativos a las propiedades de los usuarios, estas gráficas se configuran automáticamente según el tipo de propiedad.
-
-[![](http://i.imgur.com/wL83pgPl.png)](http://i.imgur.com/wL83pgP.png)
-
-
-
-### Datos de Dispositivo:
-Los datos de dispositivo que se muestran gráficamente son:
-
-* **Idioma** en el que está el dispositivo configurado.
-* **Fabricante** del dispositivo.
-
-[![](http://i.imgur.com/yMS4Mall.png)](http://i.imgur.com/yMS4Mal.png)
+[![](https://i.imgur.com/1b4AEHal.png)](https://i.imgur.com/1b4AEHa.png)
 
 
 
