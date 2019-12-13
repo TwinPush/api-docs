@@ -315,6 +315,21 @@ Al hacer click sobre uno de los dispositivos se mostrará un modal con toda la i
 * Versión de la App
 * Versión del SDK
 
+Un botón permitirá ver las notficaciones enviadas y recibidas por el Dispositivo.
+
+##### Notificaciones Recibidas:
+Al clicar sobre el botón Ver notificaciones recibidas, la vista cargará nuevamente la información del dispositivo y también todas las notificaciones enviadas al mismo. Para cada notificación, padrás ver la siguiente información:
+
+* Tipo: Simple o Rica
+* Nombre / Mensaje: título de la notificación
+* Creación: fecha de creación
+* Envío push: fecha de envío
+* Apertura: fecha en la que el usuario la abrió
+* Buzón: si se guardó o no en el buzón del usuario
+
+[![](https://i.imgur.com/Ec7XgKdl.png)](https://i.imgur.com/Ec7XgKd.png)
+
+
 #### Información de Localización:
 Siempre que se haya realizado una [integración del SDK](https://developers.twinpush.com/developers) con la geolocalización activa de dispositivos, TwinPush mostrará información relativa a la ubicación del mismo.
 

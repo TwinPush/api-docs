@@ -323,6 +323,21 @@ By clicking on one device from the table, a popup window will open showing all t
 * App version
 * SDK version
 
+A button will allow you to see all notifications sent and received by that Device.
+
+##### Received Notifications
+When clicking on the See device notifications button, a new screen will load again the device info and also all notifications sent to that device. For each notification, you will see the following information:
+
+* Type: Simple or Rich
+* Name / Message: notification title
+* Created: creation date
+* Push sent: delivery date
+* Opened: date on which the user opened it
+* Inbox: whether or not was saved in the user's inbox
+
+[![](https://i.imgur.com/CzO2BT9l.png)](https://i.imgur.com/CzO2BT9.png)
+
+
 #### Location info:
 This functionality will work whenever you have integrate your App with [TwinPush SDK](https://developers.twinpush.com/developers) to get the geolocation active in the device. TwinPush will show you location information of the device.
 
