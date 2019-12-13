@@ -340,8 +340,7 @@ Siempre que se haya realizado una [integración del SDK](https://developers.twin
 #### Datos de Usuario (Custom Properties):
 El [SDK](https://developers.twinpush.com/developers) permite el registro de propiedades de usuario en TwinPush que también se mostrarán en la vista de Dispositivos.
 
-[![](https://i.imgur.com/vqfEe5Ol.png)](https://i.imgur.com/vqfEe5O.png)
-
+[![](https://i.imgur.com/YGhcmOpl.png)](https://i.imgur.com/YGhcmOp.png)
 
 
 ### Exportación:

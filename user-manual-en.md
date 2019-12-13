@@ -313,7 +313,7 @@ The view shows the devices with the most recent registered activity, as well as 
 [![](https://i.imgur.com/gePO5ojl.png)](https://i.imgur.com/gePO5oj.png)
 
 
-By clicking on one device from the table, a popup window will open showing all the information related to that device. Besides the general information you will also see:
+By clicking on any device from the table, a popup window will open showing all the information related to that device. Besides the general information you will also see:
 
 #### Device info:
 * Manufacturer
