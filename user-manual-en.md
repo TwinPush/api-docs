@@ -348,7 +348,7 @@ This functionality will work whenever you have integrate your App with [TwinPush
 #### User Data (Custom Properties):
 The [TwinPush SDK](https://developers.twinpush.com/developers) allows you to register properties from the user in the Platform that will also be shown in the Devices screen.
 
-[![](https://i.imgur.com/7s0LY7il.png)](https://i.imgur.com/7s0LY7i.png)
+[![](https://i.imgur.com/XeUJxVql.png)](https://i.imgur.com/XeUJxVq.png)
 
 
 ### Export data:
