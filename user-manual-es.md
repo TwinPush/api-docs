@@ -400,28 +400,32 @@ TwinPush permite la gestión de las personas que tendrán acceso a tu aplicació
 
 
 #### Roles de usuario
-Hay tres roles de usuarios que el propietario o los administradores de la cuenta puede elegir para cada miembro de su equipo: Invitado, Usuario o Administrador.
+Hay cuatro roles de usuarios que el propietario o los administradores de la cuenta puede elegir para cada miembro de su equipo: Invitado, Redactor, Usuario o Administrador.
 
 
 **Invitado**: los usuarios invitados tienen acceso a:
 
-* Información de audiencia.
+* Al Dashboard de inicio.
 * Listado de dispositivos registrados.
-* Estadísticas de las notificaciones push.
+* Listado de las notificaciones push.
 
-**Usuario**:  los usuarios con el rol de usuario, además tienen acceso completo a:
+**Redactor**: los usuario redactores, además tienen acceso a:
 
 * Gestión de segmentos, pueden crear y editar los segmentos existentes.
-* Envío de notificaciones push, pueden crear, editar, enviar notificaciones y crear, editar y activar campañas.
+* Creación de notificaciones push, pueden crear o editar notificaciones y pueden crear o editar campañas, no obstante no podrán ni enviar las notificaciones ni activar campañas.
+
+**Usuario**:  los usuarios con el rol de usuario, además pueden:
+
+* Envío de notificaciones push, pueden enviar notificaciones y activar campañas.
 
 **Administrador**:  los usuarios administradores tienen el control total de la aplicación y pueden además acceder a:
 
+* Visualizar contenido protegido
 * Ajustes de aplicación, incluyendo la consulta de API Keys y configuración de APNS o FCM/GCM.
 * Claves de autenticación, para autenticar el acceso de la App móvil (SDK) y el API de TwinPush.
 * Gestión del equipo, pueden invitar nuevos usuarios, editar roles de usuarios existentes y revocar accesos de otros usuarios.
 
-[![](https://i.imgur.com/98u3GDAl.png)](https://i.imgur.com/98u3GDA.png)
-
+[![](https://i.imgur.com/OlK5Z19l.png)](https://i.imgur.com/OlK5Z19.png)
 
 
 ### Configuración FCM (GCM) y APNS:

@@ -409,22 +409,27 @@ There are three user roles that the account owner or account administrators can 
 
 **Guest**: Guest users have access to:
 
-* Audience information.
+* the Dashboard.
 * List of registered devices.
-* Statistics of Push notifications.
+* List of Push notifications.
 
-**User**: Users with the user role, have also complete access to:
+**Writer**: Writer users, besides, have access to:
 
 * Target managements, can create and edit existing segments.
-* Send Push notifications, can create, edit, send notifications and create, edit and activate campaigns.
+* Editing notifications, can create or edit notifications and create or edit campaigns, even though, they cannot send push notifications nor activate campaigns.
+
+**User**: Users with the user role, have also can:
+
+* Send Push notifications, can notifications and activate campaigns.
 
 **Administrator**: Administrators have total control of the App and they can also access to:
 
+* View protected content.
 * Application settings, including viewing API Keys and configure APNS or FCM/GCM.
 * Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
 * Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
 
-[![](https://i.imgur.com/JoCnWVol.png)](https://i.imgur.com/JoCnWVo.png)
+[![](https://i.imgur.com/vgd993ul.png)](https://i.imgur.com/vgd993u.png)
 
 
 
