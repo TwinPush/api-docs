@@ -185,10 +185,14 @@ Podremos interactuar con la App residente en el Smartphone del usuario, pudiendo
 
 ### Guardar y Previsualizar
 
-Una vez hayas completado tu notificación, podrás salvarla y enviarla clicando sobre Guardar y previsualizar abajo a la derecha. TwinPush guardará tu notificación configurada y te mostrará una pantalla resumen. Comprueba que tu notificación este correcta y envíala con el boton Send. Si no lo está, podrás editarla con Edit, o borrarla con Delete. El botón Duplicate te será de gran utilidad para reutilizar notificaciones o para crear tus propias plantillas sobre las cuales puedas hacer variaciones sobre un duplicado de una plantilla original.
+Una vez hayas completado tu notificación, podrás salvarla y enviarla clicando sobre Guardar y previsualizar abajo a la derecha. TwinPush guardará tu notificación configurada y te mostrará una pantalla resumen. Comprueba que tu notificación este correcta y envíala con el boton Enviar. Si no lo está, podrás editarla con Edit, o borrarla con Delete. El botón Duplicate te será de gran utilidad para reutilizar notificaciones o para crear tus propias plantillas sobre las cuales puedas hacer variaciones sobre un duplicado de una plantilla original.
 
 
 [![](https://i.imgur.com/CEWk6mol.png)](https://i.imgur.com/CEWk6mo.png)
+
+_Atención_: sólo en el caso que hayas seleccionado a "Todos" en tu audiencia, antes de enviar la Notificación TwinPush solicitará tu confirmación, una vez confirmes la notificación se enviará:
+
+[![](https://i.imgur.com/zp8r3t0l.png)](https://i.imgur.com/zp8r3t0.png)
 
 ### Detalle de Campaña Enviada
 Al clicar sobre una de las campañas podremos ver toda la información relativa al envío.

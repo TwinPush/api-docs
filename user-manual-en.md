@@ -192,6 +192,9 @@ Once you have completed your notification, you can save it and then send it, by 
 
 [![](https://i.imgur.com/4lMAUbXl.png)](https://i.imgur.com/4lMAUbX.png)
 
+_Warning_: only when you have selected "All" in your target audience, before you send the Notification TwinPush will ask for your confirmation, once you confirm the notification will be send:
+
+[![](https://i.imgur.com/4ibQuTkl.png](https://i.imgur.com/4ibQuTk.png)
 
 ### Details of a Delivered Campaign
 When clicking over one of your campaigns you can see all the information related to the delivery.
