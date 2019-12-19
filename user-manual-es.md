@@ -93,7 +93,7 @@ Para enviar una notificación cualquiera, los campos mínimos que hay que comple
 
 
 #### Push 
-Utiliza la pestaña Push para componer tu notificación. La notificación en sí se envía en texto plano. Al componer el mensaje ten en cuenta que los smartphones con sistemas operativos no actualizados estan limitados a un tamaño de notificación de alrededor de 250 caracteres, en estos 250 caracteres están incluidos el texto plano de la notificación y el texto enriquecido o la URL, que se introducen en la pestaña *Content*.
+Utiliza la pestaña Push para componer tu notificación. La notificación en sí se envía en texto plano. Al componer el mensaje ten en cuenta que los smartphones con sistemas operativos no actualizados estan limitados a un tamaño de notificación de alrededor de 250 caracteres, en estos 250 caracteres están incluidos el texto plano de la notificación y el texto enriquecido o la URL, que se introducen en la pestaña *Contenido*.
 
 Si quieres que tus notificaciones llegue correctamente a la mayoría de dispositivos, crea mensajes concisos y utiliza URL's cortas cuando puedas.
 
@@ -309,7 +309,7 @@ La vista muestra los dispositivos con actividad más reciente registrada, así c
 
 
 
-Al hacer click sobre uno de los dispositivos se mostrará un modal con toda la información relativa a este dispositivo, además de la información general, se mostrará:
+Al clicar sobre cualquiera de los dispositivos se mostrará un modal con toda la información relativa a este dispositivo, además de la información general, se mostrará:
 
 #### Información del Dispositivo:
 * Fabricante
