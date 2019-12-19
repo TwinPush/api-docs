@@ -51,13 +51,15 @@ El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla p
 [![](https://i.imgur.com/jRaQHctl.png)](https://i.imgur.com/jRaQHct.png)
 
 
+### Inicio o Dashboard
+La pantalla de Inicio de ofrece una vista genral de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones.
+
+
 
 ### Tus Siguientes Apps
 Una vez creada tu primera App, podrás añadir más Apps en cualquier momento. Si sólo tienes una App, deberás clicar en sobre el ícono o el nombre de tu primera App que se ubica en la barra superior y se desplegará un menú, elige la opción Todas las aplicaciones, a continuación obtendrás una pantalla con todas tus aplicaciones. Clicando sobre Nueva App podrás añadir más Apps. Si ya tienes más de una App, llegarás a esta pantalla al iniciar sesión. Clica sobre una App para entrar en la Vista general de la misma.
 
 [![](https://i.imgur.com/NIiy0lDl.png)](https://i.imgur.com/NIiy0lD.png)
-
-
 
 
 ## Notificaciones

@@ -51,14 +51,15 @@ Now the workspace of your App is already created in TwinPush, you will land into
 
 [![](https://i.imgur.com/IzlGbbal.png)](https://i.imgur.com/IzlGbba.png)
 
+### Dashboard
+The Dashboard page will bring you a general view of the evolution of your App. In this page you can see graphically how Devices are registering in your App, the Notifications you are sending, the Activity that your Users are developing in your App and how your Users are reacting to your Notifications. 
+
 
 
 ### More Apps
 Once you have created your first App, you can add more Apps at any time. If you want to add one more App and you currently are at the Dashboard of any App, click on the icon or name of your App in the upper bar and choose from the dropdown menu Create a new application option. You will get a screen of all your Apps. By clicking down over the New Application icon you will be creating a new App. If you have two of more Apps already, you will get this screen as soon as you start session in TwinPush. Click over any App to get into the Dashboard of that App.
 
 [![](https://i.imgur.com/Id54lKUl.png)](https://i.imgur.com/Id54lKU.png)
-
-
 
 
 ## Notifications
