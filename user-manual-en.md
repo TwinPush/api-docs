@@ -120,7 +120,11 @@ At the Content tab, you can select which additional actions the notification wil
 Use the Target tab to select the users you want them to receive this notification. You can send this notification to all users of your App, to one or more users selected manually, to your segments, or you can also import a file with your own list of users or devices.
 
 * **All**: By choosing All, the notification will be sent to all users registered in the platform and active at the time of sending this notitication.
-* **User**: Here you can manually select one or more users or devices, to do that, you should identify a user by its Alias, or a device by its Device ID. Remember that any user has a unique Alias, but one user can own one or more devices. 
+* **User**: Here you can manually select one or more users or devices, to do that, you should identify a user by its Alias, or a device by its Device ID. Remember that any user has a unique Alias, but one user can own one or more devices.  You can also quickly select a group of Devices **By property** according to the values they have in a certain *property*, plus you can add them a filter by segment in order to extract a very personalized audience. Remember that you define yourself the properties or "Custom Properties" in your App and register them in TwinPush, and one property could be any information that you want to capture from your users, for instance: age, gender, proffesion, interest or any other information.
+
+[![](https://i.imgur.com/wZcN7Lhl.png)](https://i.imgur.com/wZcN7Lh.png)
+
+
 * **Segment**: Choose one or more segments here, you should have created them first in the Target section. Just write the name of the segment one by one in the text box.
 * **File**: Import a CSV (.csv) or a plain text (.txt) file with your own list of users or devices. You can also customize the message to be send to each user or device. Find the rules for formatting the file [here](https://twincoders.atlassian.net/wiki/x/AgC7AQ).
 

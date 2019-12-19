@@ -119,7 +119,11 @@ En Contenido podrás seleccionar qué acción adicional realizará la notificaci
 Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban esta notificación. Podrás enviar la notificación a todos los usuarios de tu App, a uno o más usuarios o dispositivos seleccionados manualmente, a tus segmentos, o también podrás importar un fichero que contenga una lista de usuarios o dispositivos.
 
 * **Todos**: Seleccionando Todos, la notificación se enviará a todos los usuarios registrados en la plataforma y activos en el momento del envío.
-* **Usuario**: Aquí podrás elegir uno o más usuarios o dispositivos escribiéndolos manualmente uno a uno, para ello, identifica a tus usuarios por su Alias, o a los dispositivos por su Device ID. Recuerda que un usuario tiene un Alias, pero puede tener uno o más dispositivos. 
+* **Usuario**: Aquí podrás elegir uno o más usuarios o dispositivos escribiéndolos manualmente uno a uno, para ello, identifica a tus usuarios por su Alias, o a los dispositivos por su Device ID. Recuerda que un usuario tiene un Alias, pero puede tener uno o más dispositivos. También podrás seleccionar rapidamente un grupo de Dispositivos **Por propiedad** de acuerdo a los valores que tienen una determinada *propiedad* y además añadirle filtros por segmento con el fin de extraer una audiencia muy personalizada. Recuerda que las propiedades o "Custom Properties" las defines tu mismo en tu propia App y registras en TwinPush, y que una Propiedad puede ser cualquier información que te interese capturar de tus usuarios, como por ejemplo: edad, género, ocupación, intereses o cualquier otra información
+
+[![](https://i.imgur.com/zY3EeNYl.png)](https://i.imgur.com/zY3EeNY.png)
+
+ 
 * **Segmento**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
 * **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://twincoders.atlassian.net/wiki/x/AgC7AQ) encontrarás las reglas para la creación del fichero.
 
