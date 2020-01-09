@@ -57,7 +57,7 @@ La pantalla de Inicio de ofrece una vista genral de la evolución de tu App. En 
 
 
 ### Tus Siguientes Apps
-Una vez creada tu primera App, podrás añadir más Apps en cualquier momento. Si sólo tienes una App, deberás clicar en sobre el ícono o el nombre de tu primera App que se ubica en la barra superior y se desplegará un menú, elige la opción Todas las aplicaciones, a continuación obtendrás una pantalla con todas tus aplicaciones. Clicando sobre Nueva App podrás añadir más Apps. Si ya tienes más de una App, llegarás a esta pantalla al iniciar sesión. Clica sobre una App para entrar en la Vista general de la misma.
+Una vez creada tu primera App, podrás añadir más Apps en cualquier momento. Si sólo tienes una App, deberás clicar en sobre el ícono o el nombre de tu primera App que se ubica en la barra superior y se desplegará un menú, elige la opción Todas las aplicaciones, a continuación obtendrás una pantalla con todas tus aplicaciones. Clicando sobre Nueva App podrás añadir más Apps. Si ya tienes más de una App, llegarás a esta pantalla al iniciar sesión. Cuando llegues a tener muchas Apps en tu cuenta dispondrás de una cajita de búsqueda para que puedas acceder rápidamente a cualquiera. Clica sobre una App para entrar en la Vista general de la misma.
 
 [![](https://i.imgur.com/NIiy0lDl.png)](https://i.imgur.com/NIiy0lD.png)
 
