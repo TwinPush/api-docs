@@ -95,6 +95,8 @@ To send a notification, the minimum required fields to complete are: the Alert, 
 #### Push 
 Use this tab to write your notification. The notification itself is sent in plain text. When composing the message take into account that smartphones with outdated operative systems are limited to notifications size of around 250 characters, that means that you should fit your plain text message, the rich text or the URL in those 250 characters. You can add rich text or an external URL at the *Content* tab.
 
+TwinPush also support emoji in the tittle message as well as in the body of the message, you just have to enable your emoji keyboard in your system to start writing and sending them.
+
 If you want your notifications reach most devices correctly, try to create concise messages and use URL shorteners whenever you can.
 
 * **Tittle**: It's first line of the notification, it will be shown highlighted in the device.

@@ -97,6 +97,8 @@ Para enviar una notificación cualquiera, los campos mínimos que hay que comple
 #### Push 
 Utiliza la pestaña Push para componer tu notificación. La notificación en sí se envía en texto plano. Al componer el mensaje ten en cuenta que los smartphones con sistemas operativos no actualizados estan limitados a un tamaño de notificación de alrededor de 250 caracteres, en estos 250 caracteres están incluidos el texto plano de la notificación y el texto enriquecido o la URL, que se introducen en la pestaña *Contenido*.
 
+TwinPush también soporta el envío de emojis tanto en el título del mensaje como en el cuerpo del mensaje, sólo tienes que habilita en tu Ordenador el teclado de emojis y podrás enviarlos.
+
 Si quieres que tus notificaciones llegue correctamente a la mayoría de dispositivos, crea mensajes concisos y utiliza URL's cortas cuando puedas.
 
 * **Título**: Es la primera línea de la notificación que aparecerá resaltada en los dispositivos.
