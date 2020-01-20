@@ -5,6 +5,8 @@
 
 En ocasiones los dispositivos registrados nuevos se marcan automáticamente como inactivos, esto podrás comprobarlo en la vista de "Dispositivos" del administrador.
 
+[![](https://i.imgur.com/1DK9lQ7l.png)](https://i.imgur.com/1DK9lQ7.png)
+
 Esto provoca que las notificaciones no se envíen a estos dispositivos. Muy probablemente se deba a un problema con los límites de tu licencia, informate sobre el funcionamiento de las [licencias de TwinPush aquí](#funcionamiento-de-las-licencias).
 
 

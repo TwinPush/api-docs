@@ -5,6 +5,8 @@
 
 Sometimes you may experience that new devices are being check as inactive, you can confirm this in the "Devices" page at the Active column.
 
+[![](https://i.imgur.com/ifQuMQUl.png)](https://i.imgur.com/ifQuMQU.png)
+
 This situation causes that all notifications will not be send to these devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
 
 
