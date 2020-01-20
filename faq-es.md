@@ -39,7 +39,7 @@ En este informe podremos ver si ha ocurrido algún error que TwinPush haya ident
 
 Si en el informe de TwinPush está registrado el envío correctamente sin errores, los motivos principales por los que no se recibe una notificación son los siguientes:
 
-* **Dispositivo Inactivo:** principalmente ocasionado por un problema con el límite de la licencia.
+* **Dispositivo Inactivo:** principalmente ocasionado por un problema con el límite de la licencia de TwinPush [aquí](#funcionamiento-de-las-licencias).
 * **Notificaciones no habilitadas en el dispositivo:** debemos comprobar que tenemos habilitadas las notificaciones y volver a realizar la prueba. Cuando el usuario decide no aceptar notificaciones de tu App en su móvil, aparecerá desmarcado el check de Push en la lista de Dispositivos y no recibirá notificaciones aunque podrá encontrarlas en el Buzón de notificaciones, siempre que tengas integrada esta funcionalidad en tu App.
 
 [![](https://i.imgur.com/VX9lwPHl.png)](https://i.imgur.com/VX9lwPH.png)

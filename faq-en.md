@@ -42,7 +42,7 @@ You can see there, if there was an error that TwinPush could have identified. Mo
 
 In case the notification report is not showing any error, there might be some other reason, please check the following one by one:
 
-* **Inactive Device:** mainly caused by a problem with the limit of your license.
+* **Inactive Device:** mainly caused by a problem with the limit of your TwinPush license [here](#how-licenses-work).
 * **Notifications not enabled in the device:** you should check if notifications are enabled for your App in that device and try again. When a user decides not to receive notifications from your App in his phone, the Push check will show uncheck in the Device list and he will not receive any notification, eventhough he could find them in his notification Mailbox, only if you have integrated this funtionality into your App.
 
 [![](https://i.imgur.com/HniCiyDl.png)](https://i.imgur.com/HniCiyD.png)
