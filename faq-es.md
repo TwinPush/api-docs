@@ -25,19 +25,30 @@ El tamaño máximo del texto o del título de una notificación, por lo tanto, q
 
 **Comprobaciones iniciales**
 
-Lo primero que debemos hacer es descargar el PDF de reporte de la notificación que no ha sido entregada al dispositivo, en este informe, disponible en la vista de detalle de la Notificación, podremos ver si ha ocurrido algún error que TwinPush haya identificado, los errores más comunes son:
+Lo primero que debemos hacer es descargar el PDF de reporte de la notificación que no ha sido entregada al dispositivo, disponible en la vista de detalle de la Notificación.
 
-* No tiene envíos: No existían destinatarios ( dispositivos activos ) para nuestro envío, por lo que deberemos comprobar los destinatarios y que se encuentren activos, esto podremos consultarlo en la vista de "Dispositivos" de el Admin Web.
-* Token No válido o error de certificado: Estos errores son habituales en envíos a iOS, requiere revisar la configuración de certificados de nuestra Aplicación, validez, caducidad, etc...
+[![](https://i.imgur.com/yMdCHnWl.png)](https://i.imgur.com/yMdCHnW.png)
+
+En este informe podremos ver si ha ocurrido algún error que TwinPush haya identificado, los errores más comunes son:
+
+* **No tiene envíos:** No existían destinatarios (dispositivos activos ) para nuestro envío, por lo que deberemos comprobar los destinatarios y que se encuentren activos, esto podremos consultarlo en la vista de "Dispositivos" de el Admin Web.
+* **BadDeviceToken o Token No válido o error de certificado:** Estos errores son habituales en envíos a dispositivos iOS, requiere revisar la configuración de certificados de Apple APNS de nuestra Aplicación, en la sección de ajustes. Debes comprobar la validez del Certificado, o que se esté utilizando el Certificado correcto: Desarrollo o Producción (check Distribución marcado), según sea el caso y corregirlo si fuera necesario.
+
+[![](https://i.imgur.com/n5QbpHUl.png)](https://i.imgur.com/n5QbpHU.png)
+
 
 Si en el informe de TwinPush está registrado el envío correctamente sin errores, los motivos principales por los que no se recibe una notificación son los siguientes:
 
-* Dispositivo Inactivo, principalmente ocasionado por un problema con el límite de la licencia.
-* Notificaciones no habilitadas en el dispositivo, debemos comprobar que tenemos habilitadas las notificaciones y volver a realizar la prueba.
+* **Dispositivo Inactivo:** principalmente ocasionado por un problema con el límite de la licencia.
+* **Notificaciones no habilitadas en el dispositivo:** debemos comprobar que tenemos habilitadas las notificaciones y volver a realizar la prueba. Cuando el usuario decide no aceptar notificaciones de tu App en su móvil, aparecerá desmarcado el check de Push en la lista de Dispositivos y no recibirá notificaciones aunque podrá encontrarlas en el Buzón de notificaciones, siempre que tengas integrada esta funcionalidad en tu App.
+
+[![](https://i.imgur.com/VX9lwPHl.png)](https://i.imgur.com/VX9lwPH.png)
+
+
 * Problemas de conectividad en el dispositivo, en ocasiones tanto la falta de cobertura como una conexión a una red corporativa pueden ocasionar que las notificaciones no lleguen o lo hagan con cierto retraso.
 * La notificación si ha llegado pero ha pasado desapercibida.
 
-En general, siempre que tengamos problemas para determinar por qué una notificación no llega a un dispositivo en concreto, debemos comprobar la actividad de nuestro dispositivo: En la vista de "Dispositivos" podremos encontrar nuestro dispositivo, asociado a nuestro usuario, debemos percatarnos que esté efectivamente activo y tenga habilitadas las notificaciones.
+En general, siempre que tengamos problemas para determinar por qué una notificación no llega a un dispositivo en concreto, debemos comprobar la actividad de nuestro dispositivo: En la vista de "Dispositivos" podremos encontrar nuestro dispositivo, asociado a nuestro usuario (Alias), debemos percatarnos que esté efectivamente **activo y tenga habilitadas las notificaciones**.
 
 Podemos incluso reinstalar la Aplicación y repetir el proceso de registro.
 

@@ -7,7 +7,6 @@ Sometimes you may experience that new devices are being check as inactive, you c
 
 [![](https://i.imgur.com/qcmuH4Ll.png)](https://i.imgur.com/qcmuH4L.png)
 
-
 This situation causes that all notifications will not be send to these devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
 
 
@@ -27,20 +26,31 @@ The maximum size of the text or title of a notification, therefore, would be mor
 
 **Initial approach**
 
-The first thing you have to do is to download the PDF report of the undelivered notification, you can find this report in the Push page, under details of that notification. You can see there, if there was an error that TwinPush could have identified. Most common errors are:
+The first thing you have to do is to download the PDF report of the undelivered notification, you can find this report in the Push page, under details of that notification. 
 
-* There are no deliveries: There were no recipents (active devices) for your notification, from here, you should check if all devices of your recipient list are active, you can check that in "Devices" page at the Active column.
+[![](https://i.imgur.com/WXtySn1l.png)](https://i.imgur.com/WXtySn1.png)
 
-* No valid token or certificate error: These kind of errors are common when sending notifications to iOS devices, and you should check your Certificate configuration in TwinPush in the Settings page; check your Certificate expiring date and if you are using the Production or Development Certificate correctly.
+
+You can see there, if there was an error that TwinPush could have identified. Most common errors are:
+
+* **There are no deliveries:** There were no recipents (active devices) for your notification, from here, you should check if all devices of your recipient list are active, you can check that in "Devices" page at the Active column.
+
+* **BadDeviceToken or No valid token or certificate error:** These kind of errors are common when sending notifications to iOS devices, and you must check your Apple APNS Certificate configuration at the settings section. Check for your Certificate expiring date or if you are using your Certificate correctly: Development or Production (Distribution checkbox checked) according to your current App, and apply corrections if needed.
+
+[![](https://i.imgur.com/w1Yjmysl.png)](https://i.imgur.com/w1Yjmys.png)
+
 
 In case the notification report is not showing any error, there might be some other reason, please check the following one by one:
 
-* Inactive Device, mainly caused by a problem with the limit of your license.
-* Notifications not enabled in the device, you should check if notifications are enabled for your App in that device and try again.
+* **Inactive Device:** mainly caused by a problem with the limit of your license.
+* **Notifications not enabled in the device:** you should check if notifications are enabled for your App in that device and try again. When a user decides not to receive notifications from your App in his phone, the Push check will show uncheck in the Device list and he will not receive any notification, eventhough he could find them in his notification Mailbox, only if you have integrated this funtionality into your App.
+
+[![](https://i.imgur.com/HniCiyDl.png)](https://i.imgur.com/HniCiyD.png)
+
 * Connectivity problems with the device, sometimes a lack of coverage or a wifi connection into a corporative network can cause the notification not to arrive or to delay.
 * The notification had arrived but it was unnoticed.
 
-As a general rule, when you are not receiving a notification into a specific device, you should check the activity in your device: in the Devices page, find your device linked to your user name, and make sure it is effectively active and has notifications enabled. 
+As a general rule, when you are not receiving notifications into a specific device, you should check the activity in your device: in the Devices page, find your device linked to your user name(Alias), and make sure it is effectively **active and has notifications enabled**. 
 
 You could even reinstall your app and repeat the registering process.
 
