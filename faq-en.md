@@ -144,6 +144,6 @@ if you want to change this value in your account, you should contact us at [supp
 | <strong>InvalidPackageName</strong><br/>Error - FCM | Make sure the message was addressed to a registration token whose package name matches the value passed in the request. |
 | <strong>InvalidParameters</strong><br/>Error- FCM | Check that the provided parameters have the right name and type. |
 | <strong>InvalidRegistration</strong><br/>Error - FCM | Check the format of the registration token you pass to the server. Make sure it matches the registration token the client app receives from registering with Firebase Notifications. Do not truncate or add additional characters. |
-| <strong>CERTIFICATE_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> The APNS Certificate has already expired. |
+| <strong>CERTIFICATE_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> The APNS Certificate from Apple has already expired. |
 | <strong>BadDeviceToken</strong><br/>Error - APNS | The specified device token was bad. Verify that the request contains a valid token and that the token matches the environment. |
 | <strong>MissingRegistration</strong><br/>Error - FCM | Check that the request contains a registration token (in the registration_id in a plain text message, or in the to or registration_ids field in JSON). |
