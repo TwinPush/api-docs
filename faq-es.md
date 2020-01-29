@@ -138,7 +138,7 @@ Si deseas cambiar este valor, deberás ponerte en contacto con[ support@twincode
 | <strong>InvalidPackageName</strong><br/>Error - FCM | Asegúrate de que el mensaje se haya dirigido a un token de registro cuyo nombre de paquete coincida con el valor que se pasa en la solicitud. |
 | <strong>InvalidParameters</strong><br/>Error - FCM | Comprueba que los parámetros proporcionados tienen el nombre y el tipo correctos. |
 | <strong>InvalidRegistration</strong><br/>Error - FCM | Revisa el formato del token de registro que pasaste al servidor. Asegúrate de que coincida con el token de registro que la app cliente recibe cuando se registra en Firebase Notifications. No lo trunques ni agregues caracteres adicionales. |
-| <strong>error:10000415:SSL <br>routines: OPENSSL_ <br>internal: SSLV3_ALERT_ <br>CERTIFICATE_EXPIRED</strong><br/>Error - APNS    | El certificado APNS de Apple ha expirado. |
+| <strong>CERTIFICATE_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> El certificado APNS de Apple ha expirado. |
 | <strong>BadDeviceToken</strong><br/>Error - APNS | EL token del dispositivo especificado era malo. Compruebe que la petición contenga un token válido y que el token coincida con el entorno. |
 | <strong>MissingRegistration</strong><br/>Error - FCM | Verifica que la solicitud contenga un token de registro (en el registration_id, si es un mensaje de texto sin formato, o en los campos to o registration_ids en JSON). |
 
