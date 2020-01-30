@@ -134,6 +134,7 @@ if you want to change this value in your account, you should contact us at [supp
 
 ## Error Messages
 
+The following table list describe the main error messages that return Google (FCM) and Apple (APNS) Push notification Platforms. TwinPush relay these messages in the response of Notification request. These messages also could be found in the downloadable report at a Notification view.
 
 | Message | Description |
 |---------|-------------|

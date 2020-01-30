@@ -129,6 +129,8 @@ Si deseas cambiar este valor, deberás ponerte en contacto con[ support@twincode
 
 ## Mensajes de Error
 
+En la siguiente tabla se describen los principales mensajes de error que devuelven las Plataformas de Notificaciones de Google (FCM) y Apple (APNS) y que TwinPush retransmite como respuesta a sus peticiones. Estos mensajes, también se podrían encontrar en los informes descargables en la vista de una Notificación.
+
 | Mensaje | Descripción |
 |---------|-------------|
 | <strong>NotRegistered</strong><br/>Warning - FCM | Un token de registro existente puede dejar de ser válido en diversas situaciones, como las siguientes:<br>* Si la app cliente deja de estar registrada en FCM.<br>* Si se anula el registro de la app cliente automáticamente, lo cual puede ocurrir si el usuario desinstala la app. Por ejemplo, en iOS, esto sucede si el servicio de comentarios de APNS informó que los tokens de APNS no son válidos.<br>* Si el token de registro caduca (por ejemplo, porque Google decidió actualizar los tokens de registro o porque caducó el token de APNS de un dispositivo con iOS).<br>* Si la app cliente se actualiza, pero la nueva versión no está configurada para recibir mensajes.<br>En todos estos casos, debes quitar este token de registro del servidor de apps y dejar de utilizarlo para enviar mensajes. |
