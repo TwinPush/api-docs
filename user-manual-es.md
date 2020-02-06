@@ -52,7 +52,7 @@ El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla p
 
 
 ### Inicio o Dashboard
-La pantalla de Inicio de ofrece una vista genral de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones.
+La pantalla de Inicio te ofrece una vista general de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones.
 
 
 
