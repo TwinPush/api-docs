@@ -12,6 +12,7 @@ To access to the full functionality of the devices resources, the following meth
 |<span class="label label-info">POST</span>| [register](#post-register) | create or update device registration in TwinPush |
 |<span class="label label-success">GET</span>| [get badge](#get-badge) | obtains the current badge count of the device. |
 |<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge count of the device. |
+|<span class="label label-info">POST</span>| [received notification](#post-received-notification) | notifies that the notification has been received by the device |
 |<span class="label label-info">POST</span>| [open notification](#post-open-notification) | notifies that the notification has been opened by the user |
 |<span class="label label-info">POST</span>| [open app](#post-open-app) | reports that the user opened the application |
 |<span class="label label-info">POST</span>| [close app](#post-close-app) | notifies that the application has been closed or went to background execution|
@@ -337,9 +338,32 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
+## <span class="label label-info">POST</span> received notification
+
+Informs that the device has received the given Notification.
+
+### Request
+
+**Path**
+
+ ```bash
+ POST /apps/${app_id}/devices/${device_id}/notifications/${notif_id}/received_notification
+ ```
+
+__Example request__
+
+```bash
+curl -X POST \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/notifications/1441befd34f112/received_notification
+```
+
+### Response
+
+It will return an OK (HTTP 200) code if request is successful.
+
 ## <span class="label label-info">POST</span> open notification
 
-Notifies that the user interacted with a sent Notification (usually opened fom notifications center). It is usefull to determine the success of a sent notification based on its opening rate.
+Informs that the user interacted with a sent Notification (usually opened fom notifications center). It is useful to determine the success of a sent notification based on its opening rate.
 
 ### Request
 
