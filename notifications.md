@@ -447,8 +447,8 @@ The request allows the inclusion of the following optional parameters:
 
 | param | description | example |
 |-------|-------------|---------|
-| tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
-| no_tags  | Returns notifications that does not contains any of the given tags | `["main_inbox"]` |
+| tags  | Returns notifications that contains all the given tags | `tags[]=alerts&tags[]=critical` |
+| no_tags  | Returns notifications that does not contains any of the given tags | `no_tags[]=main_inbox` |
 
 **Example request**
 
