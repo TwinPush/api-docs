@@ -7,7 +7,7 @@ Sometimes you may experience that new devices are being check as inactive, you c
 
 [![](https://i.imgur.com/qcmuH4Ll.png)](https://i.imgur.com/qcmuH4L.png)
 
-This situation causes that all notifications will not be send to these devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
+This situation causes that all notifications will not be send to those devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
 
 
 
