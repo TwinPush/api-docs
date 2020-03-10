@@ -52,8 +52,9 @@ Now the workspace of your App is already created in TwinPush, you will land into
 [![](https://i.imgur.com/IzlGbbal.png)](https://i.imgur.com/IzlGbba.png)
 
 ### Dashboard
-The Dashboard page will bring you a general view of the evolution of your App. In this page you can see graphically how Devices are registering in your App, the Notifications you are sending, the Activity that your Users are developing in your App and how your Users are reacting to your Notifications. 
+The Dashboard page will bring you a general view of the evolution of your App. In this page you can see graphically how Devices are registering in your App, the Notifications you are sending, the Activity that your Users are developing in your App and how your Users are reacting to your Notifications. You can select a time frame in the upper-right corner.
 
+[![](https://i.imgur.com/nq4IWoIl.png)](https://i.imgur.com/nq4IWoI.png)
 
 
 ### More Apps
@@ -77,7 +78,8 @@ or you can also click on Create new notification on the upper right corner of th
 If you have already sent notifications using this App, the Push icon will take you to the following screen. From here you can see statistics of your sent notifications, your groups of notifications, your last notifications, your campaigns, etc. You can also reuse groups, notifications or campaigns, we will explain you later how to do that. To create a new nottification from this screen, click on Create new notification on the upper right corner of the screen.
 
 
-[![](https://i.imgur.com/Yf2xgBal.png)](https://i.imgur.com/Yf2xgBa.png)
+[![](https://i.imgur.com/0deROpil.png)](https://i.imgur.com/0deROpi.png)
+
 
 
 ### Push Composer
@@ -342,12 +344,13 @@ When clicking on the See device notifications button, a new screen will load aga
 
 * Type: Simple or Rich
 * Name / Message: notification title
-* Created: creation date
-* Push sent: delivery date
-* Opened: date on which the user opened it
+* Created: creation date and time
+* Push sent: delivery date and time
+* Received at: reception confirmation date and time
+* Opened: date and time on which the user opened it
 * Inbox: whether or not was saved in the user's inbox
 
-[![](https://i.imgur.com/CzO2BT9l.png)](https://i.imgur.com/CzO2BT9.png)
+[![](https://i.imgur.com/atKtHOTl.png)](https://i.imgur.com/atKtHOT.png)
 
 
 #### Location info:
@@ -383,8 +386,14 @@ You can modify here basic information of your App, such as:
 * **Time Zone**: You can set here the default time zone of your App, this parameter will affect the way that all time events are displayed to you, like notifications, scheduling and campaigns, but it will not take effect your notifications already scheduled. Please take note that on each campaigns you can also set a different time zone, unique for that campaign.
 * **Icon**: Upload here an image that will identify your App in TwinPush.
 * **Badge number**: This parameter sets the number displayed over the the icon of your App in iOS devices. This value is +1 by default.
+* **Max deliveries per minute**: You can set here the maximum deliveries per minute of your Notifications. This parameter will affect the Delivery speed dropdown menu at the Advanced settings view when setting a Push notification:
+    * Instant: no restrictions will apply to the delivery speed.
+    * Fast: the delivery speed will be limited to 100.000 per minute.
+    * Normal: the delivery speed will be limited to 10.000 per minute.
+    * Slow: the delivery speed will be limited to 1.000 per minute.
+* **Default inbox**: This checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
 
-[![](https://i.imgur.com/qCbrAvSl.png)](https://i.imgur.com/qCbrAvS.png)
+[![](https://i.imgur.com/hQbhOAsl.png)](https://i.imgur.com/hQbhOAs.png)
 
 
 

@@ -52,8 +52,9 @@ El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla p
 
 
 ### Inicio o Dashboard
-La pantalla de Inicio te ofrece una vista general de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones.
+La pantalla de Inicio te ofrece una vista general de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones. Puedes seleccionar el rango de tiempo de visualización arriba a la derecha.
 
+[![](https://i.imgur.com/z2OsIHzl.png)](https://i.imgur.com/z2OsIHz.png)
 
 
 ### Tus Siguientes Apps
@@ -77,8 +78,7 @@ o también sobre Crear nueva notificación arriba a la derecha.
 Si ya has enviado notificaciones con esa aplicación el botón Push te llevará a la siguiente pantalla. Desde aquí podras ver estadísticas de tus notificaciones enviadas, tus grupos de notificaciones, tus últimas notificaciones, tus campañas, etc. También podras reutilizar grupos, notificaciones o campañas, más adelante te explicaremos cómo. Para crear una nueva notificación desde esta pantalla, clica sobre Crear nueva notificación arriba a la derecha.
 
 
-[![](https://i.imgur.com/nKPzQoUl.png)](https://i.imgur.com/nKPzQoU.png)
-
+[![](https://i.imgur.com/4shkHVTl.png)](https://i.imgur.com/4shkHVT.png)
 
 
 ### Editor de Notificaciones
@@ -313,8 +313,7 @@ La vista muestra los dispositivos con actividad más reciente registrada, así c
 * **Fecha de Registro**: Fecha de primer registro del dispositivo.
 * **Fecha de última apertura**: Fecha de ultima apertura de la Aplicación.
 
-[![](https://i.imgur.com/qiBMdlVl.png)](https://i.imgur.com/qiBMdlV.png)
-
+[![](https://i.imgur.com/1q0oBlJl.png)](https://i.imgur.com/1q0oBlJ.png)
 
 
 Al clicar sobre cualquiera de los dispositivos se mostrará un modal con toda la información relativa a este dispositivo, además de la información general, se mostrará:
@@ -334,12 +333,13 @@ Al clicar sobre el botón Ver notificaciones recibidas, la vista cargará nuevam
 
 * Tipo: Simple o Rica
 * Nombre / Mensaje: título de la notificación
-* Creación: fecha de creación
-* Envío push: fecha de envío
-* Apertura: fecha en la que el usuario la abrió
+* Creación: fecha y hora de creación
+* Envío push: fecha y hora de envío
+* Confirmación: fecha y hora de confirmación de recepción de Push
+* Apertura: fecha y hora en la que el usuario la abrió
 * Buzón: si se guardó o no en el buzón del usuario
 
-[![](https://i.imgur.com/Ec7XgKdl.png)](https://i.imgur.com/Ec7XgKd.png)
+[![](https://i.imgur.com/86Olyd2l.png)](https://i.imgur.com/86Olyd2.png)
 
 
 #### Información de Localización:
@@ -375,9 +375,14 @@ Podremos modificar los datos principales de nuestra Aplicación, tales como:
 * **Zona horaria**: Modificar la zona horaria por defecto de nuestra aplicación, esto influirá en el envío de notificaciones y la programación horaria de las campañas, aun así, en cada campaña podremos definir una zona horaria única para esta campaña.
 * **Icono**: Subir imagen con el icono que identificará nuestra Aplicación en TwinPush.
 * **Badge number**: Este parámetro configura el número que aparece encima del icono de nuestra aplicación en los dispositivos iOS. Siendo por defecto +1.
+* **Velocidad máxima de envío**: Aquí puedes ajustar la velocidad máxima de envío de notificaciones. Este parámetro afectará al menú desplegable de velocidad de envío en la configuración avanzada de Notificaciones:
+    * Inmediata: no hay restricciones en la velocidad de envío.
+    * Rápida: velocidad de envío limitada a 100.000 por minuto.
+    * Normal: velocidad de envío limitada a 10.000 por minuto.
+    * Lenta: Velocidad de envío limitada a 1.000 por minuto. 
 * **Buzón por defecto**: Esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
 
-[![](https://i.imgur.com/KDkEUntl.png)](https://i.imgur.com/KDkEUnt.png)
+[![](https://i.imgur.com/MbwOLOXl.png)](https://i.imgur.com/MbwOLOX.png)
 
 
 
