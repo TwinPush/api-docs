@@ -329,6 +329,7 @@ The response body contains an object with the following fields:
   * `"campaign_expired"`: a finished campaign
 * **delivery_count** (integer): Number of deliveries made for the notification
 * **opening_count** (integer): Number of devices that did open the notification
+* **delivery_count** (integer): Number of devices that confirmed the 
 * **errors** (object[]): List of errors reported for notification
   * platform (string): Identifier of the platform, if the error is related just with a single platform. Possible values are "ios", "android" or "all"
   * level (string): Error level. Available values are "critical", "error" or "warning"
@@ -343,6 +344,7 @@ The response body contains an object with the following fields:
 {
   "status": "sent",
   "delivery_count": 82640,
+  "received_count": 69771,
   "opening_count": 17534,
   "errors": [
     {
