@@ -437,7 +437,7 @@ Hay cuatro roles de usuarios que el propietario o los administradores de la cuen
 
 ### Configuración FCM, HMS y APNS:
 
-En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [FCM de Google](https://firebase.google.com/docs/cloud-messaging/) y [Servicios Móviles de Huawei HSM](https://developer.huawei.com/consumer/en/hms/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
+En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [FCM de Google](https://firebase.google.com/docs/cloud-messaging/) y [Servicios Móviles de Huawei HMS](https://developer.huawei.com/consumer/en/hms/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
 
 
 [![](https://i.imgur.com/eu6XWFUl.png)](https://i.imgur.com/eu6XWFU.png)

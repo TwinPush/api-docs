@@ -448,7 +448,7 @@ There are three user roles that the account owner or account administrators can 
 
 ### FCM, HMS and APNS Settings:
 
-In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and [Huawei Mobile Services](https://developer.huawei.com/consumer/en/hms/), services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
+In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and [Huawei Mobile Services HMS](https://developer.huawei.com/consumer/en/hms/), services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
 
 [![](https://i.imgur.com/15LLUfVl.png)](https://i.imgur.com/15LLUfV.png)
 
