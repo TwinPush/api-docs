@@ -428,14 +428,14 @@ Hay cuatro roles de usuarios que el propietario o los administradores de la cuen
 **Administrador**:  los usuarios administradores tienen el control total de la aplicación y pueden además acceder a:
 
 * Visualizar contenido protegido
-* Ajustes de aplicación, incluyendo la consulta de API Keys y configuración de APNS, HSM o FCM/GCM.
+* Ajustes de aplicación, incluyendo la consulta de API Keys y configuración de FCM, HMS o APNS.
 * Claves de autenticación, para autenticar el acceso de la App móvil (SDK) y el API de TwinPush.
 * Gestión del equipo, pueden invitar nuevos usuarios, editar roles de usuarios existentes y revocar accesos de otros usuarios.
 
 [![](https://i.imgur.com/OlK5Z19l.png)](https://i.imgur.com/OlK5Z19.png)
 
 
-### Configuración FCM (GCM), HSM y APNS:
+### Configuración FCM, HMS y APNS:
 
 En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [FCM de Google](https://firebase.google.com/docs/cloud-messaging/) y [Servicios Móviles de Huawei HSM](https://developer.huawei.com/consumer/en/hms/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
 
@@ -444,12 +444,12 @@ En la vista de Ajustes de TwinPush también dispondremos del acceso a la configu
 
 
 
-El acceso a los servicios de mensajería de Google se realiza por el **API Key** que puede ser el proporcionado por el Servicio Firebase Cloud Messaging (FCM) o también por el anterior servicio Google Cloud Messaging (GCM). Para configurar el API Key es necesario desplegar el menu y seleccionar la plataforma adecuada, pegar el API Key y el nombre del Paquete y darle al botón Actualizar App.
+El acceso a los servicios de mensajería de Google Firebase Cloud Messaging (FCM) se realiza por el **API Key de Firebase** que podrás encontrar en la consola de Firebase. Para configurar tu App en TwinPush sólo hay que pegar el API Key y el nombre del Paquete en las casillas correspondientes y darle al botón Actualizar App.
 
-[![](https://i.imgur.com/0B1QppDl.png)](https://i.imgur.com/0B1QppD.png)
+[![](https://i.imgur.com/obMT1Ipl.png)](https://i.imgur.com/obMT1Ip.png)
 
 
-Para enviar notificaciones Push usando los servicios móviles de Huawei, será necesario obtener en la consola AppGallery Connect de Huawei, el **identificador cliente Huawei** así como la **clave de la credencial de cliente Oauth 2.0 del proyecto** y pegarlos en las casillas correspondientes.
+Para enviar notificaciones Push usando los servicios móviles de Huawei (HMS), será necesario obtener en la consola AppGallery Connect de Huawei, el **identificador cliente Huawei** así como la **clave de la credencial de cliente Oauth 2.0 del proyecto** y pegarlos en las casillas correspondientes y luego pulsar el botón Actualizar App.
 
 [![](https://i.imgur.com/HdZc0gQl.png)](https://i.imgur.com/HdZc0gQ.png)
 
