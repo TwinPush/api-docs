@@ -438,7 +438,7 @@ There are three user roles that the account owner or account administrators can 
 **Administrator**: Administrators have total control of the App and they can also access to:
 
 * View protected content.
-* Application settings, including viewing API Keys and configure APNS or FCM/GCM.
+* Application settings, including viewing API Keys and configure APNS, HSM or FCM/GCM.
 * Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
 * Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
 
@@ -446,15 +446,23 @@ There are three user roles that the account owner or account administrators can 
 
 
 
-### FCM (GCM) and APNS Settings:
+### FCM (GCM), HSM and APNS Settings:
 
-In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) and [Google FCM](https://firebase.google.com/docs/cloud-messaging/) services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
+In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and [Huawei Mobile Services](https://developer.huawei.com/consumer/en/hms/), services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
 
-[![](https://i.imgur.com/ZhWy4lal.png)](https://i.imgur.com/ZhWy4la.png)
+[![](https://i.imgur.com/15LLUfVl.png)](https://i.imgur.com/15LLUfV.png)
+
 
 The access to the Google Messaging Services is granted by the **API Key**, this can be provided by Firebase Cloud Messaging (FCM) or by the former Google Cloud Messaging (GCM) service. To set the API Key you need to click on the dropdown menu and choose the proper platform, paste the API Key and the Package name and finally click on the Update App button.
 
 [![](https://i.imgur.com/v33jOuOl.png)](https://i.imgur.com/v33jOuO.png)
+
+
+In order to send Push notifications using the Huawei Mobile Services, you will need to get at the Huawei AppGallery Connect Console, your **Huawei client ID** and the **secret Oauth 2.0 client credential of your project** and paste them in the text boxes shown below.
+
+
+[![](https://i.imgur.com/Sp5JZbsl.png)](https://i.imgur.com/Sp5JZbs.png)
+
 
 
 Apple messaging services is accessed with tieh **APNS certificate**, that expires after a year and must be renew, or by **token** that it does not expire.
