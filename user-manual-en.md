@@ -52,8 +52,9 @@ Now the workspace of your App is already created in TwinPush, you will land into
 [![](https://i.imgur.com/IzlGbbal.png)](https://i.imgur.com/IzlGbba.png)
 
 ### Dashboard
-The Dashboard page will bring you a general view of the evolution of your App. In this page you can see graphically how Devices are registering in your App, the Notifications you are sending, the Activity that your Users are developing in your App and how your Users are reacting to your Notifications. 
+The Dashboard page will bring you a general view of the evolution of your App. In this page you can see graphically how Devices are registering in your App, the Notifications you are sending, the Activity that your Users are developing in your App and how your Users are reacting to your Notifications. You can select a time frame in the upper-right corner.
 
+[![](https://i.imgur.com/nq4IWoIl.png)](https://i.imgur.com/nq4IWoI.png)
 
 
 ### More Apps
@@ -77,7 +78,8 @@ or you can also click on Create new notification on the upper right corner of th
 If you have already sent notifications using this App, the Push icon will take you to the following screen. From here you can see statistics of your sent notifications, your groups of notifications, your last notifications, your campaigns, etc. You can also reuse groups, notifications or campaigns, we will explain you later how to do that. To create a new nottification from this screen, click on Create new notification on the upper right corner of the screen.
 
 
-[![](https://i.imgur.com/Yf2xgBal.png)](https://i.imgur.com/Yf2xgBa.png)
+[![](https://i.imgur.com/0deROpil.png)](https://i.imgur.com/0deROpi.png)
+
 
 
 ### Push Composer
@@ -197,7 +199,9 @@ Once you have completed your notification, you can save it and then send it, by 
 
 _Warning_: only when you have selected "All" in your target audience, before you send the Notification TwinPush will ask for your confirmation, once you confirm the notification will be send:
 
-[![](https://i.imgur.com/4ibQuTkl.png](https://i.imgur.com/4ibQuTk.png)
+
+[![](https://i.imgur.com/4ibQuTkl.png)](https://i.imgur.com/4ibQuTk.png)
+
 
 ### Details of a Delivered Campaign
 When clicking over one of your campaigns you can see all the information related to the delivery.
@@ -340,12 +344,13 @@ When clicking on the See device notifications button, a new screen will load aga
 
 * Type: Simple or Rich
 * Name / Message: notification title
-* Created: creation date
-* Push sent: delivery date
-* Opened: date on which the user opened it
+* Created: creation date and time
+* Push sent: delivery date and time
+* Received at: reception confirmation date and time
+* Opened: date and time on which the user opened it
 * Inbox: whether or not was saved in the user's inbox
 
-[![](https://i.imgur.com/CzO2BT9l.png)](https://i.imgur.com/CzO2BT9.png)
+[![](https://i.imgur.com/atKtHOTl.png)](https://i.imgur.com/atKtHOT.png)
 
 
 #### Location info:
@@ -381,8 +386,14 @@ You can modify here basic information of your App, such as:
 * **Time Zone**: You can set here the default time zone of your App, this parameter will affect the way that all time events are displayed to you, like notifications, scheduling and campaigns, but it will not take effect your notifications already scheduled. Please take note that on each campaigns you can also set a different time zone, unique for that campaign.
 * **Icon**: Upload here an image that will identify your App in TwinPush.
 * **Badge number**: This parameter sets the number displayed over the the icon of your App in iOS devices. This value is +1 by default.
+* **Max deliveries per minute**: You can set here the maximum deliveries per minute of your Notifications. This parameter will affect the Delivery speed dropdown menu at the Advanced settings view when setting a Push notification:
+    * Instant: no restrictions will apply to the delivery speed.
+    * Fast: the delivery speed will be limited to 100.000 per minute.
+    * Normal: the delivery speed will be limited to 10.000 per minute.
+    * Slow: the delivery speed will be limited to 1.000 per minute.
+* **Default inbox**: This checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
 
-[![](https://i.imgur.com/qCbrAvSl.png)](https://i.imgur.com/qCbrAvS.png)
+[![](https://i.imgur.com/hQbhOAsl.png)](https://i.imgur.com/hQbhOAs.png)
 
 
 
@@ -427,7 +438,7 @@ There are three user roles that the account owner or account administrators can 
 **Administrator**: Administrators have total control of the App and they can also access to:
 
 * View protected content.
-* Application settings, including viewing API Keys and configure APNS or FCM/GCM.
+* Application settings, including viewing API Keys and configure FCM, HMS or APNS.
 * Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
 * Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
 
@@ -435,15 +446,23 @@ There are three user roles that the account owner or account administrators can 
 
 
 
-### FCM (GCM) and APNS Settings:
+### FCM, HMS and APNS Settings:
 
-In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) and [Google FCM](https://firebase.google.com/docs/cloud-messaging/) services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
+In the Settings screen, TwinPush provides you access to configure the certificates to grant you access to the [Apple APNS](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and [Huawei Mobile Services HMS](https://developer.huawei.com/consumer/en/hms/), services needed to send Push notifications to devices. These data should be provided by your App developer team, you can get more information about this configuration in the [SDK integration manual](https://developers.twinpush.com/developers).
 
-[![](https://i.imgur.com/ZhWy4lal.png)](https://i.imgur.com/ZhWy4la.png)
+[![](https://i.imgur.com/15LLUfVl.png)](https://i.imgur.com/15LLUfV.png)
 
-The access to the Google Messaging Services is granted by the **API Key**, this can be provided by Firebase Cloud Messaging (FCM) or by the former Google Cloud Messaging (GCM) service. To set the API Key you need to click on the dropdown menu and choose the proper platform, paste the API Key and the Package name and finally click on the Update App button.
 
-[![](https://i.imgur.com/v33jOuOl.png)](https://i.imgur.com/v33jOuO.png)
+The access to the Google Firebase Cloud Messaging Services (FCM) is granted by the **Firebase API Key** that can be found in the Firebase Console. To set your App in TwinPush you just have to paste the API Key and the Package name in the apropriate textboxes and click on the Update App button.
+
+[![](https://i.imgur.com/hG8ADiul.png)](https://i.imgur.com/hG8ADiu.png)
+
+
+In order to send Push notifications using the Huawei Mobile Services (HMS) you will need to get at the Huawei AppGallery Connect Console, your **Huawei client ID** and the **secret Oauth 2.0 client credential of your project** and paste them in the text boxes shown below and then push the Update App button.
+
+
+[![](https://i.imgur.com/Sp5JZbsl.png)](https://i.imgur.com/Sp5JZbs.png)
+
 
 
 Apple messaging services is accessed with tieh **APNS certificate**, that expires after a year and must be renew, or by **token** that it does not expire.

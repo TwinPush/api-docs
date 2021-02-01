@@ -6,35 +6,35 @@ The _notification_ resource is the representation of a message sent to a physica
 
 To access to the full functionality of the notification resources, the following methods are available:
 
-| method | name | description |
-|--------|------|-------------|
-|<span class="label label-success">GET</span>| [show](#get-show) | obtains details from a previously created notification |
-|<span class="label label-info">POST</span>| [create](#post-create) | creates a new notification to be delivered from the platform |
-|<span class="label label-success">GET</span>| [report](#get-report) | obtains delivery statistics for a given notification |
-|<span class="label label-success">GET</span>| [deliveries](#get-deliveries) | obtains paginated list of deliveries for a given notification |
-|<span class="label label-success">GET</span>| [inbox](#get-inbox) | retrieves the notifications sent to the user by the alias device |
-|<span class="label label-success">GET</span>| [inbox_summary](#get-inbox-summary) | obtains the total and unopened count of the alias notifications inbox |
-|<span class="label label-success">DELETE</span>| [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
+| method                                          | name                                       | description                                                  |
+| ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
+| <span class="label label-success">GET</span>    | [show](#get-show)                          | obtains details from a previously created notification       |
+| <span class="label label-info">POST</span>      | [create](#post-create)                     | creates a new notification to be delivered from the platform |
+| <span class="label label-success">GET</span>    | [report](#get-report)                      | obtains delivery statistics for a given notification         |
+| <span class="label label-success">GET</span>    | [deliveries](#get-deliveries)              | obtains paginated list of deliveries for a given notification |
+| <span class="label label-success">GET</span>    | [inbox](#get-inbox)                        | retrieves the notifications sent to the user by the alias device |
+| <span class="label label-success">GET</span>    | [inbox_summary](#get-inbox-summary)        | obtains the total and unopened count of the alias notifications inbox |
+| <span class="label label-success">DELETE</span> | [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
 
 **Model**
 
 Notification representation objects will contain the following information:
 
-| attribute | type | description |
-|-----------|------|-------------|
-| id | string | Unique identifier for the notification |
-| title | string | Title to be displayed in Android notifications center or TwinPush inbox |
-| alert | string | Message to be displayed in the Push Notification |
-| tp\_rich\_url | string | Content URL for rich notifications |
-| custom_properties | HashMap | Map of custom properties set for the notification |
-| tags | String[] | List of tags set to categorize notification |
-| send\_since | datetime | Date and time of scheduled sending |
-| sound | string | Custom sound set to notification |
-| badge | string | Modifier for device badge count |
-| name | string | Internal name for campaign identification |
-| group_name| string | Name of the group where notification is included |
-| delivery_speed | string | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
-| protected_content | boolean | If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. |
+| attribute         | type     | description                                                  |
+| ----------------- | -------- | ------------------------------------------------------------ |
+| id                | string   | Unique identifier for the notification                       |
+| title             | string   | Title to be displayed in Android notifications center or TwinPush inbox |
+| alert             | string   | Message to be displayed in the Push Notification             |
+| tp\_rich\_url     | string   | Content URL for rich notifications                           |
+| custom_properties | HashMap  | Map of custom properties set for the notification            |
+| tags              | String[] | List of tags set to categorize notification                  |
+| send\_since       | datetime | Date and time of scheduled sending                           |
+| sound             | string   | Custom sound set to notification                             |
+| badge             | string   | Modifier for device badge count                              |
+| name              | string   | Internal name for campaign identification                    |
+| group_name        | string   | Name of the group where notification is included             |
+| delivery_speed    | string   | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
+| protected_content | boolean  | If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. |
 
 ## <span class="label label-success">GET</span> show
 
@@ -120,6 +120,7 @@ Each notification must have one (and only one) target parameter that defines wic
 ```bash
 POST /apps/${app_id}/notifications
 ```
+
 **Headers:** To create notifications it is required to include the Application _Creator Token_ header.
 
 ```bash
@@ -131,12 +132,13 @@ Content-Type: application/json; charset: utf-8
 
 The parameters that define the content and category of the notification are the following:
 
-| param | description |
-|-------|-------------|
-|  | **Content params** | |
-|alert | The text that will be shown in the push notification received in devices. This parameter is mandatory |
-|title | Notification title for Android and for TwinPush message inbox |
-|url   | URL to be opened to display rich content when the user opens the notification |
+| param | description                                                  |
+| ----- | ------------------------------------------------------------ |
+|       | **Content params**                                           |
+| alert | The text that will be shown in the push notification received in devices. This parameter is mandatory |
+| title | Notification title for Android and for TwinPush message inbox |
+| url   | URL to be opened to display rich content when the user opens the notification |
+
 |custom\_properties | Hash map of custom properties that will be reported to the user device in the notification payload
 |badge | The number that the user will see in the badge indicator of the app when the notification is received (only iOS). Default value is `+1` |
 |  | **Additional params** | |
@@ -155,13 +157,13 @@ The parameters that define the content and category of the notification are the 
 
 Allows to specify a list of elements of many types to be addressee of the Push Notification:
 
-| param | description | type |
-|-------|-------------|------|
-| broadcast | If set to `true`, the notification will be sent to all the devices registered in the application | Boolean |
-| devices_ids | Array of device identifiers to be target of the notification | String[] |
-| devices_aliases | Array of device alias to be target of the notification | String[] |
-| segments | Devices that fulfill the conditions of any of the previously created selected segments | String[] |
-| target_property | Devices that have any of the selected values for given property.<br>This param is a JSON object formed by two additional attributes:<br><ul><li>name: string property identifier</li><li>values: array of string values that devices will have to match to be selected as target of the notification</li></ul> | Object |
+| param           | description                                                  | type     |
+| --------------- | ------------------------------------------------------------ | -------- |
+| broadcast       | If set to `true`, the notification will be sent to all the devices registered in the application | Boolean  |
+| devices_ids     | Array of device identifiers to be target of the notification | String[] |
+| devices_aliases | Array of device alias to be target of the notification       | String[] |
+| segments        | Devices that fulfill the conditions of any of the previously created selected segments | String[] |
+| target_property | Devices that have any of the selected values for given property.<br>This param is a JSON object formed by two additional attributes:<br><ul><li>name: string property identifier</li><li>values: array of string values that devices will have to match to be selected as target of the notification</li></ul> | Object   |
 
 
 
@@ -169,10 +171,10 @@ Allows to specify a list of elements of many types to be addressee of the Push N
 
 Multiple target notifications can be send through device ID or device alias:
 
-| param | description |
-|-------|-------------|
+| param            | description                                                  |
+| ---------------- | ------------------------------------------------------------ |
 | multiple_devices | Target that allows to customize the content of the notification by device id |
-| multiple_alias | Target that allows to customize the content of the notification by alias |
+| multiple_alias   | Target that allows to customize the content of the notification by alias |
 
 It is possible to customize the payload information sent to every device or alias targeted in a notification.
 
@@ -180,13 +182,13 @@ This is done specifying a the target through a Hash where every key is the targe
 
 Through this method it is possible to customize the content fields of the notification received for every specified target:
 
-| attribute | description |
-|-----------|-------------|
-|title|If defined, it will replace the title of the notification received by the target|
-|alert|If defined, it will replace the displayed notification message|
-|url|If defined, it will override the URL of the rich content|
-|badge|If defined, it will override the badge indicator of the main notification|
-|custom_properties|Properties defined by target will be merged with the notification properties overwriting when two keys collide|
+| attribute         | description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| title             | If defined, it will replace the title of the notification received by the target |
+| alert             | If defined, it will replace the displayed notification message |
+| url               | If defined, it will override the URL of the rich content     |
+| badge             | If defined, it will override the badge indicator of the main notification |
+| custom_properties | Properties defined by target will be merged with the notification properties overwriting when two keys collide |
 
 If any of there parameters is not set, the message received by the user will contain the basic information defined in the main notification parameters.
 
@@ -209,6 +211,7 @@ Scheduled broadcast notification:
   "group_name": "Commercial Offers"
 }
 ```
+
 Notification by device IDs with instant delivery:
 
 ```javascript
@@ -305,6 +308,7 @@ Obtains delivery statistics for a given notification.
 ```bash
 GET /apps/${app_id}/notifications/${notif_id}/report
 ```
+
 **Headers**
 
 ```bash
@@ -316,21 +320,22 @@ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
 The response body contains an object with the following fields:
 
 * **status** (string): Current status of the notification. Available values are:
-    * `"draft"`: the notification has not been activated yet
-    * `"sending"`: the notification is being send
-    * `"sent"`: sending process has been completed
-    * `"scheduled"`: the notification has been scheduled for a future send
-    * `"campaign_active"`: a currently active campaign
-    * `"campaign_inactive"`: a currently inactive campaign
-    * `"campaign_expired"`: a finished campaign
+  * `"draft"`: the notification has not been activated yet
+  * `"sending"`: the notification is being send
+  * `"sent"`: sending process has been completed
+  * `"scheduled"`: the notification has been scheduled for a future send
+  * `"campaign_active"`: a currently active campaign
+  * `"campaign_inactive"`: a currently inactive campaign
+  * `"campaign_expired"`: a finished campaign
 * **delivery_count** (integer): Number of deliveries made for the notification
 * **opening_count** (integer): Number of devices that did open the notification
+* **received_count** (integer): Number of devices that reported the reception of the push notification
 * **errors** (object[]): List of errors reported for notification
-    * platform (string): Identifier of the platform, if the error is related just with a single platform. Possible values are "ios", "android" or "all"
-    * level (string): Error level. Available values are "critical", "error" or "warning"
-    * key (string): Error category key
-    * message (string): Detailed error description
-    * created_at (datetime): Moment when the error was registered
+  * platform (string): Identifier of the platform, if the error is related just with a single platform. Possible values are "ios", "android" or "all"
+  * level (string): Error level. Available values are "critical", "error" or "warning"
+  * key (string): Error category key
+  * message (string): Detailed error description
+  * created_at (datetime): Moment when the error was registered
 * **notification** (object): Notification basic info
 
 **Example response**
@@ -339,6 +344,7 @@ The response body contains an object with the following fields:
 {
   "status": "sent",
   "delivery_count": 82640,
+  "received_count": 69771,
   "opening_count": 17534,
   "errors": [
     {
@@ -377,6 +383,7 @@ Obtains paginated list of all the deliveries for a given notification. This is u
 ```bash
 POST /apps/${app_id}/notifications/${notif_id}/deliveries
 ```
+
 **Headers**
 
  ```bash
@@ -389,6 +396,7 @@ Response body will contain a paginated array of delivery objects. Each delivery 
 
 * **id** (integer): Unique identifier of the delivery
 * **created_at** (datetime): moment when the notification was sent
+* **received_at** (datetime): moment when the notification was received by the device. Will be `null` if push acknowledgement is not enabled or the notification has not received the notification (as it could happen with a device turned off or with push notifications disabled)
 * **open_at** (datetime): moment when the notification was open in the device. Will be `null` if user has not opened the notification
 * **device** (object): Target device info
 
@@ -405,6 +413,7 @@ Response body will contain a paginated array of delivery objects. Each delivery 
     {
       "id": 45264,
       "created_at": "2016-03-01 13:34:51 UTC",
+      "received_at": "2016-03-01 13:36:17 UTC",
       "open_at": null,
       "device": {
         "id": "a7c9dc047d019759",
@@ -445,10 +454,10 @@ GET /apps/${app_id}/devices/${device_id}/inbox
 
 The request allows the inclusion of the following optional parameters:
 
-| param | description | example |
-|-------|-------------|---------|
-| tags  | Returns notifications that contains all the given tags | `["alerts", "critical"]` |
-| no_tags  | Returns notifications that does not contains any of the given tags | `["main_inbox"]` |
+| param   | description                                                  | example                         |
+| ------- | ------------------------------------------------------------ | ------------------------------- |
+| tags    | Returns notifications that contains all the given tags       | `tags[]=alerts&tags[]=critical` |
+| no_tags | Returns notifications that does not contains any of the given tags | `no_tags[]=main_inbox`          |
 
 **Example request**
 
@@ -469,6 +478,7 @@ It returns a paginated array of objects that offers delivery information and wra
     {
       "id": "2785b9d61574e029",
       "created_at": "2016-03-01 13:34:50 UTC",
+      "received_at": "2016-03-01 13:36:17 UTC",
       "open_at": "2016-03-01 13:34:50 UTC",
       "notification": {
         "id": "fd99bf658771385a",
@@ -516,10 +526,10 @@ curl -X GET \
 
 It returns a simple hash object with two attributes:
 
-| attribute | type | description |
-|-----------|------|-------------|
-| total_count | int | Total number of notifications present in the alias inbox |
-| unopened_count | int | Number of notifications that has not been checked as opened. Useful to display a badge indicating pending notifications |
+| attribute      | type | description                                                  |
+| -------------- | ---- | ------------------------------------------------------------ |
+| total_count    | int  | Total number of notifications present in the alias inbox     |
+| unopened_count | int  | Number of notifications that has not been checked as opened. Useful to display a badge indicating pending notifications |
 
 
 **Example response**

@@ -5,6 +5,8 @@
 
 En ocasiones los dispositivos registrados nuevos se marcan automáticamente como inactivos, esto podrás comprobarlo en la vista de "Dispositivos" del administrador.
 
+[![](https://i.imgur.com/1DK9lQ7l.png)](https://i.imgur.com/1DK9lQ7.png)
+
 Esto provoca que las notificaciones no se envíen a estos dispositivos. Muy probablemente se deba a un problema con los límites de tu licencia, informate sobre el funcionamiento de las [licencias de TwinPush aquí](#funcionamiento-de-las-licencias).
 
 
@@ -23,19 +25,30 @@ El tamaño máximo del texto o del título de una notificación, por lo tanto, q
 
 **Comprobaciones iniciales**
 
-Lo primero que debemos hacer es descargar el PDF de reporte de la notificación que no ha sido entregada al dispositivo, en este informe, disponible en la vista de detalle de la Notificación, podremos ver si ha ocurrido algún error que TwinPush haya identificado, los errores más comunes son:
+Lo primero que debemos hacer es descargar el PDF de reporte de la notificación que no ha sido entregada al dispositivo, disponible en la vista de detalle de la Notificación.
 
-* No tiene envíos: No existían destinatarios ( dispositivos activos ) para nuestro envío, por lo que deberemos comprobar los destinatarios y que se encuentren activos, esto podremos consultarlo en la vista de "Dispositivos" de el Admin Web.
-* Token No válido o error de certificado: Estos errores son habituales en envíos a iOS, requiere revisar la configuración de certificados de nuestra Aplicación, validez, caducidad, etc...
+[![](https://i.imgur.com/yMdCHnWl.png)](https://i.imgur.com/yMdCHnW.png)
+
+En este informe podremos ver si ha ocurrido algún error que TwinPush haya identificado, los errores más comunes son:
+
+* **No tiene envíos:** No existían destinatarios (dispositivos activos ) para nuestro envío, por lo que deberemos comprobar los destinatarios y que se encuentren activos, esto podremos consultarlo en la vista de "Dispositivos" de el Admin Web.
+* **BadDeviceToken o Token No válido o error de certificado:** Estos errores son habituales en envíos a dispositivos iOS, requiere revisar la configuración de certificados de Apple APNS de nuestra Aplicación, en la sección de ajustes. Debes comprobar la validez del Certificado, o que se esté utilizando el Certificado correcto: Desarrollo o Producción (check Distribución marcado), según sea el caso y corregirlo si fuera necesario.
+
+[![](https://i.imgur.com/n5QbpHUl.png)](https://i.imgur.com/n5QbpHU.png)
+
 
 Si en el informe de TwinPush está registrado el envío correctamente sin errores, los motivos principales por los que no se recibe una notificación son los siguientes:
 
-* Dispositivo Inactivo, principalmente ocasionado por un problema con el límite de la licencia.
-* Notificaciones no habilitadas en el dispositivo, debemos comprobar que tenemos habilitadas las notificaciones y volver a realizar la prueba.
+* **Dispositivo Inactivo:** principalmente ocasionado por un problema con el límite de la licencia de TwinPush [aquí](#funcionamiento-de-las-licencias).
+* **Notificaciones no habilitadas en el dispositivo:** debemos comprobar que tenemos habilitadas las notificaciones y volver a realizar la prueba. Cuando el usuario decide no aceptar notificaciones de tu App en su móvil, aparecerá desmarcado el check de Push en la lista de Dispositivos y no recibirá notificaciones aunque podrá encontrarlas en el Buzón de notificaciones, siempre que tengas integrada esta funcionalidad en tu App.
+
+[![](https://i.imgur.com/VX9lwPHl.png)](https://i.imgur.com/VX9lwPH.png)
+
+
 * Problemas de conectividad en el dispositivo, en ocasiones tanto la falta de cobertura como una conexión a una red corporativa pueden ocasionar que las notificaciones no lleguen o lo hagan con cierto retraso.
 * La notificación si ha llegado pero ha pasado desapercibida.
 
-En general, siempre que tengamos problemas para determinar por qué una notificación no llega a un dispositivo en concreto, debemos comprobar la actividad de nuestro dispositivo: En la vista de "Dispositivos" podremos encontrar nuestro dispositivo, asociado a nuestro usuario, debemos percatarnos que esté efectivamente activo y tenga habilitadas las notificaciones.
+En general, siempre que tengamos problemas para determinar por qué una notificación no llega a un dispositivo en concreto, debemos comprobar la actividad de nuestro dispositivo: En la vista de "Dispositivos" podremos encontrar nuestro dispositivo, asociado a nuestro usuario (Alias), debemos percatarnos que esté efectivamente **activo y tenga habilitadas las notificaciones**.
 
 Podemos incluso reinstalar la Aplicación y repetir el proceso de registro.
 
@@ -112,3 +125,22 @@ Es posible configurar el periodo de tiempo sin actividad necesario para consider
 
 Este parámetro de configuración permitirá ajustar la cuenta para poder trabajar siempre con los más activos, pero se perderá la capacidad de comunicarse con los dispositivos menos activos, imposibilitando la realización de campañas para obtener recurrencia de estos usuarios. 
 Si deseas cambiar este valor, deberás ponerte en contacto con[ support@twincoders.com](mailto:support@twincoders.com)
+
+
+## Mensajes de Error
+
+En la siguiente tabla se describen los principales mensajes de error que devuelven las Plataformas de Notificaciones de Google (FCM) y Apple (APNS) y que TwinPush retransmite como respuesta a sus peticiones. Estos mensajes, también se podrían encontrar en los informes descargables en la vista de una Notificación.
+
+| Mensaje | Descripción |
+|---------|-------------|
+| <strong>NotRegistered</strong><br/>Warning - FCM | Un token de registro existente puede dejar de ser válido en diversas situaciones, como las siguientes:<br>* Si la app cliente deja de estar registrada en FCM.<br>* Si se anula el registro de la app cliente automáticamente, lo cual puede ocurrir si el usuario desinstala la app. Por ejemplo, en iOS, esto sucede si el servicio de comentarios de APNS informó que los tokens de APNS no son válidos.<br>* Si el token de registro caduca (por ejemplo, porque Google decidió actualizar los tokens de registro o porque caducó el token de APNS de un dispositivo con iOS).<br>* Si la app cliente se actualiza, pero la nueva versión no está configurada para recibir mensajes.<br>En todos estos casos, debes quitar este token de registro del servidor de apps y dejar de utilizarlo para enviar mensajes. |
+| <strong>Unregistered</strong><br/>Warning - APNS | El token de Dispositivo está inactivo para el entorno especificado. |
+| <strong>MismatchSenderId</strong><br/>Error - FCM | Un token de registro está asociado con un determinado grupo de emisores. Cuando una app cliente se registra para FCM, debe especificar qué remitentes tienen autorización para enviar mensajes. Debes utilizar el ID de uno de esos remitentes cuando envíes mensajes a la app cliente. Si cambias a otro diferente, los tokens de registro existentes no funcionarán. |
+| <strong>DeviceTokenNotForTopic</strong><br/>Error - APNS | El token del dispositivo no coincide con el entorno especificado. |
+| <strong>InvalidPackageName</strong><br/>Error - FCM | Asegúrate de que el mensaje se haya dirigido a un token de registro cuyo nombre de paquete coincida con el valor que se pasa en la solicitud. |
+| <strong>InvalidParameters</strong><br/>Error - FCM | Comprueba que los parámetros proporcionados tienen el nombre y el tipo correctos. |
+| <strong>InvalidRegistration</strong><br/>Error - FCM | Revisa el formato del token de registro que pasaste al servidor. Asegúrate de que coincida con el token de registro que la app cliente recibe cuando se registra en Firebase Notifications. No lo trunques ni agregues caracteres adicionales. |
+| <strong>CERTIFICATE\_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> El certificado APNS de Apple ha expirado. |
+| <strong>BadDeviceToken</strong><br/>Error - APNS | EL token del dispositivo especificado era malo. Compruebe que la petición contenga un token válido y que el token coincida con el entorno. |
+| <strong>MissingRegistration</strong><br/>Error - FCM | Verifica que la solicitud contenga un token de registro (en el registration\_id, si es un mensaje de texto sin formato, o en los campos to o registration\_ids en JSON). |
+

@@ -5,7 +5,9 @@
 
 Sometimes you may experience that new devices are being check as inactive, you can confirm this in the "Devices" page at the Active column.
 
-This situation causes that all notifications will not be send to these devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
+[![](https://i.imgur.com/qcmuH4Ll.png)](https://i.imgur.com/qcmuH4L.png)
+
+This situation causes that all notifications will not be send to those devices. Most probably this is due to the limits of your license, find more information about [how licenses works here](#how-licenses-work). 
 
 
 
@@ -24,20 +26,31 @@ The maximum size of the text or title of a notification, therefore, would be mor
 
 **Initial approach**
 
-The first thing you have to do is to download the PDF report of the undelivered notification, you can find this report in the Push page, under details of that notification. You can see there, if there was an error that TwinPush could have identified. Most common errors are:
+The first thing you have to do is to download the PDF report of the undelivered notification, you can find this report in the Push page, under details of that notification. 
 
-* There are no deliveries: There were no recipents (active devices) for your notification, from here, you should check if all devices of your recipient list are active, you can check that in "Devices" page at the Active column.
+[![](https://i.imgur.com/WXtySn1l.png)](https://i.imgur.com/WXtySn1.png)
 
-* No valid token or certificate error: These kind of errors are common when sending notifications to iOS devices, and you should check your Certificate configuration in TwinPush in the Settings page; check your Certificate expiring date and if you are using the Production or Development Certificate correctly.
+
+You can see there, if there was an error that TwinPush could have identified. Most common errors are:
+
+* **There are no deliveries:** There were no recipents (active devices) for your notification, from here, you should check if all devices of your recipient list are active, you can check that in "Devices" page at the Active column.
+
+* **BadDeviceToken or No valid token or certificate error:** These kind of errors are common when sending notifications to iOS devices, and you must check your Apple APNS Certificate configuration at the settings section. Check for your Certificate expiring date or if you are using your Certificate correctly: Development or Production (Distribution checkbox checked) according to your current App, and apply corrections if needed.
+
+[![](https://i.imgur.com/w1Yjmysl.png)](https://i.imgur.com/w1Yjmys.png)
+
 
 In case the notification report is not showing any error, there might be some other reason, please check the following one by one:
 
-* Inactive Device, mainly caused by a problem with the limit of your license.
-* Notifications not enabled in the device, you should check if notifications are enabled for your App in that device and try again.
+* **Inactive Device:** mainly caused by a problem with the limit of your TwinPush license [here](#how-licenses-work).
+* **Notifications not enabled in the device:** you should check if notifications are enabled for your App in that device and try again. When a user decides not to receive notifications from your App in his phone, the Push check will show uncheck in the Device list and he will not receive any notification, eventhough he could find them in his notification Mailbox, only if you have integrated this funtionality into your App.
+
+[![](https://i.imgur.com/HniCiyDl.png)](https://i.imgur.com/HniCiyD.png)
+
 * Connectivity problems with the device, sometimes a lack of coverage or a wifi connection into a corporative network can cause the notification not to arrive or to delay.
 * The notification had arrived but it was unnoticed.
 
-As a general rule, when you are not receiving a notification into a specific device, you should check the activity in your device: in the Devices page, find your device linked to your user name, and make sure it is effectively active and has notifications enabled. 
+As a general rule, when you are not receiving notifications into a specific device, you should check the activity in your device: in the Devices page, find your device linked to your user name(Alias), and make sure it is effectively **active and has notifications enabled**. 
 
 You could even reinstall your app and repeat the registering process.
 
@@ -118,3 +131,20 @@ This parameter will allow an account to work always with the most active devices
 
 if you want to change this value in your account, you should contact us at [support@twincoders.com](mailto:support@twincoders.com)
 
+
+## Error Messages
+
+The following table list describe the main error messages that return Google (FCM) and Apple (APNS) Push notification Platforms. TwinPush relay these messages in the response of Notification request. These messages could also be found in the downloadable report at a Notification view.
+
+| Message | Description |
+|---------|-------------|
+| <strong>NotRegistered</strong><br/>Warning - FCM | An existing registration token may cease to be valid in a number of scenarios, including:<br>* If the client app unregisters with FCM.<br>* If the client app is automatically unregistered, which can happen if the user uninstalls the application. For example, on iOS, if the APNS Feedback Service reported the APNS token as invalid.<br>* If the registration token expires (for example, Google might decide to refresh registration tokens, or the APNS token has expired for iOS devices).<br>* If the client app is updated but the new version is not configured to receive messages.<br>For all these cases, remove this registration token from the app server and stop using it to send messages. |
+| <strong>Unregistered</strong><br/>Warning - APNS | The device token is inactive for the specified topic. |
+| <strong>MismatchSenderId</strong><br/>Error - FCM | A registration token is tied to a certain group of senders. When a client app registers for FCM, it must specify which senders are allowed to send messages. You should use one of those sender IDs when sending messages to the client app. If you switch to a different sender, the existing registration tokens won't work. |
+| <strong>DeviceTokenNotForTopic</strong><br/>Error - APNS | The device token does not match the specified topic. |
+| <strong>InvalidPackageName</strong><br/>Error - FCM | Make sure the message was addressed to a registration token whose package name matches the value passed in the request. |
+| <strong>InvalidParameters</strong><br/>Error- FCM | Check that the provided parameters have the right name and type. |
+| <strong>InvalidRegistration</strong><br/>Error - FCM | Check the format of the registration token you pass to the server. Make sure it matches the registration token the client app receives from registering with Firebase Notifications. Do not truncate or add additional characters. |
+| <strong>CERTIFICATE\_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> The APNS Certificate from Apple has already expired. |
+| <strong>BadDeviceToken</strong><br/>Error - APNS | The specified device token was bad. Verify that the request contains a valid token and that the token matches the environment. |
+| <strong>MissingRegistration</strong><br/>Error - FCM | Check that the request contains a registration token (in the registration\_id in a plain text message, or in the to or registration\_ids field in JSON). |

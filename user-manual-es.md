@@ -52,8 +52,9 @@ El espacio de trabajo para tu App en TwinPush ya está creado y en la pantalla p
 
 
 ### Inicio o Dashboard
-La pantalla de Inicio de ofrece una vista genral de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones.
+La pantalla de Inicio te ofrece una vista general de la evolución de tu App. En ella podrás ver gráficamente cómo se van registrando los Dispositivos en tu App, las Notificaciones que vas enviando, la Actividad que van desarrollando tus Usuarios en tu App y cómo van reaccionando tus Usuarios a tus Notificaciones. Puedes seleccionar el rango de tiempo de visualización arriba a la derecha.
 
+[![](https://i.imgur.com/z2OsIHzl.png)](https://i.imgur.com/z2OsIHz.png)
 
 
 ### Tus Siguientes Apps
@@ -77,8 +78,7 @@ o también sobre Crear nueva notificación arriba a la derecha.
 Si ya has enviado notificaciones con esa aplicación el botón Push te llevará a la siguiente pantalla. Desde aquí podras ver estadísticas de tus notificaciones enviadas, tus grupos de notificaciones, tus últimas notificaciones, tus campañas, etc. También podras reutilizar grupos, notificaciones o campañas, más adelante te explicaremos cómo. Para crear una nueva notificación desde esta pantalla, clica sobre Crear nueva notificación arriba a la derecha.
 
 
-[![](https://i.imgur.com/nKPzQoUl.png)](https://i.imgur.com/nKPzQoU.png)
-
+[![](https://i.imgur.com/4shkHVTl.png)](https://i.imgur.com/4shkHVT.png)
 
 
 ### Editor de Notificaciones
@@ -313,8 +313,7 @@ La vista muestra los dispositivos con actividad más reciente registrada, así c
 * **Fecha de Registro**: Fecha de primer registro del dispositivo.
 * **Fecha de última apertura**: Fecha de ultima apertura de la Aplicación.
 
-[![](https://i.imgur.com/qiBMdlVl.png)](https://i.imgur.com/qiBMdlV.png)
-
+[![](https://i.imgur.com/1q0oBlJl.png)](https://i.imgur.com/1q0oBlJ.png)
 
 
 Al clicar sobre cualquiera de los dispositivos se mostrará un modal con toda la información relativa a este dispositivo, además de la información general, se mostrará:
@@ -334,12 +333,13 @@ Al clicar sobre el botón Ver notificaciones recibidas, la vista cargará nuevam
 
 * Tipo: Simple o Rica
 * Nombre / Mensaje: título de la notificación
-* Creación: fecha de creación
-* Envío push: fecha de envío
-* Apertura: fecha en la que el usuario la abrió
+* Creación: fecha y hora de creación
+* Envío push: fecha y hora de envío
+* Confirmación: fecha y hora de confirmación de recepción de Push
+* Apertura: fecha y hora en la que el usuario la abrió
 * Buzón: si se guardó o no en el buzón del usuario
 
-[![](https://i.imgur.com/Ec7XgKdl.png)](https://i.imgur.com/Ec7XgKd.png)
+[![](https://i.imgur.com/86Olyd2l.png)](https://i.imgur.com/86Olyd2.png)
 
 
 #### Información de Localización:
@@ -375,9 +375,14 @@ Podremos modificar los datos principales de nuestra Aplicación, tales como:
 * **Zona horaria**: Modificar la zona horaria por defecto de nuestra aplicación, esto influirá en el envío de notificaciones y la programación horaria de las campañas, aun así, en cada campaña podremos definir una zona horaria única para esta campaña.
 * **Icono**: Subir imagen con el icono que identificará nuestra Aplicación en TwinPush.
 * **Badge number**: Este parámetro configura el número que aparece encima del icono de nuestra aplicación en los dispositivos iOS. Siendo por defecto +1.
+* **Velocidad máxima de envío**: Aquí puedes ajustar la velocidad máxima de envío de notificaciones. Este parámetro afectará al menú desplegable de velocidad de envío en la configuración avanzada de Notificaciones:
+    * Inmediata: no hay restricciones en la velocidad de envío.
+    * Rápida: velocidad de envío limitada a 100.000 por minuto.
+    * Normal: velocidad de envío limitada a 10.000 por minuto.
+    * Lenta: Velocidad de envío limitada a 1.000 por minuto. 
 * **Buzón por defecto**: Esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
 
-[![](https://i.imgur.com/KDkEUntl.png)](https://i.imgur.com/KDkEUnt.png)
+[![](https://i.imgur.com/MbwOLOXl.png)](https://i.imgur.com/MbwOLOX.png)
 
 
 
@@ -423,23 +428,30 @@ Hay cuatro roles de usuarios que el propietario o los administradores de la cuen
 **Administrador**:  los usuarios administradores tienen el control total de la aplicación y pueden además acceder a:
 
 * Visualizar contenido protegido
-* Ajustes de aplicación, incluyendo la consulta de API Keys y configuración de APNS o FCM/GCM.
+* Ajustes de aplicación, incluyendo la consulta de API Keys y configuración de FCM, HMS o APNS.
 * Claves de autenticación, para autenticar el acceso de la App móvil (SDK) y el API de TwinPush.
 * Gestión del equipo, pueden invitar nuevos usuarios, editar roles de usuarios existentes y revocar accesos de otros usuarios.
 
 [![](https://i.imgur.com/OlK5Z19l.png)](https://i.imgur.com/OlK5Z19.png)
 
 
-### Configuración FCM (GCM) y APNS:
+### Configuración FCM, HMS y APNS:
 
-En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) y [FCM de Google](https://firebase.google.com/docs/cloud-messaging/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
+En la vista de Ajustes de TwinPush también dispondremos del acceso a la configuración de los certificados para el acceso a los servicios de [APNS de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [FCM de Google](https://firebase.google.com/docs/cloud-messaging/) y [Servicios Móviles de Huawei HMS](https://developer.huawei.com/consumer/en/hms/), necesarios para el envío de Notificaciones Push a dispositivos. Estos datos deberán ser proporcionados por el equipo de desarrollo de la Aplicación, más información sobre esta configuración en la [documentación de integración del SDK](https://developers.twinpush.com/developers).
 
 
-[![](https://i.imgur.com/xhMUPMwl.png)](https://i.imgur.com/xhMUPMw.png)
+[![](https://i.imgur.com/eu6XWFUl.png)](https://i.imgur.com/eu6XWFU.png)
 
-El acceso a los servicios de mensajería de Google se realiza por el **API Key** que puede ser el proporcionado por el Servicio Firebase Cloud Messaging (FCM) o también por el anterior servicio Google Cloud Messaging (GCM). Para configurar el API Key es necesario desplegar el menu y seleccionar la plataforma adecuada, pegar el API Key y el nombre del Paquete y darle al botón Actualizar App.
 
-[![](https://i.imgur.com/0B1QppDl.png)](https://i.imgur.com/0B1QppD.png)
+
+El acceso a los servicios de mensajería de Google Firebase Cloud Messaging (FCM) se realiza por el **API Key de Firebase** que podrás encontrar en la consola de Firebase. Para configurar tu App en TwinPush sólo hay que pegar el API Key y el nombre del Paquete en las casillas correspondientes y darle al botón Actualizar App.
+
+[![](https://i.imgur.com/obMT1Ipl.png)](https://i.imgur.com/obMT1Ip.png)
+
+
+Para enviar notificaciones Push usando los servicios móviles de Huawei (HMS), será necesario obtener en la consola AppGallery Connect de Huawei, el **identificador cliente Huawei** así como la **clave de la credencial de cliente Oauth 2.0 del proyecto** y pegarlos en las casillas correspondientes y luego pulsar el botón Actualizar App.
+
+[![](https://i.imgur.com/HdZc0gQl.png)](https://i.imgur.com/HdZc0gQ.png)
 
 
 Los servicios de mensajería de Apple se acceden con el **certificado APNS** que caduca anualmente y debe renovarse, o por **token** que no caduca. 

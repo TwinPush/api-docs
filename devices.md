@@ -10,8 +10,10 @@ To access to the full functionality of the devices resources, the following meth
 |--------|------|-------------|
 |<span class="label label-success">GET</span>| [index](#get-index) | obtains the paginated list of application devices associated |
 |<span class="label label-info">POST</span>| [register](#post-register) | create or update device registration in TwinPush |
+|<span class="label label-success">GET</span>| [show](#get-show) | obtains the device details given its identifier |
 |<span class="label label-success">GET</span>| [get badge](#get-badge) | obtains the current badge count of the device. |
 |<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge count of the device. |
+|<span class="label label-info">POST</span>| [received notification](#post-received-notification) | notifies that the notification has been received by the device |
 |<span class="label label-info">POST</span>| [open notification](#post-open-notification) | notifies that the notification has been opened by the user |
 |<span class="label label-info">POST</span>| [open app](#post-open-app) | reports that the user opened the application |
 |<span class="label label-info">POST</span>| [close app](#post-close-app) | notifies that the application has been closed or went to background execution|
@@ -28,7 +30,7 @@ Device resources will contain the following information:
 |-----------|------|-------------|
 | id | string | Unique identifier device in the platform |
 | alias_device | string | Alias assigned to device. It is commonly used as a link with bussiness logic |
-| platform | string | Physical device platform. Available values are `ios` or `android`.
+| platform | string | Physical device platform. Available values are `ios` or `android`. |
 | created_at | datetime | Device first registration date |
 | updated_at | datetime | Device last update date. This field will change when any device usage stat is reported, and will represent the last usage time |
 | last\_registered\_at | datetime | Represents the last time that the device called register service to update its token, device alias or custom properties |
@@ -245,6 +247,64 @@ The `id` value of the device will be necessary to identify the device in subsequ
 }
 ```
 
+## <span class="label label-success">GET</span> show
+
+Creates or updates the subscription of a device in the platform.
+
+### Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices/${device_id}
+```
+
+**Headers:** To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ ```
+
+**Example request**
+
+```bash
+curl -X GET \
+  -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/313639abc/devices/456abcdefg
+```
+
+### Response
+
+The request will return a Device object that will contain the requested device.
+
+If a device with given ID does not exist in the current application, a 404 "Device not found" response will be returned.
+
+**Example response**
+
+```javascript
+{
+    "id": "456abcdefg",
+    "push_token": "ffk1HTeyE-0:APA91bFoqq7Ceup_pk9cz_...",
+    "last_registered_at": "2016-05-24 22:02:29 UTC",
+    "created_at": "2016-05-24 22:02:29 UTC",
+    "updated_at": "2020-09-26 11:36:56 UTC",
+    "app_id": "313639abc",
+    "platform": "android",
+    "language": "es_ES",
+    "device_code": "Aquaris_E5_HD",
+    "device_model": "Aquaris E5 HD",
+    "device_manufacturer": "Bq",
+    "app_version": "2.6.0",
+    "sdk_version": "2.7.1",
+    "os_version": "5.0",
+    "alias_device": null,
+    "type": "Device",
+    "active": true,
+    "registration_updated_at": "2016-05-24 22:02:29 UTC",
+    "custom_properties": []
+}
+```
+
 ## <span class="label label-success">GET</span> badge
 
 Obtains the current badge count associated with the current device. This value can be altered when notifications are sent to the device or when the `update_badge` API method is called.
@@ -337,9 +397,32 @@ curl -X POST \
 
 It will return an OK (HTTP 200) code if request is successful.
 
+## <span class="label label-info">POST</span> received notification
+
+Informs that the device has received the given Notification.
+
+### Request
+
+**Path**
+
+ ```bash
+ POST /apps/${app_id}/devices/${device_id}/notifications/${notif_id}/received_notification
+ ```
+
+__Example request__
+
+```bash
+curl -X POST \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/623c8befd3f1b7f3/devices/28be4fd32b731f3/notifications/1441befd34f112/received_notification
+```
+
+### Response
+
+It will return an OK (HTTP 200) code if request is successful.
+
 ## <span class="label label-info">POST</span> open notification
 
-Notifies that the user interacted with a sent Notification (usually opened fom notifications center). It is usefull to determine the success of a sent notification based on its opening rate.
+Informs that the user interacted with a sent Notification (usually opened fom notifications center). It is useful to determine the success of a sent notification based on its opening rate.
 
 ### Request
 
@@ -563,7 +646,7 @@ The available custom property types are:
 | type | description | value example |
 |------|-------------|---------------|
 | string | A text as a sequence of characters | `"iPhone X"`, `"New York"` |
-| boolean | Logic data type with two possible values: true or false | `true`, `false` | 
+| boolean | Logic data type with two possible values: true or false | `true`, `false` |
 | integer | A number without fractional component | `26`, `-6` |
 | float | A number with fraction precision using floating point. The decimal separator is the '.' (dot) character. | `25.0`, `-1,999.95` |
 | enum | A string value that is contained on a small set of possible values. Enum properties can be later used for segmentation | `"Female"`, `"VIP client"` |
