@@ -10,6 +10,7 @@ To access to the full functionality of the devices resources, the following meth
 |--------|------|-------------|
 |<span class="label label-success">GET</span>| [index](#get-index) | obtains the paginated list of application devices associated |
 |<span class="label label-info">POST</span>| [register](#post-register) | create or update device registration in TwinPush |
+|<span class="label label-success">GET</span>| [show](#get-show) | obtains the device details given its identifier |
 |<span class="label label-success">GET</span>| [get badge](#get-badge) | obtains the current badge count of the device. |
 |<span class="label label-info">POST</span>| [update badge](#post-update-badge) | updates the badge count of the device. |
 |<span class="label label-info">POST</span>| [received notification](#post-received-notification) | notifies that the notification has been received by the device |
@@ -243,6 +244,64 @@ The `id` value of the device will be necessary to identify the device in subsequ
     }
   ],
   "references": []
+}
+```
+
+## <span class="label label-success">GET</span> show
+
+Creates or updates the subscription of a device in the platform.
+
+### Request
+
+**Path**
+
+```bash
+GET /apps/${app_id}/devices/${device_id}
+```
+
+**Headers:** To launch this request it is needed to include the TwinPush Token in the `X-TwinPush-REST-API-Token` header.
+
+ ```bash
+ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
+ ```
+
+**Example request**
+
+```bash
+curl -X GET \
+  -H "X-TwinPush-REST-API-Token: ${REST_API_TOKEN}" \
+  https://{{subdomain}}.twinpush.com/api/{{version}}/apps/313639abc/devices/456abcdefg
+```
+
+### Response
+
+The request will return a Device object that will contain the requested device.
+
+If a device with given ID does not exist in the current application, a 404 "Device not found" response will be returned.
+
+**Example response**
+
+```javascript
+{
+    "id": "456abcdefg",
+    "push_token": "ffk1HTeyE-0:APA91bFoqq7Ceup_pk9cz_...",
+    "last_registered_at": "2016-05-24 22:02:29 UTC",
+    "created_at": "2016-05-24 22:02:29 UTC",
+    "updated_at": "2020-09-26 11:36:56 UTC",
+    "app_id": "313639abc",
+    "platform": "android",
+    "language": "es_ES",
+    "device_code": "Aquaris_E5_HD",
+    "device_model": "Aquaris E5 HD",
+    "device_manufacturer": "Bq",
+    "app_version": "2.6.0",
+    "sdk_version": "2.7.1",
+    "os_version": "5.0",
+    "alias_device": null,
+    "type": "Device",
+    "active": true,
+    "registration_updated_at": "2016-05-24 22:02:29 UTC",
+    "custom_properties": []
 }
 ```
 
