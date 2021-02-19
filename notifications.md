@@ -138,11 +138,9 @@ The parameters that define the content and category of the notification are the 
 | alert | The text that will be shown in the push notification received in devices. This parameter is mandatory |
 | title | Notification title for Android and for TwinPush message inbox |
 | url   | URL to be opened to display rich content when the user opens the notification |
-
-|custom\_properties | Hash map of custom properties that will be reported to the user device in the notification payload
+|custom\_properties | Hash map of custom properties that will be reported to the user device in the notification payload |
 |badge | The number that the user will see in the badge indicator of the app when the notification is received (only iOS). Default value is `+1` |
-|  | **Additional params** | |
-|delivery\_speed | Determines the number of deliveries per minute to be send for the recipients of this notice. Slowing delivery speed will help to avoid overloading client servers due to many simultaneous app openings. Available values are:<ul><li>`instant`: will send all the notifications to the target as soon as possible</li><li>`fast`: will deliver 100.000 notifications per minute</li><li>`normal`: (default) will deliver 1.000 notifications per minute</li><li>`slow`: will deliver 100 notifications per minute</li></ul>|
+|  | **Additional params** |
 |sound| The name of the file you should have as a resource in your application, and it's the one that will be played when a notification is received |
 |send\_since| The time when the push notification will be sent, in format _yyyy-MM-dd HH:mm:ss Z_. If not set or if the value is `null`, the notification be sent inmediatly. |
 |tags| An array of strings to categorize or differentiate in the future this notification from others |
@@ -151,7 +149,7 @@ The parameters that define the content and category of the notification are the 
 |inbox| Boolean value that defines whether the notification will be included or not in the notifications inbox of the user associated with the target device. |
 | protected_content | Boolean value. If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. This option allows sending private information that will only be visible by the receiver. |
 | mutable_content | Boolean value. If set to `true`, it enables the ability of iOS applications to mutate the notification content before displaying it to the user. See [documentation](http://developers.twinpush.com/developers/ios#notification-attachments). |
-
+|delivery\_speed | Determines the number of deliveries per minute to be send for the recipients of this notice. Slowing delivery speed will help to avoid overloading client servers due to many simultaneous app openings. Available values are:<ul><li>`instant`: will send all the notifications to the target as soon as possible</li><li>`fast`: will deliver 100.000 notifications per minute</li><li>`normal`: (default) will deliver 10.000 notifications per minute</li><li>`slow`: will deliver 1.000 notifications per minute</li></ul> |
 
 **Simple target params**
 
