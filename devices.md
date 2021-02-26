@@ -30,7 +30,7 @@ Device resources will contain the following information:
 |-----------|------|-------------|
 | id | string | Unique identifier device in the platform |
 | alias_device | string | Alias assigned to device. It is commonly used as a link with bussiness logic |
-| platform | string | Physical device platform. Available values are `ios` or `android`. |
+| platform | string | Physical device platform. Available values are `ios`, `android` and `huawei`. |
 | created_at | datetime | Device first registration date |
 | updated_at | datetime | Device last update date. This field will change when any device usage stat is reported, and will represent the last usage time |
 | last\_registered\_at | datetime | Represents the last time that the device called register service to update its token, device alias or custom properties |
@@ -136,7 +136,7 @@ The register request requires the following parameters as a minimum information 
 | param | description |
 |-------|-------------|
 | udid  | unique identifier of the device per application and platform. A good choice is the [ANDROID_ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) for Android and the [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) for iOS |
-| platform | Device platform. Available values are: `"ios"` for Apple iOS devices and `"android"` for Google Android devices
+| platform | Device platform. Available values are: `"ios"` for Apple iOS devices, `"android"` for Google Android devices and `"huawei"` for Android devices with HMS services. |
 
 If an existing device is already registered with given `udid-platform`, the record will be updated. Otherwise, a new device will be registered.
 
@@ -146,8 +146,8 @@ Register service accepts some optional parameters that can be included or not in
 
 | param     | description | example |
 |-----------|-------------|---------|
-| push_token | Token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). A device without push token will not receive push notifications, but it will be able to report usage statistics and check inbox. | `"eTPVpHwpWLw..."`
-| alias_device | Value to associate the device to a user of the client platform | `"username"`
+| push_token | Token provided for the device by the Push notification services (known as _registrationId_ for Android and _token_ for iOS). A device without push token will not receive push notifications, but it will be able to report usage statistics and check inbox. | `"eTPVpHwpWLw..."`|
+| alias_device | Value to associate the device to a user of the client platform | `"username"`|
 | language  | Language and region, joined by undescore | `"en_ES"`, `"en_GB"` |
 | device_code | Device model code | `"osprey_umts"` |
 | device_model | Device commercial name | `"iPad 2"`, `"iPhone 6S"` |
