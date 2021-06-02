@@ -14,7 +14,7 @@ Esto provoca que las notificaciones no se envíen a estos dispositivos. Muy prob
 
 ### ¿Cuál es el límite de caracteres para los mensajes push?
 
-Actualmente el límite en el tamaño del título o la alerta para una notificación push viene determinado por el tamaño del _payload_ (información completa de la notificación) que se envía a los servicios de Google y Apple. Este _payload_ incluye toda la información de la notificación, desde título y alerta, hasta propiedades personalizadas o la URL de contenido rico. Y tiene un tamaño máximo total de 2KB para iOS y 4KB para Android. Cada caracter suele ocupar 1B, así que es difícil alcanzar este límite haciendo un uso razonable. Aún así, es recomentable utilizar URLs cortas en la medida de lo posible para alejar más este límite.
+Actualmente el límite en el tamaño del título o la alerta para una notificación push es de 500 caracteres, pero hay que también tener en cuenta el tamaño máximo del _payload_ (información completa de la notificación) que se envía a los servicios de Google y Apple. Este _payload_ incluye toda la información de la notificación, desde título y alerta, hasta propiedades personalizadas o la URL de contenido rico. Y tiene un tamaño máximo total de 2KB para iOS y 4KB para Android. Cada caracter suele ocupar 1B, así que es difícil alcanzar este límite haciendo un uso razonable. Aún así, es recomentable utilizar URLs cortas en la medida de lo posible para alejar más este límite.
 
 El tamaño máximo del texto o del título de una notificación, por lo tanto, quedaría más determinado por lo que puede mostrar la pantalla de un teléfono o tablet (una notificación demasiado larga no se podría mostrar completa en la pantalla). Estos tamaños son (aproximadamente):
 

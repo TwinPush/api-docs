@@ -15,7 +15,7 @@ This situation causes that all notifications will not be send to those devices. 
 
 ### What is the character limit for push messages?
 
-Currently the limit on the size of the title or the alert for a push notification is determined by the size of the _payload_ (complete notification information) that is sent to Google and Apple services. This _payload_ includes all notification information, from title and alert, to custom properties or the rich content URL. And it has a total maximum size of 2KB for iOS and 4KB for Android. Each character usually occupies 1B, so it is difficult to reach this limit by making reasonable use. Even so, it is recommended to use short URLs as much as possible to push this limit further.
+Currently the limit on the size of the title or the alert for a push notification is 500 characters, but you have also to take consideration of the maximum size of the _payload_ (complete notification information) that is sent to Google and Apple services. This _payload_ includes all notification information, from title and alert, to custom properties or the rich content URL. And it has a total maximum size of 2KB for iOS and 4KB for Android. Each character usually occupies 1B, so it is difficult to reach this limit by making reasonable use. Even so, it is recommended to use short URLs as much as possible to push this limit further.
 
 The maximum size of the text or title of a notification, therefore, would be more determined by what a phone or tablet screen may display (a notification that is too long could not be displayed full on the screen). These sizes are (approximately):
 
