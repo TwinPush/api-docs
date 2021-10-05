@@ -134,7 +134,7 @@ if you want to change this value in your account, you should contact us at [supp
 
 ## Error Messages
 
-The following table list describe the main error messages that return Google (FCM) and Apple (APNS) Push notification Platforms. TwinPush relay these messages in the response of Notification request. These messages could also be found in the downloadable report at a Notification view.
+The following table list describe the main error messages that return Google (FCM), Apple  (APNS) and Huawei (HMS) Push notification Platforms. TwinPush relay these messages in the response of Notification request. These messages could also be found in the downloadable report at a Notification view.
 
 | Message | Description |
 |---------|-------------|
@@ -143,8 +143,23 @@ The following table list describe the main error messages that return Google (FC
 | <strong>MismatchSenderId</strong><br/>Error - FCM | A registration token is tied to a certain group of senders. When a client app registers for FCM, it must specify which senders are allowed to send messages. You should use one of those sender IDs when sending messages to the client app. If you switch to a different sender, the existing registration tokens won't work. |
 | <strong>DeviceTokenNotForTopic</strong><br/>Error - APNS | The device token does not match the specified topic. |
 | <strong>InvalidPackageName</strong><br/>Error - FCM | Make sure the message was addressed to a registration token whose package name matches the value passed in the request. |
-| <strong>InvalidParameters</strong><br/>Error- FCM | Check that the provided parameters have the right name and type. |
+| <strong>InvalidParameters</strong><br/>Error - FCM | Check that the provided parameters have the right name and type. |
 | <strong>InvalidRegistration</strong><br/>Error - FCM | Check the format of the registration token you pass to the server. Make sure it matches the registration token the client app receives from registering with Firebase Notifications. Do not truncate or add additional characters. |
 | <strong>CERTIFICATE\_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> The APNS Certificate from Apple has already expired. |
 | <strong>BadDeviceToken</strong><br/>Error - APNS | The specified device token was bad. Verify that the request contains a valid token and that the token matches the environment. |
 | <strong>MissingRegistration</strong><br/>Error - FCM | Check that the request contains a registration token (in the registration\_id in a plain text message, or in the to or registration\_ids field in JSON). |
+| <strong>80000000</strong><br/>Error - HMS | Success. No errors. |
+| <strong>80100000</strong><br/>Error - HMS | Some tokens are successfully sent. Tokens identified by illegal token are those failed to be sent. Solution: Check these tokens in the return value. |
+| <strong>80100001</strong><br/>Error - HMS | Some token parameters are incorrect. Solution: Check the token parameters as prompted in the response. |
+| <strong>80100002</strong><br/>Error - HMS | The number of tokens must be 1 when a synchronization message is sent. Solution: Check the token field in the request. |
+| <strong>80100003</strong><br/>Error - HMS | Incorrect message structure. Solution: Check the parameters in the message structure as prompted in the response. |
+| <strong>80100004</strong><br/>Error - HMS | The message expiration time is earlier than the current time. Solution: Check the message field <strong>ttl.</strong> |
+| <strong>80100013</strong><br/>Error - HMS | The <strong>collapse\_key</strong> message field is invalid. Solution: Check the message field <strong>collapse\_key</strong>. |
+| <strong>80100016</strong><br/>Error - HMS | The message contains sensitive information. Solution: Check whether the message contains sensitive words. |
+| <strong>80200001</strong><br/>Error - HMS | OAuth authentication error. Solution: The access token in the Authorization parameter in the request HTTP header failed to be authenticated. Ensure that the access token is correct. |
+| <strong>80200003</strong><br/>Error - HMS | OAuth token expired. Solution: The access token in the Authorization parameter in the request HTTP header expired. Apply for a new access token. |
+| <strong>80300002</strong><br/>Error - HMS | The current app does not have the permission to send push messages. Solution: Check the push message sending permission of the current app. |
+| <strong>80300007</strong><br/>Error - HMS | All tokens are invalid. Solution: Check the token parameter. |
+| <strong>80300008</strong><br/>Error - HMS | The message body size exceeds the default value. Solution: Reduce the message body size. |
+| <strong>80300010</strong><br/>Error - HMS | The number of tokens in the message body exceeds the default value. Solution: Reduce the number of tokens and send them in batches. |
+| <strong>81000001</strong><br/>Error - HMS | System internal error. Solution: Contact Huawei technical support of HUAWEI Push Kit. |

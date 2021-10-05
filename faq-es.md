@@ -129,7 +129,7 @@ Si deseas cambiar este valor, deberás ponerte en contacto con[ support@twincode
 
 ## Mensajes de Error
 
-En la siguiente tabla se describen los principales mensajes de error que devuelven las Plataformas de Notificaciones de Google (FCM) y Apple (APNS) y que TwinPush retransmite como respuesta a sus peticiones. Estos mensajes, también se podrían encontrar en los informes descargables en la vista de una Notificación.
+En la siguiente tabla se describen los principales mensajes de error que devuelven las Plataformas de Notificaciones de Google (FCM), Apple (APNS) y Huawei (HMS) y que TwinPush retransmite como respuesta a sus peticiones. Estos mensajes, también se podrían encontrar en los informes descargables en la vista de una Notificación.
 
 | Mensaje | Descripción |
 |---------|-------------|
@@ -143,4 +143,18 @@ En la siguiente tabla se describen los principales mensajes de error que devuelv
 | <strong>CERTIFICATE\_EXPIRED</strong><br/>Error - APNS | OPENSSL\_internal:SSLV3\_ALERT\_CERTIFICATE_EXPIRED<br/> El certificado APNS de Apple ha expirado. |
 | <strong>BadDeviceToken</strong><br/>Error - APNS | EL token del dispositivo especificado era malo. Compruebe que la petición contenga un token válido y que el token coincida con el entorno. |
 | <strong>MissingRegistration</strong><br/>Error - FCM | Verifica que la solicitud contenga un token de registro (en el registration\_id, si es un mensaje de texto sin formato, o en los campos to o registration\_ids en JSON). |
-
+| <strong>80000000</strong><br/>Error - HMS | Éxito. Sin errores. |
+| <strong>80100000</strong><br/>Error - HMS | Algunos tokens se enviaron correctamente. Los tokens identificados como token ilegales son aquellos que no se pudieron enviar. Solución: Comprueba estos tokens en el valor de retorno. |
+| <strong>80100001</strong><br/>Error - HMS | Algunos parámetros del token son incorrectos. Solución: Comprueba los parámetros del token como se indica en la respuesta. |
+| <strong>80100002</strong><br/>Error - HMS | El número de tokens debe ser 1 cuando se envía un mensaje de sincronización. Solución: Comprueba el campo del token en la petición. |
+| <strong>80100003</strong><br/>Error - HMS | Estructura de mensaje incorrecta. Solución: Verifica los parámetros en la estructura del mensaje como se indica en la respuesta. |
+| <strong>80100004</strong><br/>Error - HMS | El tiempo de expiración del mensaje es anterior a la hora actual. Solución: Verifica el campo de mensaje <strong>ttl.</strong> |
+| <strong>80100013</strong><br/>Error - HMS | El campo de mensaje <strong>collapse\_key</strong> es inválido. Solución: Comprueba el campo de mensaje <strong>collapse\_key</strong>. |
+| <strong>80100016</strong><br/>Error - HMS | El mensaje contiene información sensible. Solución: Comprueba si el mensaje contiene palabras sensibles. |
+| <strong>80200001</strong><br/>Error - HMS | Error de autenticación de OAuth. Solución: No se pudo autenticar el token de acceso del parámetro de autorización del encabezado HTTP de la petición. Asegúrate de que el token de acceso sea el correcto. |
+| <strong>80200003</strong><br/>Error - HMS | El token de OAuth expiró. Solución: El token de acceso del parámetro de autorización del encabezado HTTP de la petición expiró. Solicita un nuevo token de acceso. |
+| <strong>80300002</strong><br/>Error - HMS | La aplicación actual no tiene permisos para enviar notificaciones push. Solución: Comprueba el permiso de envío de notificaciones push de la presente aplicación. |
+| <strong>80300007</strong><br/>Error - HMS | Todos los tokens son inválidos. Solución: Verifica el parámetro del token. |
+| <strong>80300008</strong><br/>Error - HMS | El tamaño del cuerpo del mensaje supera el valor por defecto. Solución: Reduce el tamaño del cuerpo del mensaje. |
+| <strong>80300010</strong><br/>Error - HMS | El número de tokens en el cuerpo del mensaje supera el valor por defecto. Solución: Reduce el número de tokens y envíalos en lotes. |
+| <strong>81000001</strong><br/>Error - HMS | Error interno del sistema. Solución: Comunícate con el soporte técnico de HUAWEI Push Kit. |
