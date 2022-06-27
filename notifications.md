@@ -171,12 +171,11 @@ The notification will be sent to **all the active devices** registered on the ap
 | --------- | ------------------------------------------------------------ | ------- |
 | broadcast | If set to `true`, the notification will be sent to all the active devices registered in the application | Boolean |
 
-Example payload for a broadcast notification:
+Example payload param for a broadcast notification:
 
 ````json
 {
   "broadcast": true,
-  ...
 }
 ````
 
@@ -188,12 +187,11 @@ The notification will be sent to the active devices that match with the provided
 | ----------- | ------------------------------------------------------------ | -------- |
 | devices_ids | Array of device identifiers to be target of the notification | String[] |
 
-Example payload for notification with *device_id* target:
+Example payload param for notification with *device_id* target:
 
 ````json
 {
   "devices_ids": ["1a2b3c4d5f","2b3c4d5f6g","3c4d5f6g7h"]
-  ...
 }
 ````
 
@@ -205,12 +203,11 @@ The notification will be sent to the active devices linked with any of the provi
 | --------------- | ------------------------------------------------------ | -------- |
 | devices_aliases | Array of device alias to be target of the notification | String[] |
 
-Example payload for notification with alias array target
+Example payload param for notification with alias array target
 
 ````json
 {
   "devices_aliases": ["john01", "peter41", "martha78"],
-  ...
 }
 ````
 
@@ -222,7 +219,7 @@ The notification will be sent to the active devices present in any of the provid
 | -------- | ------------------------------------------------------------ | -------- |
 | segments | Array with the name of previously created segments to be target of the notification. | String[] |
 
-Example payload for notification with segments:
+Example payload param for notification with segments:
 
 ````json
 {
@@ -242,7 +239,7 @@ That is, **for each property**, a device must have **any** of the provided value
 | ----------------- | ------------------------------------------------------------ | ---------------------- |
 | target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
 
-Example of a notification that will be sent to any device with the roles *"Student"* or *"Teacher"* **and** whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"*:
+Example payload param for a notification that will be sent to any device with the roles *"Student"* or *"Teacher"* **and** whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"*:
 
 ````json
 {
@@ -264,7 +261,7 @@ In that case both parameters *target_properties* and *segments* must be included
 | target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
 | segments          | Array with the name of previously created segments to be target of the notification. | String[]               |
 
-Example of a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
+Example payload params for a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
 
 ```
 {
