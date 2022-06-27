@@ -263,7 +263,7 @@ In that case both parameters *target_properties* and *segments* must be included
 
 Example payload params for a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
 
-```
+```json
 {
   "target_properties": {    
     "class": ["Grade 1A", "Grade 1B", "Grade 2A"]
@@ -314,30 +314,6 @@ Scheduled broadcast notification with emojis:
   "send_since": "2024-10-10 15:14:33 +0000",
   "tags": ["one", "two"],
   "group_name": "Commercial Offers"
-}
-```
-
-Notification by device IDs with instant delivery:
-
-```javascript
-{
-  "alert": "This is the message displayed in Notifications Center",
-  "devices_ids": ["1a2b3c4d5f","2b3c4d5f6g","3c4d5f6g7h"]
-}
-```
-
-Notification by custom property :
-
-```javascript
-{
-  "alert": "Everything is OK ",
-  "target_property": {
-    "name": "Civil status",
-    "values": [
-      "Single",
-      "Divorced"
-    ]
-  }
 }
 ```
 
