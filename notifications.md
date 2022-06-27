@@ -128,7 +128,11 @@ X-TwinPush-REST-API-Key-Creator: ${REST_API_TOKEN_CREATOR}
 Content-Type: application/json; charset: utf-8
 ```
 
-**Notification params**
+#### Parameters
+
+The different parameters available to define the details of the **notification** or its **target** are described below.
+
+**1. Notification params**
 
 The parameters that define the content and category of the notification are the following:
 
@@ -151,23 +155,129 @@ The parameters that define the content and category of the notification are the 
 | mutable_content | Boolean value. If set to `true`, it enables the ability of iOS applications to mutate the notification content before displaying it to the user. See [documentation](http://developers.twinpush.com/developers/ios#notification-attachments). |
 |delivery\_speed | Determines the number of deliveries per minute to be send for the recipients of this notice. Slowing delivery speed will help to avoid overloading client servers due to many simultaneous app openings. Available values are:<ul><li>`instant`: will send all the notifications to the target as soon as possible</li><li>`fast`: will deliver 100.000 notifications per minute</li><li>`normal`: (default) will deliver 10.000 notifications per minute</li><li>`slow`: will deliver 1.000 notifications per minute</li></ul> |
 
-**Simple target params**
+**2. Target parameters**
 
-Allows to specify a list of elements of many types to be addressee of the Push Notification:
+The following parameters are used to indicate which devices should receive the notification. A distinction is made between **simple target**, in which each device receives an identical notification, and **multiple target**, in which it is possible to customize the content of the notification received by each device.
 
-| param           | description                                                  | type     |
-| --------------- | ------------------------------------------------------------ | -------- |
-| broadcast       | If set to `true`, the notification will be sent to all the devices registered in the application | Boolean  |
-| devices_ids     | Array of device identifiers to be target of the notification | String[] |
-| devices_aliases | Array of device alias to be target of the notification       | String[] |
-| segments        | Devices that fulfill the conditions of any of the previously created selected segments | String[] |
-| target_property | Devices that have any of the selected values for given property.<br>This param is a JSON object formed by two additional attributes:<br><ul><li>name: string property identifier</li><li>values: array of string values that devices will have to match to be selected as target of the notification</li></ul> | Object   |
+**2. 1. Simple target params**
 
+It allows to specify a list of elements of many types to be receiver of the Push Notification. Use one of the following options to define the target for the notification.
 
+**2. 1. 1 Broadcast**
 
-**Multiple target params**
+The notification will be sent to **all the active devices** registered on the application.
 
-Multiple target notifications can be send through device ID or device alias:
+| param     | description                                                  | type    |
+| --------- | ------------------------------------------------------------ | ------- |
+| broadcast | If set to `true`, the notification will be sent to all the active devices registered in the application | Boolean |
+
+Example payload for a broadcast notification:
+
+````json
+{
+  "broadcast": true,
+  ...
+}
+````
+
+**2. 1. 2. Device Id array**
+
+The notification will be sent to the active devices that match with the provided *device_id* array:
+
+| param       | description                                                  | type     |
+| ----------- | ------------------------------------------------------------ | -------- |
+| devices_ids | Array of device identifiers to be target of the notification | String[] |
+
+Example payload for notification with *device_id* target:
+
+````json
+{
+  "devices_ids": ["1a2b3c4d5f","2b3c4d5f6g","3c4d5f6g7h"]
+  ...
+}
+````
+
+**2.1.3. Alias array**
+
+The notification will be sent to the active devices linked with any of the provided aliases:
+
+| param           | description                                            | type     |
+| --------------- | ------------------------------------------------------ | -------- |
+| devices_aliases | Array of device alias to be target of the notification | String[] |
+
+Example payload for notification with alias array target
+
+````json
+{
+  "devices_aliases": ["john01", "peter41", "martha78"],
+  ...
+}
+````
+
+**2. 1. 4. Segments**
+
+The notification will be sent to the active devices present in any of the provided segments:
+
+| param    | description                                                  | type     |
+| -------- | ------------------------------------------------------------ | -------- |
+| segments | Array with the name of previously created segments to be target of the notification. | String[] |
+
+Example payload for notification with segments:
+
+````json
+{
+  "segments": ["Gold Users", "Silver Users"]
+}
+````
+
+**2. 1. 5 Target property**
+
+This target offers the option of sending the notification to active devices that have certain values in some of their properties.
+
+It is possible to provide values that devices must have for **up to 5** different properties. This way, the notification will be sent to the active devices that have **any of the values** provided for **ALL listed properties**.
+
+That is, **for each property**, a device must have **any** of the provided values in order to be chosen as target of the notification.
+
+| param             | description                                                  | type                   |
+| ----------------- | ------------------------------------------------------------ | ---------------------- |
+| target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
+
+Example of a notification that will be sent to any device with the roles *"Student"* or *"Teacher"* **and** whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"*:
+
+````json
+{
+  "target_properties": {
+    "role": ["Student", "Professor"],
+    "class": ["Grade 1A", "Grade 1B", "Grade 2A"]
+  }
+}
+````
+
+**2. 1. 6 Target property and segment**
+
+Target property target also supports filtering **by segments**, using the format described before. The notification will be sent to the devices selected by the *target_properties* target (as stated in the previous point) that are included in **any** of the selected segments.
+
+In that case both parameters *target_properties* and *segments* must be included.
+
+| param             | description                                                  | type                   |
+| ----------------- | ------------------------------------------------------------ | ---------------------- |
+| target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
+| segments          | Array with the name of previously created segments to be target of the notification. | String[]               |
+
+Example of a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
+
+```
+{
+  "target_properties": {    
+    "class": ["Grade 1A", "Grade 1B", "Grade 2A"]
+  }
+  "segments": ["Students", "Professors"]
+}
+```
+
+**2. 2. Multiple target params**
+
+Multiple customized notifications can be send through device ID or device alias:
 
 | param            | description                                                  |
 | ---------------- | ------------------------------------------------------------ |
@@ -190,21 +300,21 @@ Through this method it is possible to customize the content fields of the notifi
 
 If any of there parameters is not set, the message received by the user will contain the basic information defined in the main notification parameters.
 
-**Example request body**
+**Example requests body**
 
-Scheduled broadcast notification:
+Scheduled broadcast notification with emojis:
 
 ```javascript
 {
   "broadcast": true,
   "title": "Welcome to TwinPush",
-  "alert": "This is the message displayed in Notifications Center",
+  "alert": "This is the message displayed in Notifications Center \ud83d\udc4c\",
   "url": "http://www.inception-explained.com"",
   "custom_properties": {"key1": "value1", "key2": "value2"},
   "badge": "+1",
   "delivery_speed": "slow",
   "sound": "waves",
-  "send_since": "2015-10-10 15:14:33 +0000",
+  "send_since": "2024-10-10 15:14:33 +0000",
   "tags": ["one", "two"],
   "group_name": "Commercial Offers"
 }
@@ -219,11 +329,11 @@ Notification by device IDs with instant delivery:
 }
 ```
 
-Notification by custom property with emojis:
+Notification by custom property :
 
 ```javascript
 {
-  "alert": "Everything is OK \ud83d\udc4c\ud83c\udffb",
+  "alert": "Everything is OK ",
   "target_property": {
     "name": "Civil status",
     "values": [
