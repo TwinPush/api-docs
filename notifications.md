@@ -135,10 +135,10 @@ The parameters that define the content and category of the notification are the 
 | param | description                                                  |
 | ----- | ------------------------------------------------------------ |
 |       | **Content params**                                           |
-| alert | The text that will be shown in the push notification received in devices. This parameter is mandatory |
-| title | Notification title for Android and for TwinPush message inbox |
-| url   | URL to be opened to display rich content when the user opens the notification |
-|custom\_properties | Hash map of custom properties that will be reported to the user device in the notification payload |
+| alert | The text that will be shown in the push notification received in devices. This parameter is mandatory. Limited to 255 characters. |
+| title | Notification title for Android and for TwinPush message inbox. Limited to 255 characters. |
+| url   | URL to be opened to display rich content when the user opens the notification. Limited to 255 characters. |
+|custom\_properties | Hash map of custom properties that will be reported to the user device in the notification payload. Limited to 255 characters once serialized to JSON. |
 |badge | The number that the user will see in the badge indicator of the app when the notification is received (only iOS). Default value is `+1` |
 |  | **Additional params** |
 |sound| The name of the file you should have as a resource in your application, and it's the one that will be played when a notification is received |
