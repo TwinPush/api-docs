@@ -6,16 +6,16 @@ The _notification_ resource is the representation of a message sent to a physica
 
 To access to the full functionality of the notification resources, the following methods are available:
 
-| method                                          | name                                       | description                                                  |
-| ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
-| <span class="label label-success">GET</span>    | [show](#get-show-notification)             | obtains details from a previously created notification       |
-| <span class="label label-info">POST</span>      | [create](#post-create)                     | creates a new notification to be delivered from the platform |
-| <span class="label label-success">DELETE</span> | [delete](#delete-notification)             | removes a notification from the system and from all users' inboxes |
-| <span class="label label-success">GET</span>    | [report](#get-report)                      | obtains delivery statistics for a given notification         |
-| <span class="label label-success">GET</span>    | [deliveries](#get-deliveries)              | obtains paginated list of deliveries for a given notification |
-| <span class="label label-success">GET</span>    | [inbox](#get-inbox)                        | retrieves the notifications sent to the user by the alias device |
-| <span class="label label-success">GET</span>    | [inbox_summary](#get-inbox-summary)        | obtains the total and unopened count of the alias notifications inbox |
-| <span class="label label-success">DELETE</span> | [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
+| method                                            | name                                       | description                                                  |
+| ------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
+| <span class="label label-success">GET</span>      | [show](#get-show-notification)             | obtains details from a previously created notification       |
+| <span class="label label-info">POST</span>        | [create](#post-create)                     | creates a new notification to be delivered from the platform |
+| <span class="label label-important">DELETE</span> | [delete](#delete-notification)             | removes a notification from the system and from all users' inboxes |
+| <span class="label label-success">GET</span>      | [report](#get-report)                      | obtains delivery statistics for a given notification         |
+| <span class="label label-success">GET</span>      | [deliveries](#get-deliveries)              | obtains paginated list of deliveries for a given notification |
+| <span class="label label-success">GET</span>      | [inbox](#get-inbox)                        | retrieves the notifications sent to the user by the alias device |
+| <span class="label label-success">GET</span>      | [inbox_summary](#get-inbox-summary)        | obtains the total and unopened count of the alias notifications inbox |
+| <span class="label label-important">DELETE</span> | [delete inbox](#delete-inbox-notification) | removes a notification from the inbox of the associated user |
 
 **Model**
 
