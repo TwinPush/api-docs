@@ -8,7 +8,7 @@ To access to the full functionality of the notification resources, the following
 
 | method                                          | name                                       | description                                                  |
 | ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
-| <span class="label label-success">GET</span>    | [show](#get-show)                          | obtains details from a previously created notification       |
+| <span class="label label-success">GET</span>    | [show](#get-show-notification)             | obtains details from a previously created notification       |
 | <span class="label label-info">POST</span>      | [create](#post-create)                     | creates a new notification to be delivered from the platform |
 | <span class="label label-success">DELETE</span> | [delete](#delete-notification)             | removes a notification from the system and from all users' inboxes |
 | <span class="label label-success">GET</span>    | [report](#get-report)                      | obtains delivery statistics for a given notification         |
@@ -37,7 +37,7 @@ Notification representation objects will contain the following information:
 | delivery_speed    | string   | Defines the number of deliveries per minute when sending the notification. Available values are: `instant`, `fast`, `normal` or `slow`. |
 | protected_content | boolean  | If set to `true`, the content of the notification (_alert_ and _title_) will be hidden from API requests and Web Platform and will only be displayed to the devices targetted by the notification. |
 
-## <span class="label label-success">GET</span> show
+## <span class="label label-success">GET</span> show notification
 
 Returns all the details of a previously created notification.
 
