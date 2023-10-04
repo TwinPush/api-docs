@@ -10,6 +10,7 @@ To access to the full functionality of the notification resources, the following
 | ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
 | <span class="label label-success">GET</span>    | [show](#get-show)                          | obtains details from a previously created notification       |
 | <span class="label label-info">POST</span>      | [create](#post-create)                     | creates a new notification to be delivered from the platform |
+| <span class="label label-success">DELETE</span> | [delete](#delete-notification)             | removes a notification from the system and from all users' inboxes |
 | <span class="label label-success">GET</span>    | [report](#get-report)                      | obtains delivery statistics for a given notification         |
 | <span class="label label-success">GET</span>    | [deliveries](#get-deliveries)              | obtains paginated list of deliveries for a given notification |
 | <span class="label label-success">GET</span>    | [inbox](#get-inbox)                        | retrieves the notifications sent to the user by the alias device |
@@ -377,6 +378,35 @@ It will return an array of notifications with a single object that represents th
   ]
 }
 ```
+
+## <span class="label label-important">DELETE</span> notification
+
+Removes a notification from the system and from all users' inboxes. Any delivery in progress will be cancelled.
+
+### Request
+
+**Path**
+
+```bash
+DELETE /apps/${app_id}/notifications/${notification_id}
+```
+
+**Headers:** To remove notifications it is required to include the Application _Creator Token_ header.
+
+```bash
+X-TwinPush-REST-API-Key-Creator: ${REST_API_TOKEN_CREATOR}
+```
+
+__Example request__
+
+```bash
+curl -X DELETE \
+  http://{{subdomain}}.twinpush.com/api/v2/apps/12mj18sja89/notifications/8a2bdm1d50
+```
+
+### Response
+
+It will return an OK (HTTP 200) code if request is successful or a NotFound (HTTP 404) if notification can not be found.
 
 ## <span class="label label-success">GET</span> report
 
