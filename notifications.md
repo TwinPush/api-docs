@@ -433,8 +433,8 @@ The response body contains an object with the following fields:
 * **status** (string): Current status of the notification. Available values are:
   * `"draft"`: the notification has not been activated yet.
   * `"sending"`: the notification is currently being sent.
-  * `"sent"`: the sending process has been completed.
-  * `"error"`: the sending process finished, but has been no deliveries. Usually due to an invalid target or configuration.
+  * `"sent"`: the sending process has been completed. This does not necessarily indicate success, as errors may have occurred during delivery. Inspect the "errors" attribute to check for possible incidents.
+  * `"error"`: there has been an error in the notification target or in the app settings that has prevented the delivery from taking place
   * `"scheduled"`: the notification has been scheduled for a future send.
   * `"campaign_active"`: a currently active campaign.
   * `"campaign_inactive"`: a currently inactive campaign.
