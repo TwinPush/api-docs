@@ -431,13 +431,14 @@ X-TwinPush-REST-API-Token: ${REST_API_TOKEN}
 The response body contains an object with the following fields:
 
 * **status** (string): Current status of the notification. Available values are:
-  * `"draft"`: the notification has not been activated yet
-  * `"sending"`: the notification is being send
-  * `"sent"`: sending process has been completed
-  * `"scheduled"`: the notification has been scheduled for a future send
-  * `"campaign_active"`: a currently active campaign
-  * `"campaign_inactive"`: a currently inactive campaign
-  * `"campaign_expired"`: a finished campaign
+  * `"draft"`: the notification has not been activated yet.
+  * `"sending"`: the notification is currently being sent.
+  * `"sent"`: the sending process has been completed.
+  * `"error"`: the sending process finished, but has been no deliveries. Usually due to an invalid target or configuration.
+  * `"scheduled"`: the notification has been scheduled for a future send.
+  * `"campaign_active"`: a currently active campaign.
+  * `"campaign_inactive"`: a currently inactive campaign.
+  * `"campaign_expired"`: a finished campaign.
 * **delivery_count** (integer): Number of deliveries made for the notification
 * **opening_count** (integer): Number of devices that did open the notification
 * **received_count** (integer): Number of devices that reported the reception of the push notification
