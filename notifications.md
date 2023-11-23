@@ -186,7 +186,7 @@ The notification will be sent to the active devices that match with the provided
 
 | param       | description                                                  | type     |
 | ----------- | ------------------------------------------------------------ | -------- |
-| devices_ids | Array of device identifiers to be target of the notification | String[] |
+| devices_ids | Array of device identifiers to be target of the notification. Limited to 1.000 device ID per request. | String[] |
 
 Example payload param for notification with *device_id* target:
 
@@ -200,9 +200,9 @@ Example payload param for notification with *device_id* target:
 
 The notification will be sent to the active devices linked with any of the provided aliases:
 
-| param           | description                                            | type     |
-| --------------- | ------------------------------------------------------ | -------- |
-| devices_aliases | Array of device alias to be target of the notification | String[] |
+| param           | description                                                  | type     |
+| --------------- | ------------------------------------------------------------ | -------- |
+| devices_aliases | Array of device alias to be target of the notification. Limited to 1.000 alias per request. | String[] |
 
 Example payload param for notification with alias array target
 
@@ -218,7 +218,7 @@ The notification will be sent to the active devices present in any of the provid
 
 | param    | description                                                  | type     |
 | -------- | ------------------------------------------------------------ | -------- |
-| segments | Array with the name of previously created segments to be target of the notification. | String[] |
+| segments | Array with the name of previously created segments to be target of the notification. Limited to 50 segments per request. | String[] |
 
 Example payload param for notification with segments:
 
@@ -260,7 +260,7 @@ In that case both parameters *target_properties* and *segments* must be included
 | param             | description                                                  | type                   |
 | ----------------- | ------------------------------------------------------------ | ---------------------- |
 | target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
-| segments          | Array with the name of previously created segments to be target of the notification. | String[]               |
+| segments          | Array with the name of previously created segments to be target of the notification. Limited to 50 segments per request. | String[]               |
 
 Example payload params for a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
 
@@ -277,10 +277,10 @@ Example payload params for a notification that will be sent to any device whose 
 
 Multiple customized notifications can be send through device ID or device alias:
 
-| param            | description                                                  |
-| ---------------- | ------------------------------------------------------------ |
-| multiple_devices | Target that allows to customize the content of the notification by device id |
-| multiple_alias   | Target that allows to customize the content of the notification by alias |
+| param            | description                                                  | type               |
+| ---------------- | ------------------------------------------------------------ | ------------------ |
+| multiple_devices | Target that allows to customize the content of the notification by device id. Limited to 1.000 entries per request. | Hash<String, Hash> |
+| multiple_alias   | Target that allows to customize the content of the notification by alias.  Limited to 1.000 entries per request. | Hash<String, Hash> |
 
 It is possible to customize the payload information sent to every device or alias targeted in a notification.
 
