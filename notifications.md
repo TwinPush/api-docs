@@ -162,7 +162,7 @@ The following parameters are used to indicate which devices should receive the n
 
 **2. 1. Simple target params**
 
-It allows to specify a list of elements of many types to be receiver of the Push Notification. Use one of the following options to define the target for the notification.
+It allows to specify a list of elements of many types to be receiver of the Push Notification. Use **only one** of the following options to define the target for the notification.
 
 **2. 1. 1 Broadcast**
 
@@ -170,7 +170,7 @@ The notification will be sent to **all the active devices** registered on the ap
 
 | param     | description                                                  | type    |
 | --------- | ------------------------------------------------------------ | ------- |
-| broadcast | If set to `true`, the notification will be sent to all the active devices registered in the application | Boolean |
+| broadcast | If set to `true`, the notification will be sent to all the active devices registered in the application. | Boolean |
 
 Example payload param for a broadcast notification:
 
