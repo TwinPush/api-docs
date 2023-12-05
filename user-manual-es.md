@@ -380,10 +380,17 @@ Podremos modificar los datos principales de nuestra Aplicación, tales como:
     * Rápida: velocidad de envío limitada a 100.000 por minuto.
     * Normal: velocidad de envío limitada a 10.000 por minuto.
     * Lenta: Velocidad de envío limitada a 1.000 por minuto. 
-* **Buzón por defecto**: Esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
+* **Permitir envíos broadcast**: Los envíos broadcast permiten realizar un envío masivo a todos los dispositivos de tu App con una sola Notificación. Este parámetro permite restringir esta función según tus necesidades:
+    * Desde API y consola web: se permite crear y enviar notificaciones broadcast tanto desde el API como desde la consola web.
+    * Solo desde API: se permite crear y enviar notificaciones broadcast solamente desde el API y no será posible desde la consola web.
+    * Solo desde consola web: se permite crear y enviar notificaciones broadcast solamente desde la consola web y no será posible hacerlo desde el API.
+    * No permitir: no se permite crear ni enviar notificaciones de este tipo.
 
-[![](https://i.imgur.com/MbwOLOXl.png)](https://i.imgur.com/MbwOLOX.png)
+* **Valores por defecto**:
+    * Incluir por defecto las notificaciones nuevas en el buzón de usuario: esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
+    * Notificaciones con "contenido mutable" activado por defecto: marcando esta casilla se habilitará el uso de contenido mutable en notificaciones a dispositivos iOS, siempre que se haya desarrollado una apropiada integración con TwinPush.
 
+[![](https://i.imgur.com/1hBAZ0jl.png)](https://i.imgur.com/1hBAZ0j.png)
 
 
 ### Claves de Autenticación:
