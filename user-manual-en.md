@@ -391,10 +391,17 @@ You can modify here basic information of your App, such as:
     * Fast: the delivery speed will be limited to 100.000 per minute.
     * Normal: the delivery speed will be limited to 10.000 per minute.
     * Slow: the delivery speed will be limited to 1.000 per minute.
-* **Default inbox**: This checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
+* **Allow broadcast notifications**: Broadcast notifications allows you a mass notification sending to all the devices of your App with a single Notification. This parameter enables you to restrict this function according to your needs:
+    * From API requests and web console: you can create and send broadcast notifications both from the API and the web console.
+    * Only from API requests: creating and sending broadcast notifications is allowed only through the API and it will not be possible from the web console.
+    * Only from web console: creating and sending broadcast notifications is permitted only through the web console and it will not be possible via the API.
+    * Do not allow: creating and sending notifications of this type is not allowed.
+* **Default values**: 
+    * Include new notifications in user inbox by default: this checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
+    * Notifications with "mutable-content" enabled by default: by checking this box, the use of mutable content in notifications to iOS devices will be enabled, provided that an appropriate integration with TwinPush has been developed.
 
-[![](https://i.imgur.com/hQbhOAsl.png)](https://i.imgur.com/hQbhOAs.png)
 
+[![](https://i.imgur.com/YdZ1nDnl.png)](https://i.imgur.com/YdZ1nDn.png)
 
 
 ### Authentication Keys:
