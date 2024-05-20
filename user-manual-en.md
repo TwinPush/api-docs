@@ -471,7 +471,12 @@ The status helps to quickly visualize the services that have already been config
 
 * **Not setup**: Indicates that no data has been entered for the service configuration.
 
-**Note**: Only users with the Administrator role can edit the service configuration.
+**Note 1**: Only users with the Administrator role can edit the service configuration.
+
+**Note 2**: Now, the Apple, Android, and Huawei icons displayed for each App in the Applications view indicate that these notification services have been configured for that App.
+
+[![](https://i.imgur.com/lHpu1sYl.png)](https://i.imgur.com/lHpu1sY.png)
+
 
 
 ##### Setting APNs, FCM and HMS
