@@ -462,7 +462,7 @@ El estado ayuda a visualizar rápidamente los servicios que ya han sido configur
 **Nota 1**: Solo los usuarios con el rol de Administrador podrán editar la configuración de los servicios.
 
 
-**Nota 2** Ahora, los iconos de Apple, Android y Huawei mostrados en cada App en la vista de **Aplicaciones** indican que esos son servicios de Notificaciones han sido configurados para dicha App.
+**Nota 2**: Ahora, los iconos de Apple, Android y Huawei mostrados en cada App en la vista de **Aplicaciones** indican que esos son servicios de Notificaciones han sido configurados para dicha App.
 
 
 [![](https://i.imgur.com/zHiiKn8l.png)](https://i.imgur.com/zHiiKn8.png)
