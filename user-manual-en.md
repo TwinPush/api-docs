@@ -530,7 +530,8 @@ TwinPush manages two methods for accessing Google Firebase Cloud Messaging (FCM)
 
 **Important**: Ensure that the Firebase Cloud Messaging (V1) API is enabled in the Project.
 
-[![](https://i.imgur.com/cvkZqcsl.png)](https://i.imgur.com/cvkZqcs.png)
+[![](https://i.imgur.com/azKWQIkl.png)](https://i.imgur.com/azKWQIk.png)
+
 
 
 #### Huawei Mobile Services (HMS)
