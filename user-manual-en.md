@@ -467,7 +467,7 @@ The status helps to quickly visualize the services that have already been config
 
 * **Ready**: Indicates that the service configuration has been completed. It is important to note that TwinPush does not validate the entered data, so the "Ready" status does not guarantee that the data is correct.
 
-* **Warning**: Indicates that the entered configuration requires attention. This may be due to the Apple APNS Service p12 certificate being within 30 days of its expiration date or you are currently using the already deprecated Google FCM API Service.
+* **Warning**: Indicates that the entered configuration requires attention. This may be due to the Apple APNS Service .p12 certificate being within 30 days of its expiration date or you are currently using the already deprecated Google FCM API Service.
 
 * **Not setup**: Indicates that no data has been entered for the service configuration.
 

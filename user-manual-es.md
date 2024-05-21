@@ -446,7 +446,7 @@ Hay cuatro roles de usuarios que el propietario o los administradores de la cuen
 
 Esta sección de configuración de servicios Push permite gestionar los tokens de acceso y certificados necesarios para enviar notificaciones a través de los servicios de Apple, Google y Huawei. Es crucial completar y mantener actualizada esta configuración, ya que de no hacerlo, el envío de notificaciones puede fallar, afectando la comunicación con los usuarios finales.
 
-##### Estado
+#### Estado
 
 El estado ayuda a visualizar rápidamente los servicios que ya han sido configurados o si alguno de los servicios requiere atención.
 
@@ -455,7 +455,7 @@ El estado ayuda a visualizar rápidamente los servicios que ya han sido configur
 
 * **Configurado**: Indica que se ha completado la configuración del servicio. Es importante destacar que TwinPush no realiza ninguna validación de los datos introducidos, por lo tanto, el estado "Configurado" no garantiza que los datos sean correctos.
 
-* **Advertencia**: Indica que la configuración ingresada requiere atención. Esto puede deberse a que el certificado p12 del Servicio APNS de Apple está dentro de los 30 días de su fecha de expiración o a que actualmente se está utilizando la API FCM Heredada (legacy) de Google la cual ya ha sido declarado obsoleta.
+* **Advertencia**: Indica que la configuración ingresada requiere atención. Esto puede deberse a que el certificado .p12 del Servicio APNS de Apple está dentro de los 30 días de su fecha de expiración o a que actualmente se está utilizando la API FCM Heredada (legacy) de Google la cual ya ha sido declarado obsoleta.
 
 * **No configurado**: Indica que no se han introducido datos para la configuración del servicio.
 
