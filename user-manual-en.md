@@ -458,7 +458,7 @@ There are three user roles that the account owner or account administrators can 
 This Push services configuration section allows you to manage the access tokens and certificates required to send notifications through Apple, Google, and Huawei services. It is crucial to complete and keep this configuration updated, as failure to do so may result in notification delivery failures, impacting communication with end users.
 
 
-##### Status
+#### Status
 
 The status helps to quickly visualize the services that have already been configured or if any of the services require your attention.
 
@@ -467,7 +467,7 @@ The status helps to quickly visualize the services that have already been config
 
 * **Ready**: Indicates that the service configuration has been completed. It is important to note that TwinPush does not validate the entered data, so the "Ready" status does not guarantee that the data is correct.
 
-* **Warning**: Indicates that the entered configuration requires attention. This may be due to the Apple APNS Service P12 certificate being within 30 days of its expiration date or the use of the Google Legacy FCM API Service.
+* **Warning**: Indicates that the entered configuration requires attention. This may be due to the Apple APNS Service p12 certificate being within 30 days of its expiration date or you are currently using the already deprecated Google FCM API Service.
 
 * **Not setup**: Indicates that no data has been entered for the service configuration.
 
@@ -479,25 +479,26 @@ The status helps to quickly visualize the services that have already been config
 
 
 
-##### Setting APNs, FCM and HMS
+#### Setting APNs, FCM and HMS
 
 In order to send Push notifications through TwinPush, it is necessary to configure the required Certificates or Access Keys for [Apple APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html), [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and [Huawei Mobile Services HMS](https://developer.huawei.com/consumer/en/hms/). These Certificates or Keys must be provided by the Application development team. For more information, refer to the [SDK integration manual](https://developers.twinpush.com/developers).
 
-##### Apple Push Notification Service (APNs)
 
-TwinPush offers two methods of authentication against Apple services: token-based authentication (p8) or p12 certificate. You should select the authentication method at the dropdown menu.
+#### Apple Push Notification Service (APNs)
+
+TwinPush offers two methods of authentication against Apple services: token-based authentication (.p8) or .p12 certificate. You should select the authentication method at the dropdown menu. [Visit APNs documentation](https://developer.apple.com/documentation/usernotifications/registering-your-app-with-apns)
+
 
 
 [![](https://i.imgur.com/7Na2Vrwl.png)](https://i.imgur.com/7Na2Vrw.png)
 
 
-* **P12 Certificate Authentication**: Upload the certificate file and enter the corresponding password and the application Bundle ID. Finally, ensure to check the "to use production servers" box only if you are compiling a "Production" version intended for the Store.
+* **.p12 Certificate Authentication**: Upload the certificate file and enter the corresponding password and the application Bundle ID. Finally, ensure to check the "to use production servers" box only if you are compiling a "Production" version intended for the Store.
 
 [![](https://i.imgur.com/uzUEFcUl.png)](https://i.imgur.com/uzUEFcU.png)
 
 
-**Note**: Keep in mind that the .p12 certificate must be renewed annually. TwinPush monitors the expiration date of your APNS certificate, displaying an alert when it is close to expiring. This helps to avoid invalid certificate errors that would cause sending failures to iOS devices.
-
+**Note**: Keep in mind that the .p12 certificate must be renewed annually. TwinPush monitors the expiration date of your APNS certificate, displaying an alert when it is close to expiring. This helps to avoid invalid certificate errors that would cause sending failures to iOS devices. Be aware that TwinPush will not email you whenever your certificate is about to expire.
 
 
 * **Token-Based Authentication**: Upload the authentication token key file (.p8), and enter the authentication key ID, the Team ID, and the Bundle ID. Finally, check the "to use production servers" box only if you are compiling a "Production" version intended for the Store.
@@ -508,9 +509,9 @@ TwinPush offers two methods of authentication against Apple services: token-base
 **Note**: The p8 token authentication key does not expire.
 
 
-##### Firebase Cloud Messaging (FCM)
+#### Firebase Cloud Messaging (FCM)
 
-TwinPush manages the two existing methods for accessing Google Firebase Cloud Messaging (FCM) services: the first, via API Key called "Legacy" or the second via JSON file called "HTTP v1". You should select the method at the dropdown menu.
+TwinPush manages two methods for accessing Google Firebase Cloud Messaging (FCM) services: the first, via API Key called "Legacy" or the second via JSON file called "HTTP v1". You should select the method at the dropdown menu.
 
 [![](https://i.imgur.com/qZ7WuTUl.png)](https://i.imgur.com/qZ7WuTU.png)
 
@@ -522,15 +523,19 @@ TwinPush manages the two existing methods for accessing Google Firebase Cloud Me
 **Important**: Legacy API Key users must migrate to the "HTTP v1" method before June 20, 2024.
 
 
-* **HTTP v1**: Just upload the JSON file with the private key of the service account from the Firebase console and click the "Update details" button.
+* **HTTP v1**: Just upload the JSON file with the private key of the service account from the [Firebase console](https://console.firebase.google.com/) and click the "Update details" button.
 
 [![](https://i.imgur.com/CZBdeshl.png)](https://i.imgur.com/CZBdesh.png)
 
 
+**Important**: Ensure that the Firebase Cloud Messaging (V1) API is enabled in the Project.
 
-##### Huawei Mobile Services (HMS)
+[![](https://i.imgur.com/cvkZqcsl.png)](https://i.imgur.com/cvkZqcs.png)
 
-In order to send Push notifications using the Huawei Mobile Services (HMS) you will need to obtain the **Huawei client ID** and your project **Huawei client secret** from  the Huawei AppGallery Connect console. Paste them into the corresponding fields and click the "Update details" button.
+
+#### Huawei Mobile Services (HMS)
+
+In order to send Push notifications using the Huawei Mobile Services (HMS) you will need to obtain the **Huawei client ID** and your project **Huawei client secret** from  the Huawei [AppGallery Connect console](https://developer.huawei.com/consumer/en/console#/serviceCards/) at the Credentials section. Paste them into the corresponding fields and click the "Update details" button.
 
 
 [![](https://i.imgur.com/Hx1PSKbl.png)](https://i.imgur.com/Hx1PSKb.png)
