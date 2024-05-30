@@ -158,3 +158,85 @@ En la siguiente tabla se describen los principales mensajes de error que devuelv
 | <strong>80300008</strong><br/>Error - HMS | El tamaño del cuerpo del mensaje supera el valor por defecto. Solución: Reduce el tamaño del cuerpo del mensaje. |
 | <strong>80300010</strong><br/>Error - HMS | El número de tokens en el cuerpo del mensaje supera el valor por defecto. Solución: Reduce el número de tokens y envíalos en lotes. |
 | <strong>81000001</strong><br/>Error - HMS | Error interno del sistema. Solución: Comunícate con el soporte técnico de HUAWEI Push Kit. |
+
+
+
+## Importar fichero de destino
+
+TwinPush ofrece la posibilidad de subir ficheros para especificar el destino de una nueva notificación.
+A través de esta funcionalidad, es posible enviar una notificación a un grupo de usuarios segmentados fuera de la plataforma TwinPush.
+
+El fichero debe ser un archivo de texto plano en formato UTF8 (.txt o .csv) y contener solo los campos aceptados en cada línea.
+
+### Destinos simples
+
+La forma más común de crear el fichero de destino es crear un archivo de texto plano (.txt o .csv) que contenga solo un identificador de destinatario por línea.
+
+Estos identificadores de destinatarios pueden ser:
+
+* **Device ID**: identificador único del dispositivo proporcionado por TwinPush
+* **Device Alias**: el alias asignado al dispositivo en su registro
+
+#### Ejemplos de fichero
+
+
+| alias              |
+| :----------------- |
+| alias1             |
+| alias2             |
+| alias3             |
+| alias4             |
+
+
+| device_id          |
+| :----------------- |
+| 2725b9d61a74e029   |
+| f22ad2938a11d9f2   |
+| 7723005d9ac27efb   |
+| 682fcff66a3af683   |
+| f8220f8f5acb83a9   |
+| 3c2b4f94aa5c9660   |
+| 6320b3352a14b019   |
+
+
+
+### Destinos múltiples
+
+Es posible personalizar la información enviada a cada dispositivo o alias objetivo en una notificación.
+
+Esto se hace especificando el destino a través de un fichero CSV donde cada línea representa el destino (device_id o alias) y el contenido es otro hash de campos que se sobrescribirán desde los parámetros del contenido de la notificación.
+
+A través de este método es posible personalizar los campos de contenido de la notificación recibida para cada destino especificado:
+
+* **title**: Si se define, reemplazará el título de la notificación recibida por el destino
+* **alert**: Si se define, reemplazará el mensaje de notificación mostrado
+* **url**: Si se define, sobrescribirá la URL del contenido enriquecido
+* **badge**: Si se define, sobrescribirá el indicador de la insignia de la notificación principal
+* **custom_properties**: Las propiedades definidas por destino se fusionarán con las propiedades de la notificación, sobrescribiendo cuando dos claves coincidan. Se definirá como un objeto JSON.
+
+Si alguno de estos parámetros no ha sido establecido, el mensaje recibido por el usuario contendrá la información básica definida en los parámetros principales de la notificación.
+
+
+
+| alias (mandatory),alert,title,url,custom properties,badge     |
+| :------------------------------------------------------------ |
+| alias1                                                        |
+| alias2,Nuevo mensaje de notificación                          |
+| alias3,,Nuevo título de notificación                          |
+| alias4,,,"http://new.notification.url"                        |
+| alias5,,,,"{""new_custom_property"":true}"                    |
+| alias6,,,,,"+1"                                               |
+| alias7,Nuevo mensaje,Nuevo título,"http://new.url","{""private"":true}","+1" |
+
+
+| device_id (mandatory),alert,title,url,custom properties,badge |
+| :------------------------------------------------------------ |
+| 2725b9d61a74e029                                              |
+| f22ad2938a11d9f2,Nuevo mensaje de notificación                |
+| 7723005d9ac27efb,,Nuevo título de notificación                |
+| 682fcff66a3af683,,,"http://new.notification.url"              |
+| f8220f8f5acb83a9,,,,"{""new_custom_property"":true}"          |
+| 3c2b4f94aa5c9660,,,,,"+1"                                     |
+| 6320b3352a14b019,Nuevo mensaje,Nuevo título,"http://new.url","{""private"":true}","+1" |
+
+

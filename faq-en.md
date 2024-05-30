@@ -163,3 +163,82 @@ The following table list describe the main error messages that return Google (FC
 | <strong>80300008</strong><br/>Error - HMS | The message body size exceeds the default value. Solution: Reduce the message body size. |
 | <strong>80300010</strong><br/>Error - HMS | The number of tokens in the message body exceeds the default value. Solution: Reduce the number of tokens and send them in batches. |
 | <strong>81000001</strong><br/>Error - HMS | System internal error. Solution: Contact Huawei technical support of HUAWEI Push Kit. |
+
+
+## Import target file
+
+TwinPush offers the possibility to upload files to specify the target for a new notification.
+Through this functionality, it is possible to send a notification to a group of users segmented outside the TwinPush platform.
+
+The file must be an UTF8 plain text file (.txt or .csv) and contain only the accepted fields on each line.
+
+### Simple targets
+
+The most common way to create the target file is to create a plain text file (.txt of .csv) that contains only a single recipient identifier per line.
+
+These recipient identifiers can be:
+
+* **Device ID**: unique device identifier provided by TwinPush
+* **Device Alias**: the alias assigned to the device on its registration
+
+#### File examples
+
+| alias              |
+| :----------------- |
+| alias1             |
+| alias2             |
+| alias3             |
+| alias4             |
+
+
+| device_id          |
+| :----------------- |
+| 2725b9d61a74e029   |
+| f22ad2938a11d9f2   |
+| 7723005d9ac27efb   |
+| 682fcff66a3af683   |
+| f8220f8f5acb83a9   |
+| 3c2b4f94aa5c9660   |
+| 6320b3352a14b019   |
+
+
+
+### Multiple targets
+
+It is possible to customize the information sent to every device or alias targeted in a notification.
+
+This is done specifying a the target through a CSV file where every line represents is the target (device_id or alias) and the content is another hash of fields to override from the notification content parameters.
+
+Through this method it is possible to customize the content fields of the notification received for every specified target:
+
+* **title**: If defined, it will replace the title of the notification received by the target
+* **alert**: If defined, it will replace the displayed notification message
+* **url**: If defined, it will override the URL of the rich content
+* **badge**: If defined, it will override the badge indicator of the main notification
+* **custom_properties**: Properties defined by target will be merged with the notification properties overwriting when two keys collide. Will be defined as a JSON object.
+
+If any of there parameters is not set, the message received by the user will contain the basic information defined in the main notification parameters.
+
+
+| alias (mandatory),alert,title,url,custom properties,badge     |
+| :------------------------------------------------------------ |
+| alias1                                                        |
+| alias2,New notification message                               |
+| alias3,,New notification title                                |
+| alias4,,,"http://new.notification.url"                        |
+| alias5,,,,"{""new_custom_property"":true}"                    |
+| alias6,,,,,"+1"                                               |
+| alias7,New message,New title,"http://new.url","{""private"":true}","+1" |
+
+
+
+| device_id (mandatory),alert,title,url,custom properties,badge |
+| :------------------------------------------------------------ |
+| 2725b9d61a74e029                                              |
+| f22ad2938a11d9f2,New notification message                     |
+| 7723005d9ac27efb,,New notification title                      |
+| 682fcff66a3af683,,,"http://new.notification.url"              |
+| f8220f8f5acb83a9,,,,"{""new_custom_property"":true}"          |
+| 3c2b4f94aa5c9660,,,,,"+1"                                     |
+| 6320b3352a14b019,New message,New title,"http://new.url","{""private"":true}","+1" |
+
