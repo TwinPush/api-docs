@@ -372,26 +372,39 @@ En la pestaña de Ajustes tendremos acceso a los parámetros de configuración d
 ### Detalle de Aplicación:
 Podremos modificar los datos principales de nuestra Aplicación, tales como:
 
+[![](https://i.imgur.com/z9lhwvwl.png)](https://i.imgur.com/z9lhwvw.png)
+
 * **Nombre**: Nombre de la Aplicación que se muestra en TwinPush.
+
 * **Zona horaria**: Modificar la zona horaria por defecto de nuestra aplicación, esto influirá en el envío de notificaciones y la programación horaria de las campañas, aun así, en cada campaña podremos definir una zona horaria única para esta campaña.
+
 * **Icono**: Subir imagen con el icono que identificará nuestra Aplicación en TwinPush.
+
 * **Badge number**: Este parámetro configura el número que aparece encima del icono de nuestra aplicación en los dispositivos iOS. Siendo por defecto +1.
+
+* **Valores por defecto**:
+    * Incluir por defecto las notificaciones nuevas en el buzón de usuario: esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
+    * Notificaciones con "contenido mutable" activado por defecto: marcando esta casilla se habilitará el uso de contenido mutable en notificaciones a dispositivos iOS, siempre que se haya desarrollado una apropiada integración con TwinPush.
+
 * **Velocidad máxima de envío**: Aquí puedes ajustar la velocidad máxima de envío de notificaciones. Este parámetro afectará al menú desplegable de velocidad de envío en la configuración avanzada de Notificaciones:
     * Inmediata: no hay restricciones en la velocidad de envío.
     * Rápida: velocidad de envío limitada a 100.000 por minuto.
     * Normal: velocidad de envío limitada a 10.000 por minuto.
     * Lenta: Velocidad de envío limitada a 1.000 por minuto. 
+
 * **Permitir envíos broadcast**: Los envíos broadcast permiten realizar un envío masivo a todos los dispositivos de tu App con una sola Notificación. Este parámetro permite restringir esta función según tus necesidades:
     * Desde API y consola web: se permite crear y enviar notificaciones broadcast tanto desde el API como desde la consola web.
     * Solo desde API: se permite crear y enviar notificaciones broadcast solamente desde el API y no será posible desde la consola web.
     * Solo desde consola web: se permite crear y enviar notificaciones broadcast solamente desde la consola web y no será posible hacerlo desde el API.
     * No permitir: no se permite crear ni enviar notificaciones de este tipo.
 
-* **Valores por defecto**:
-    * Incluir por defecto las notificaciones nuevas en el buzón de usuario: esta casilla habilita el uso por defecto del buzón, almacenando todas las notificaciones nuevas en cada buzón de usuario.
-    * Notificaciones con "contenido mutable" activado por defecto: marcando esta casilla se habilitará el uso de contenido mutable en notificaciones a dispositivos iOS, siempre que se haya desarrollado una apropiada integración con TwinPush.
+* **IPs de acceso a la consola permitidas**: Indica aquí la **lista blanca de direcciones IPs públicas** que podrán acceder a la Consola Web de TwinPush. Escribe cada dirección IP, y seguidamente pulsa la tecla Intro antes de escribir la siguiente IP. Borra una IP configurada pulsando sobre la X a la izquierda. Podrás utilizar notación CIDR para rangos de subredes. TwinPush siempre te va a sugerir tu propia dirección IP actual y también las direcciones IP's que hayas configurado en otras APPs de tu cuenta de TwinPush. Cuando hayas completado la lista blanca, pulsa sobre el botón Actualizar.
 
-[![](https://i.imgur.com/1hBAZ0jl.png)](https://i.imgur.com/1hBAZ0j.png)
+[![](https://i.imgur.com/IMRAF2Cl.png)](https://i.imgur.com/IMRAF2C.png)
+
+
+**Importante:** Las direcciones IPs de la lista deben ser las IPs públicas o externas, no se utilizan IPs privadas o de red interna.
+Si tu propia IP es dinámica, lo cual ocurre en la mayoría de los casos, asegúrate de incluir el rango de IPs públicas que utiliza tu organización.
 
 
 ### Claves de Autenticación:

@@ -383,26 +383,41 @@ In the Settings screen you have access to the configuration parameter of your Ap
 ### Application Details:
 You can modify here basic information of your App, such as:
 
+
+[![](https://i.imgur.com/UinMfT7l.png)](https://i.imgur.com/UinMfT7.png)
+
+
+
 * **Name**: The name your App will show in TwinPush.
+
 * **Time Zone**: You can set here the default time zone of your App, this parameter will affect the way that all time events are displayed to you, like notifications, scheduling and campaigns, but it will not take effect your notifications already scheduled. Please take note that on each campaigns you can also set a different time zone, unique for that campaign.
+
 * **Icon**: Upload here an image that will identify your App in TwinPush.
+
 * **Badge number**: This parameter sets the number displayed over the the icon of your App in iOS devices. This value is +1 by default.
+
+* **Default values**: 
+    * Include new notifications in user inbox by default: this checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
+    * Notifications with "mutable-content" enabled by default: by checking this box, the use of mutable content in notifications to iOS devices will be enabled, provided that an appropriate integration with TwinPush has been developed.
+
 * **Max deliveries per minute**: You can set here the maximum deliveries per minute of your Notifications. This parameter will affect the Delivery speed dropdown menu at the Advanced settings view when setting a Push notification:
     * Instant: no restrictions will apply to the delivery speed.
     * Fast: the delivery speed will be limited to 100.000 per minute.
     * Normal: the delivery speed will be limited to 10.000 per minute.
     * Slow: the delivery speed will be limited to 1.000 per minute.
+
 * **Allow broadcast notifications**: Broadcast notifications allows you a mass notification sending to all the devices of your App with a single Notification. This parameter enables you to restrict this function according to your needs:
     * From API requests and web console: you can create and send broadcast notifications both from the API and the web console.
     * Only from API requests: creating and sending broadcast notifications is allowed only through the API and it will not be possible from the web console.
     * Only from web console: creating and sending broadcast notifications is permitted only through the web console and it will not be possible via the API.
     * Do not allow: creating and sending notifications of this type is not allowed.
-* **Default values**: 
-    * Include new notifications in user inbox by default: this checkbox enable the use of the inbox by default, storing all new notifications into each user inbox.
-    * Notifications with "mutable-content" enabled by default: by checking this box, the use of mutable content in notifications to iOS devices will be enabled, provided that an appropriate integration with TwinPush has been developed.
 
+* **Whitelisted IPs for console access**: Set here **the whitelist of public IP addresses** that will be able to access the TwinPush Web Console. Enter each IP address, then press the Enter key before typing the next IP. Delete a configured IP by clicking on the X to the left. You can use CIDR notation for subnet ranges. TwinPush will always suggest your own current IP address and also the IP addresses you have configured in other APPs in your TwinPush account. When you have completed the whitelist, click the Update button.
 
-[![](https://i.imgur.com/YdZ1nDnl.png)](https://i.imgur.com/YdZ1nDn.png)
+[![](https://i.imgur.com/TYbOcftl.png)](https://i.imgur.com/TYbOcft.png)
+
+**Important:** The IP addresses in the list must be public or external IPs; private or internal network IPs should not be used.
+If your own IP is dynamic, which is the case in most instances, make sure to include the range of public IPs used by your organization.
 
 
 ### Authentication Keys:
