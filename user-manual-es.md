@@ -32,8 +32,68 @@ Escribe la dirección de correo que usaste para registrarte y en breve tiempo re
 
 [![](https://i.imgur.com/GXDfEmOl.png)](https://i.imgur.com/GXDfEmO.png)
 
+### Introducir OTP
+
+Si tienes activada la autenticación en 2 factores, tendrás que introducir un código de 6 dígitos de un único uso (también llamado OTP) para poder iniciar sesión tras introducir tu contraseña correctamente. La manera de obtener este código depende del método de autenticación escogido (ver [más adelante](#autenticacion-en-2-factores)).
+
+![](https://i.imgur.com/8IyiBYH.png)
+
+También tienes la opción de **Recordar este dispositivo** para que no se solicite introducir OTP en el navegador actual durante cierto periodo de tiempo (puede variar según entorno).
+
+En el caso de que hayas extraviado el dispositivo con la app *Authenticator* necesaria para iniciar sesión, deberás ponerte en [contacto con soporte](mailto:support@twincoders.com).
+
+## Mi cuenta
+
+Desde el menú de usuario, pulsando sobre la imagen de perfil en la barra de navegación, se puede acceder a la sección de Mi cuenta.
+
+![](https://i.imgur.com/X5bcAqe.png)
+
+En esta página tendremos las opciones de Editar perfil, consultar el detalle de accesos o gestionar la autenticación en 2 factores.
+
+![](https://i.imgur.com/GuYjJNc.png)
+
+### Editar perfil
+
+Por defecto TwinPush obtendrá tu nombre de usuario en la plataforma a partir de tu email, y la imagen se extraerá del avatar establecido en Gravatar.
+
+Puedes cambiar el nombre de usuario pulsando en "Editar perfil" e introduciendo el nuevo. Tiene un límite de 30 caracteres.
+
+Para cambiar la imagen de perfil, debes acceder a [gravatar.com](http://gravatar.com), una plataforma de terceros que ofrece a través de API imágenes de perfil enlazadas a un email.
+
+### Detalle de accesos
+
+En esta sección puramente informativa podrás revisar información sobre el último login a la plataforma, incluyendo el detalle de la fecha y la IP de origen, así como tu IP actual y el número total de inicios de sesión.
+
+### Autenticación en 2 factores
+
+Desde esta sección tienes la opción de activar la Autenticación en 2 factores para añadir para añadir una capa adicional de protección adicional a tu cuenta de TwinPush. Al activarla se solicitará un código de acceso de un único uso, además de tu contraseña, en cada inicio de sesión.
+
+Dispones de dos opciones para la autenticación en dos factores, según el método para obtener el código de un único uso (también llamado OTP) para el inicio de sesión: recibirlo a través de **email** o generarlo  mediante **App de autenticación**.
+
+#### Email
+
+Utilizando la autenticación de dos factores mediante email, cada vez que quieras iniciar sesión recibirás un código de 6 dígitos a través de correo electrónico. Para activarlo, debes incluir del mismo modo el código OTP recibido por email.
+
+En el caso de no recibir el correo pasados unos minutos, puedes revisar la bandeja de spam, comprueba también que la dirección de email es correcta, que no tienes filtros de entrada en el buzón o algún otro motivo que pueda estar rechazando el mensaje. Para volver a intentar el envío, puedes cerrar la ventana modal y volver a abrirla para realizar el reenvío.
+
+#### App de autenticación
+
+Dispones de la opción es generar un código mediante una app de autenticación en tu teléfono móvil (normalmente conocidas como *Authenticator*). Esto tiene la ventaja de que no requiere acceso al correo electrónico ni conexión a internet en el dispositivo que genera la OTP.
+
+![](https://i.imgur.com/tZOrcpB.png)
+
+Para configurarlo, basta con utilizar instalar una de las aplicaciones compatibles, como por ejemplo [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=es&co=GENIE.Platform%3DAndroid), [Microsoft Authenticator](https://www.microsoft.com/es-es/security/mobile-authenticator-app) o [Authy](https://authy.com/download/).
+
+Una vez escogida e instalada la app *Authenticator*, deberás escanear el código QR mostrado en pantalla, o introducir manualmente la clave de autenticación. Después, introduce el código generado por la aplicación y pulsa en Activar para confirmar.
+
+Es importante que canceles la autenticación en dos factores si vas a dejar de tener acceso a la aplicación Authenticator actual, ya que podrías perder el acceso a tu cuenta si no.
+
+#### Cancelar autenticación
+
+Puedes eliminar el método de autenticación si quieres reemplazarlo por otro o dejar de utilizarlo. Al desactivarlo se borrará también el registro de dispositivos recordados.
 
 ## Aplicaciones
+
 La primera vez que accedes, te pediremos que crees tu primera App, por el momento sólo será necesario el Nombre de tu App y un ícono para tu propia referencia. Más adelante podrás modificar estos parámetros. Al hacer clic en Crear App, estarás creando el espacio de trabajo para tu App.
 
 * **Nombre para tu App**: al crear un nuevo nombre para tu app, intenta describirla tanto como te sea posible, una buena descripción ayudará a que sea facilmente identificable para ti y para tus compañeros. Ejemplo: Clientes Premium Europa Android Production.
@@ -128,7 +188,7 @@ Utiliza la pestaña Audiencia para seleccionar qué usuarios quieres que reciban
 
 [![](https://i.imgur.com/zY3EeNYl.png)](https://i.imgur.com/zY3EeNY.png)
 
- 
+
 * **Segmento**: Elige uno o más segmentos que previamente hayas creado en la sección Segmentos, escribe el nombre del segmento uno a uno en el cuadro de texto.
 * **Archivo**: Importa un fichero CSV (.cvs) o de texto plano (.txt) con la lista de usuarios o dispositivos. Podrás personalizar el mensaje que enviarás a cada usuario o dispositivo. [Aquí](https://developers.twinpush.com/faq/es#importar-fichero-de-destino) encontrarás las reglas para la creación del fichero.
 
@@ -152,7 +212,7 @@ En Programación eliges cuándo enviar tu notificación, también programar tu e
 * **Crear campaña**: Se enviará la misma notificación repetida un número de veces dentro del periodo establecido, pudiendo establecer los límites de envíos a un mismo dispositivo en un periodo de tiempo.
 
 Esta configuración permite establecer un periodo de tiempo entre dos fechas donde TwinPush realizará los envíos de manera automática, comprobando los dispositivos que cumplen con las condiciones establecidas.
- 
+
  * **Fecha de inicio y fin de campaña**: Día que la campaña pasará a estar activa, y por lo tanto TwinPush comprobará periodicamente (máximo cada 30 minutos) qué dispositivos deben ser notificados. Así como el día de fin de campaña.
  * **Horario**: Horario de actividad de la campaña.
  * **Días de la semana**: Permite seleccionar los días de la semana que la campaña debe ser envíada.
