@@ -34,7 +34,7 @@ Escribe la dirección de correo que usaste para registrarte y en breve tiempo re
 
 ### Introducir OTP
 
-Si tienes activada la autenticación en 2 factores, tendrás que introducir un código de 6 dígitos de un único uso (también llamado OTP) para poder iniciar sesión tras introducir tu contraseña correctamente. La manera de obtener este código depende del método de autenticación escogido (ver [más adelante](#autenticacion-en-2-factores)).
+Si tienes activada la autenticación en 2 factores, tendrás que introducir un código de 6 dígitos de un único uso (también llamado OTP) para poder iniciar sesión tras introducir tu contraseña correctamente. La manera de obtener este código depende del método de autenticación escogido (ver [más adelante](#autenticaci-n-en-2-factores)).
 
 ![](https://i.imgur.com/8IyiBYH.png)
 
