@@ -523,7 +523,7 @@ There are three user roles that the account owner or account administrators can 
 * View protected content.
 * Application settings, including viewing API Keys and configure FCM, HMS or APNS.
 * Authentication keys, to authenticate the mobile App (SDK) and TwinPush API.
-* Team Management, they can add new users, edit user roles of existing users andrevoke access to other users.
+* Team Management, they can add new users, edit user roles of existing users and revoke access to other users.
 
 [![](https://i.imgur.com/vgd993ul.png)](https://i.imgur.com/vgd993u.png)
 
