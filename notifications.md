@@ -232,7 +232,7 @@ Example payload param for notification with segments:
 
 This target offers the option of sending the notification to active devices that have certain values in some of their properties.
 
-It is possible to provide values that devices must have for **up to 5** different properties. This way, the notification will be sent to the active devices that have **any of the values** provided for **ALL listed properties**.
+It is possible to provide values that devices must have for **up to 5** different **enum** or **enum_list** properties. This way, the notification will be sent to the active devices that have **any of the values** provided for **ALL listed properties**.
 
 That is, **for each property**, a device must have **any** of the provided values in order to be chosen as target of the notification.
 
@@ -259,7 +259,7 @@ In that case both parameters *target_properties* and *segments* must be included
 
 | param             | description                                                  | type                   |
 | ----------------- | ------------------------------------------------------------ | ---------------------- |
-| target_properties | Hash with up to 5 entries where the key is the property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
+| target_properties | Hash with up to 5 entries where the key is the **enum** or **enum_list** property name and the value is an array of Strings with desired property values. | Hash<String, String[]> |
 | segments          | Array with the name of previously created segments to be target of the notification. Limited to 50 segments per request. | String[]               |
 
 Example payload params for a notification that will be sent to any device whose class is *"Grade 1A"*, *"Grade 1B"* or *"Grade 1B"* **and** that is contained in any of the *"Students"* or *"Professors"* segments:
