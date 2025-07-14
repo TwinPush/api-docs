@@ -605,3 +605,172 @@ Para enviar notificaciones Push usando los servicios móviles de Huawei (HMS), s
 
 [![](https://i.imgur.com/ufchj7El.png)](https://i.imgur.com/ufchj7E.png)
 
+
+## Autenticación con SAML/SSO
+
+TwinPush cuenta con integración con SAML para la autenticación mediante SSO (Single Sign-On) a través de proveedores de identidad como Microsoft Entra ID, Google Workspace, entre otros.
+
+> Solo el propietario de tu cuenta TwinPush tiene acceso a la configuración de autenticación mediante SAML/SSO.
+
+
+Para acceder a la configuración, haz clic en tu nombre de usuario en la parte superior derecha de la consola y selecciona la opción **Ajustes de autenticación** en el menú desplegable.
+
+
+[![](https://i.imgur.com/w0ZBJef.png)](https://i.imgur.com/w0ZBJef.png)
+
+Si nunca antes has configurado los parámetros de SAML/SSO, se mostrará la siguiente interfaz inicial: 
+
+[![](https://i.imgur.com/pauKMCsl.png)](https://i.imgur.com/pauKMCs.png)
+
+Pulsa el botón **Editar configuración** para comenzar con la configuración del proveedor de identidad.
+
+### Configuración SAML en el lado idP
+
+Los parámetros básicos que deberás copiar en la Aplicación de tu proveedor de identidad (por ejemplo, Azure Entra ID o Google Workspace) para la integración con TwinPush son los siguientes:
+
+
+- **Identificador de identidad (Entity ID):**  
+  `https://subdominio.twinpush.com/saml/metadata/token.xml`
+
+- **Dirección URL de respuesta (ACS URL):**  
+  `https://subdominio.twinpush.com/saml/acs`
+
+- **Dirección URL de cierre de sesión (SLO URL):**  
+  `https://subdominio.twinpush.com/saml/slo`
+
+**Atributos:**
+
+- **Identificador de usuario único (`nameid`):** `user.mail`
+
+
+### Configuración SAML en el lado TwinPush
+
+TwinPush ofrece tres formas de configurar tu proveedor de identidad (IdP) para el protocolo SAML:
+
+- **Manual**
+- **Desde una URL de metadata**
+- **Desde un archivo de metadata XML**
+
+[![](https://i.imgur.com/QQLSchtl.png)](https://i.imgur.com/QQLScht.png)
+
+
+Independientemente de la forma que utilices para configurar la autenticación, encontrarás los siguientes elementos comunes que deberás completar: Nombre de Proveedor y Modo de Autenticación:
+
+
+> Estos elementos estarán disponibles en todas las pestañas de configuración SAML y modifican la forma cómo se presenta la página de inicio de sesión de TwinPush
+
+
+
+- **Nombre del proveedor:**
+
+   Se trata de un nombre descriptivo que identifique a tu proveedor de identidad. Este nombre se mostrará como una opción visible en la pantalla de inicio de sesión de TwinPush.  
+  Ejemplo: `Microsoft Entra ID`
+
+[![](https://i.imgur.com/7wa39f0l.png)](https://i.imgur.com/7wa39f0.png)
+
+
+
+- **Modo de autenticación:**
+
+   Que define cómo tus usuarios podrán acceder a TwinPush desde la página de inicio de sesión:
+
+
+  - **Solo usuario y contraseña:**  
+    Solo se permite el acceso mediante el formulario tradicional de inicio de sesión.
+
+  - **Usuario y contraseña o SAML:**  
+    Permite al usuario elegir entre autenticación tradicional o mediante SAML/SSO.
+
+  - **Solo SAML:**  
+    Obliga a todos los usuarios a autenticarse exclusivamente a través de SAML/SSO.
+
+
+**Nota importante:** la primera vez que configures el acceso vía SAML/SSO, selecciona el modo de autenticación **Usuario y contraseña o SAML** sólo luego de realizar las pruebas y compruebar que puedes acceder correctamenta a tu cuenta TwinPush y tus **Ajustes de autenticación** via SAML/SSO, podrás cambiar este ajuste a **Solo SAML**.
+
+
+[![](https://i.imgur.com/nD3LXs5l.png)](https://i.imgur.com/nD3LXs5.png)
+
+
+En la siguiente imagen se ve la página de inicio de sesión de TwinPush, donde aparece el **Nombre del proveedor** que hemos configurado y el **modo de autenticación "Usuario y contraseña o SAML"** que hemos seleccionado.
+
+
+[![](https://i.imgur.com/0nMmaBIl.png)](https://i.imgur.com/0nMmaBI.png)
+
+
+A continuación, selecciona la pestaña del método de configuración: manual, por URL de metadata o por archivo de metadata que prefieras utilizar. 
+
+
+#### Configuración manual
+
+La pestaña por defecto es la **Manual** donde podrás configurar tu proveedor de identidad introduciendo los datos manualmente.
+
+[![](https://i.imgur.com/IPmUt0jl.png)](https://i.imgur.com/IPmUt0j.png)
+
+
+
+Deberás completar los siguientes campos:
+
+- **ID de proveedor de identidad (obligatorio):**  
+  Identificador único del proveedor de identidad (Entity ID).  
+  Ejemplo: `https://sts.windows.net/7efceb08-44b4-e056-b8f8-6e625cd6600d/`
+
+- **URL de login de IDP (obligatorio):**  
+  Dirección a la que se redirigirá a los usuarios para autenticarse.  
+  Ejemplo: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
+
+- **URL de logout de IDP (opcional):**  
+  Dirección para el cierre de sesión único (Single Logout), si tu proveedor la ofrece.  
+  Ejemplo: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
+
+- **Certificado de IDP (obligatorio):**  
+  Certificado X.509 proporcionado por tu proveedor de identidad. Se utiliza para validar las respuestas SAML firmadas.
+
+Una vez completados los campos pulsa sobre el botón **Crear ajustes de SAML**
+
+
+#### Configuración desde URL de metadata
+
+Este método permite importar automáticamente los datos de configuración del proveedor de identidad mediante una URL de metadatos SAML válida.
+
+- **URL de metadata (obligatorio):**  
+  Introduce la URL proporcionada por tu proveedor de identidad. TwinPush recuperará desde esa dirección los parámetros necesarios para establecer la conexión (Entity ID, URL de login, certificado, etc.).
+
+
+[![](https://i.imgur.com/v1mXjuel.png)](https://i.imgur.com/v1mXjue.png)
+
+
+#### Configuración desde archivo de metadata
+
+Esta opción permite subir un archivo `.xml` de metadatos SAML exportado desde tu proveedor de identidad.
+
+- **Archivo de metadata (obligatorio):**  
+  Selecciona el archivo XML proporcionado por el IdP. TwinPush extraerá del archivo todos los datos necesarios para completar la configuración de SAML automáticamente.
+
+> Este método es especialmente útil cuando el proveedor de identidad no expone una URL pública de metadatos, pero permite su descarga manual.
+
+
+[![](https://i.imgur.com/ADNe6oml.png)](https://i.imgur.com/ADNe6om.png)
+
+
+### Guardar y editar la configuración
+
+Una vez completados los campos y guardada la configuración, se mostrará un resumen de los datos registrados. Desde esta vista podrás revisar los valores ingresados y, si lo necesitas, pulsar el botón **Editar configuración** para realizar modificaciones en cualquier momento.
+
+
+[![](https://i.imgur.com/mmcSTpsl.png)](https://i.imgur.com/mmcSTps.png)
+
+
+### Prueba de acceso
+
+Una vez configurado tu proveedor de identidad y guardados los cambios, es recomendable realizar una prueba de acceso mediante SAML para verificar que todo funciona correctamente.
+
+> **Importante:**  
+> Durante la primera configuración, selecciona siempre el modo de autenticación **Usuario y contraseña o SAML**.  
+> Esto te permitirá seguir accediendo a TwinPush con tus credenciales tradicionales en caso de que la integración con SAML falle.  
+>  
+> Si seleccionas directamente **Solo SAML** y ocurre un error en la configuración, podrías perder el acceso a tu cuenta.
+> Se recomienda utilizar el ajuste **Solo SAML** sólo después de haber realizado las pruebas y haber comprobado que se puede acceder correctamenta a la cuenta TwinPush y los **Ajustes de autenticación** via SAML/SSO.
+
+
+Para realizar la prueba, cierra la sesión actual e intenta iniciar sesión desde la pantalla principal de acceso a TwinPush, seleccionando la opción correspondiente a SSO con el nombre del proveedor configurado.
+
