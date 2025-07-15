@@ -629,7 +629,7 @@ Haz clic en el botón **Editar configuración** para comenzar con la configuraci
 
 
 
-### Configuración SAML en el lado IdP
+### SAML en el lado IdP
 
 Los parámetros básicos que deberás copiar en la aplicación de tu Proveedor de Identidad (por ejemplo, Azure Entra ID o Google Workspace) para la integración con TwinPush son los siguientes:
 
@@ -657,7 +657,7 @@ Puedes copiar los parámetros de configuración de SAML para tu Proveedor de Ide
 
 
 
-### Configuración SAML en el lado TwinPush
+### SAML en el lado TwinPush
 
 TwinPush ofrece tres formas de configurar tu Proveedor de Identidad (IdP) para el protocolo SAML:
 
@@ -766,7 +766,7 @@ Esta opción permite subir un archivo `.xml` de metadatos SAML exportado desde t
 [![](https://i.imgur.com/ADNe6oml.png)](https://i.imgur.com/ADNe6om.png)
 
 
-### Guardar y editar la configuración
+### Guardar y editar
 
 Una vez completados los campos y guardada la configuración, se mostrará un resumen de los datos registrados. Desde esta vista podrás revisar los valores ingresados y, si lo necesitas, hacer clic en el botón **Editar configuración** para realizar modificaciones en cualquier momento.
 

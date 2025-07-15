@@ -639,7 +639,7 @@ If you haven't configured SAML/SSO settings before, the following initial screen
 Click the **Edit Settings** button to start configuring your Identity Provider (IdP).
 
 
-### SAML Configuration on the IdP Side
+### SAML on the IdP Side
 
 The following parameters must be configured in the application set up within your Identity Provider (e.g., Azure Entra ID or Google Workspace) to integrate with TwinPush:
 
@@ -665,7 +665,7 @@ You can view and copy these parameters directly from the **Service Provider (SP)
 [![](https://i.imgur.com/t59V6GWl.png)](https://i.imgur.com/t59V6GW.png)
 
 
-### SAML Configuration on the TwinPush Side
+### SAML on the TwinPush Side
 
 TwinPush offers three ways to configure your Identity Provider (IdP) for the SAML protocol:
 
@@ -776,7 +776,7 @@ This option allows you to upload a `.xml` file containing SAML metadata exported
 [![](https://i.imgur.com/lFQNXlal.png)](https://i.imgur.com/lFQNXla.png)
 
 
-### Save and Edit Configuration
+### Save and Edit
 
 Once all fields have been completed and the configuration has been saved, a summary of the registered data will be displayed. From this view, you can review the entered values and, if needed, click the **Edit Settings** button to make changes at any time.
 
