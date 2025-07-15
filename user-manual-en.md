@@ -11,7 +11,7 @@ Troubles? please visit our FAQ Section and find answers or just Contact us, we w
 
 
 ## Register and Login
-If you don't have a user's account in Twinpush yet, you can register at [app.twinpush.com](https://app.twinpush.com/). Business customers, may have their own subdomain to accesss: [yourcompany.twinpush.com](mailto:info@twincoders.com), please contact us to get your own subdomain.
+If you don't have a user's account in Twinpush yet, you can register at [app.twinpush.com](https://app.twinpush.com/). Business customers, may have their own subdomain to accesss: [yourdomain.twinpush.com](mailto:info@twincoders.com), please contact us to get your own subdomain.
 
 From this screen you will be able to:
 
@@ -617,3 +617,183 @@ In order to send Push notifications using the Huawei Mobile Services (HMS) you w
 
 [![](https://i.imgur.com/Hx1PSKbl.png)](https://i.imgur.com/Hx1PSKb.png)
 
+
+
+## SAML/SSO Authentication
+
+TwinPush includes integration with SAML for Single Sign-On (SSO) authentication using Identity Providers (IdPs) such as Microsoft Entra ID, Google Workspace, and others.
+
+> **Only the owner of your TwinPush account can access the SAML/SSO authentication settings.**  
+> [Contact us](mailto:support@twincoders.com) if you need this feature to be enabled for your account.
+
+To access the configuration, click on your username at the top right corner of the console and select **Authentication Settings** from the dropdown menu.
+
+[![](https://i.imgur.com/YEt8dvBl.png)](https://i.imgur.com/YEt8dvB.png)
+
+
+If you haven't configured SAML/SSO settings before, the following initial screen will appear:
+
+[![](https://i.imgur.com/QpgyqDVl.png)](https://i.imgur.com/QpgyqDV.png)
+
+
+Click the **Edit Settings** button to start configuring your Identity Provider (IdP).
+
+
+### SAML Configuration on the IdP Side
+
+The following parameters must be configured in the application set up within your Identity Provider (e.g., Azure Entra ID or Google Workspace) to integrate with TwinPush:
+
+- **Identity Identifier (Entity ID):**  
+  `https://yourdomain.twinpush.com/saml/metadata/<unique-token>.xml`\*
+
+- **Response URL (ACS URL):**  
+  `https://yourdomain.twinpush.com/saml/acs`
+
+- **Logout URL (SLO URL):**  
+  `https://yourdomain.twinpush.com/saml/slo`
+
+**Attributes:**
+
+- **Unique user identifier (`nameid`):** `user.mail`
+
+
+> \* The value `<unique-token>` refers to an alphanumeric string generated uniquely by TwinPush for each account.
+
+You can view and copy these parameters directly from the **Service Provider (SP) Configuration** section further down on this page.
+
+
+[![](https://i.imgur.com/t59V6GWl.png)](https://i.imgur.com/t59V6GW.png)
+
+
+### SAML Configuration on the TwinPush Side
+
+TwinPush offers three ways to configure your Identity Provider (IdP) for the SAML protocol:
+
+- **Manual**
+- **From a metadata URL**
+- **From a metadata XML file**
+
+[![](https://i.imgur.com/CXy82mYl.png)](https://i.imgur.com/CXy82mY.png)
+
+
+
+Regardless of the configuration method you choose, you will need to complete the following common fields: **Provider Name** and **Authentication Mode**.
+
+> These fields are available in all SAML configuration tabs and affect how the TwinPush login page is presented to users.
+
+
+
+- **Provider Name:**
+
+  A descriptive name to identify your Identity Provider. This name will appear as an option on the TwinPush login screen.  
+  Example: `Microsoft Entra ID`
+
+[![](https://i.imgur.com/fmMAGAQl.png)](https://i.imgur.com/fmMAGAQ.png)
+
+
+
+- **Authentication Mode:**
+
+  This defines how users will access TwinPush from the login screen:
+
+  - **Username and password only:**  
+    Only traditional login form is available.
+
+  - **Username and password or SAML:**  
+    Users can choose to log in with their TwinPush credentials or via SAML/SSO.
+
+  - **SAML only:**  
+    All users must authenticate exclusively via SAML/SSO.
+
+
+> **Important note:**  
+> When configuring SAML/SSO access for the first time, select **Username and password or SAML** as the authentication mode.  
+> Perform your tests and confirm that you can successfully access your account and the **Authentication Settings** using SSO.  
+> Only then, if desired, switch the mode to **SAML only**.
+
+
+[![](https://i.imgur.com/gJhuw2xl.png)](https://i.imgur.com/gJhuw2x.png)
+
+
+In the following image, you can see the TwinPush login page showing the configured **Provider Name** and the selected **"Username and password or SAML"** authentication mode.
+
+
+[![](https://i.imgur.com/oAWYlFZl.png)](https://i.imgur.com/oAWYlFZ.png)
+
+
+Next, select the tab that matches your preferred configuration method: manual entry, metadata URL, or metadata file.
+
+
+#### Manual Configuration
+
+The default tab is **Manual**, where you can configure your identity provider by entering the required details manually.
+
+[![](https://i.imgur.com/GJF9Fdzl.png)](https://i.imgur.com/GJF9Fdz.png)
+
+
+
+You will need to complete the following fields:
+
+- **IdP entity ID (required):**  
+  The unique identifier (Entity ID) of your identity provider.  
+  Example: `https://sts.windows.net/7efceb08-44b4-e056-b8f8-6e625cd6600d/`
+
+- **IdP SSO target URL (required):**  
+  The URL where users will be redirected to authenticate.  
+  Example: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
+
+- **IdP SLO target URL (optional):**  
+  The URL used for Single Logout, if supported by your identity provider.  
+  Example: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
+
+- **IdP certificate (required):**  
+  The X.509 certificate provided by your identity provider. This is used to validate signed SAML responses.
+
+Once all fields are completed, click the **Create SAML Settings** button.
+
+
+#### Configuration from Metadata URL
+
+This method allows you to automatically import your identity provider's configuration data using a SAML metadata URL.
+
+- **Metadata URL (required):**  
+  Enter the URL provided by your identity provider. TwinPush will retrieve the necessary parameters from this URL to establish the connection (Entity ID, login URL, certificate, etc.).
+
+
+[![](https://i.imgur.com/vvLDkoJl.png)](https://i.imgur.com/vvLDkoJ.png)
+
+
+#### Configuration from Metadata File
+
+This option allows you to upload a `.xml` file containing SAML metadata exported from your identity provider.
+
+- **Metadata file (required):**  
+  Select the XML file provided by your IdP. TwinPush will automatically extract all necessary data from the file to complete the SAML configuration.
+
+> This method is especially useful when your identity provider does not expose a public metadata URL but does allow manual file download.
+
+
+[![](https://i.imgur.com/lFQNXlal.png)](https://i.imgur.com/lFQNXla.png)
+
+
+### Save and Edit Configuration
+
+Once all fields have been completed and the configuration has been saved, a summary of the registered data will be displayed. From this view, you can review the entered values and, if needed, click the **Edit Settings** button to make changes at any time.
+
+[![](https://i.imgur.com/s7PZOFRl.png)](https://i.imgur.com/s7PZOFR.png)
+
+
+### Login Test
+
+Once your identity provider has been configured and the changes saved, it is recommended to perform a login test using SAML to verify that everything is working correctly.
+
+> **Important:**  
+> During the initial configuration, always select the **Username and password or SAML** authentication mode.  
+> This will allow you to continue accessing TwinPush with your traditional credentials in case the SAML integration fails.  
+> If you select **SAML only** right away and there is an error in the configuration, you may lose access to your account.  
+>  
+> It is recommended to switch to **SAML only** only after testing and confirming that you can successfully access your account and the **Authentication Settings** via SAML/SSO.
+
+To perform the test, log out of your current session and try signing in from the main TwinPush login page by selecting the SSO option with the configured provider name.
+
+[![](https://i.imgur.com/ApG1CnVl.png)](https://i.imgur.com/ApG1CnV.png)
