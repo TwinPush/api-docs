@@ -689,14 +689,11 @@ Independientemente de la forma que utilices para configurar la autenticación, e
    Que define cómo tus usuarios podrán acceder a TwinPush desde la página de inicio de sesión:
 
 
-  - **Solo usuario y contraseña:**  
-    Solo se permite el acceso mediante el formulario tradicional de inicio de sesión.
+  - **Solo usuario y contraseña:** Solo se permite el acceso mediante el formulario tradicional de inicio de sesión.
 
-  - **Usuario y contraseña o SAML:**  
-    Permite al usuario elegir entre autenticación tradicional o mediante SAML/SSO.
+  - **Usuario y contraseña o SAML:** Permite al usuario elegir entre autenticación tradicional o mediante SAML/SSO.
 
-  - **Solo SAML:**  
-    Obliga a todos los usuarios a autenticarse exclusivamente a través de SAML/SSO.
+  - **Solo SAML:** Obliga a todos los usuarios a autenticarse exclusivamente a través de SAML/SSO.
 
 
 > **Nota importante:** la primera vez que configures el acceso mediante SAML/SSO, selecciona el modo de autenticación **Usuario y contraseña o SAML**. Realiza las pruebas necesarias y asegúrate de que puedes acceder correctamenta a tu cuenta y a los **Ajustes de autenticación** usando SSO. Solo entonces, si lo deseas, podrás cambiar este ajuste a **Solo SAML**.
@@ -724,20 +721,16 @@ La pestaña predeterminada es **Manual** donde podrás configurar tu Proveedor d
 
 Deberás completar los siguientes campos:
 
-- **ID de proveedor de identidad (obligatorio):**  
-  Identificador único del proveedor de identidad (Entity ID).  
+- **ID de proveedor de identidad (obligatorio):** Identificador único del proveedor de identidad (Entity ID).  
   Ejemplo: `https://sts.windows.net/7efceb08-44b4-e056-b8f8-6e625cd6600d/`
 
-- **URL de login de IDP (obligatorio):**  
-  Dirección a la que se redirigirá a los usuarios para autenticarse.  
+- **URL de login de IDP (obligatorio):** Dirección a la que se redirigirá a los usuarios para autenticarse.  
   Ejemplo: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
 
-- **URL de logout de IDP (opcional):**  
-  Dirección para el cierre de sesión único (Single Logout), si tu proveedor la ofrece.  
+- **URL de logout de IDP (opcional):** Dirección para el cierre de sesión único (Single Logout), si tu proveedor la ofrece.  
   Ejemplo: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
 
-- **Certificado de IDP (obligatorio):**  
-  Certificado X.509 proporcionado por tu proveedor de identidad. Se utiliza para validar las respuestas SAML firmadas.
+- **Certificado de IDP (obligatorio):** Certificado X.509 proporcionado por tu proveedor de identidad. Se utiliza para validar las respuestas SAML firmadas.
 
 Una vez completados los campos haz clic en el botón **Crear ajustes de SAML**
 
@@ -746,8 +739,7 @@ Una vez completados los campos haz clic en el botón **Crear ajustes de SAML**
 
 Este método permite importar automáticamente los datos de configuración del proveedor de identidad mediante una URL de metadatos SAML.
 
-- **URL de metadata (obligatorio):**  
-  Introduce la URL proporcionada por tu proveedor de identidad. TwinPush recuperará desde esa URL los parámetros necesarios para establecer la conexión (Entity ID, URL de login, certificado, etc.).
+- **URL de metadata (obligatorio):** Introduce la URL proporcionada por tu proveedor de identidad. TwinPush recuperará desde esa URL los parámetros necesarios para establecer la conexión (Entity ID, URL de login, certificado, etc.).
 
 
 [![](https://i.imgur.com/v1mXjuel.png)](https://i.imgur.com/v1mXjue.png)
@@ -757,8 +749,7 @@ Este método permite importar automáticamente los datos de configuración del p
 
 Esta opción permite subir un archivo `.xml` de metadatos SAML exportado desde tu Proveedor de Identidad.
 
-- **Archivo de metadata (obligatorio):**  
-  Selecciona el archivo XML proporcionado por el IdP. TwinPush extraerá del archivo todos los datos necesarios para completar la configuración de SAML automáticamente.
+- **Archivo de metadata (obligatorio):** Selecciona el archivo XML proporcionado por el IdP. TwinPush extraerá del archivo todos los datos necesarios para completar la configuración de SAML automáticamente.
 
 > Este método es especialmente útil cuando el proveedor de identidad no expone una URL pública de metadatos, pero permite su descarga manual.
 

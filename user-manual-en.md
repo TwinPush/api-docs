@@ -696,14 +696,11 @@ Regardless of the configuration method you choose, you will need to complete the
 
   This defines how users will access TwinPush from the login screen:
 
-  - **Username and password only:**  
-    Only traditional login form is available.
+  - **Username and password only:** Only traditional login form is available.
 
-  - **Username and password or SAML:**  
-    Users can choose to log in with their TwinPush credentials or via SAML/SSO.
+  - **Username and password or SAML:** Users can choose to log in with their TwinPush credentials or via SAML/SSO.
 
-  - **SAML only:**  
-    All users must authenticate exclusively via SAML/SSO.
+  - **SAML only:** All users must authenticate exclusively via SAML/SSO.
 
 
 > **Important note:**  
@@ -734,20 +731,16 @@ The default tab is **Manual**, where you can configure your identity provider by
 
 You will need to complete the following fields:
 
-- **IdP entity ID (required):**  
-  The unique identifier (Entity ID) of your identity provider.  
+- **IdP entity ID (required):** The unique identifier (Entity ID) of your identity provider.  
   Example: `https://sts.windows.net/7efceb08-44b4-e056-b8f8-6e625cd6600d/`
 
-- **IdP SSO target URL (required):**  
-  The URL where users will be redirected to authenticate.  
+- **IdP SSO target URL (required):** The URL where users will be redirected to authenticate.  
   Example: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
 
-- **IdP SLO target URL (optional):**  
-  The URL used for Single Logout, if supported by your identity provider.  
+- **IdP SLO target URL (optional):** The URL used for Single Logout, if supported by your identity provider.  
   Example: `https://login.microsoftonline.com/7efceb08-44b4-e056-b8f8-6e625cd6600d/saml2`
 
-- **IdP certificate (required):**  
-  The X.509 certificate provided by your identity provider. This is used to validate signed SAML responses.
+- **IdP certificate (required):** The X.509 certificate provided by your identity provider. This is used to validate signed SAML responses.
 
 Once all fields are completed, click the **Create SAML Settings** button.
 
@@ -756,8 +749,7 @@ Once all fields are completed, click the **Create SAML Settings** button.
 
 This method allows you to automatically import your identity provider's configuration data using a SAML metadata URL.
 
-- **Metadata URL (required):**  
-  Enter the URL provided by your identity provider. TwinPush will retrieve the necessary parameters from this URL to establish the connection (Entity ID, login URL, certificate, etc.).
+- **Metadata URL (required):** Enter the URL provided by your identity provider. TwinPush will retrieve the necessary parameters from this URL to establish the connection (Entity ID, login URL, certificate, etc.).
 
 
 [![](https://i.imgur.com/vvLDkoJl.png)](https://i.imgur.com/vvLDkoJ.png)
@@ -767,8 +759,7 @@ This method allows you to automatically import your identity provider's configur
 
 This option allows you to upload a `.xml` file containing SAML metadata exported from your identity provider.
 
-- **Metadata file (required):**  
-  Select the XML file provided by your IdP. TwinPush will automatically extract all necessary data from the file to complete the SAML configuration.
+- **Metadata file (required):** Select the XML file provided by your IdP. TwinPush will automatically extract all necessary data from the file to complete the SAML configuration.
 
 > This method is especially useful when your identity provider does not expose a public metadata URL but does allow manual file download.
 
