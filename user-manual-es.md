@@ -675,7 +675,7 @@ Independientemente de la forma que utilices para configurar la autenticación, e
 
 
 
-- **Nombre del proveedor:**
+#### Nombre del proveedor
 
    Se trata de un nombre descriptivo que identifique a tu proveedor de identidad. Este nombre se mostrará como una opción visible en la pantalla de inicio de sesión de TwinPush.  
   Ejemplo: `Microsoft Entra ID`
@@ -684,7 +684,7 @@ Independientemente de la forma que utilices para configurar la autenticación, e
 
 
 
-- **Modo de autenticación:**
+#### Modo de autenticación
 
    Que define cómo tus usuarios podrán acceder a TwinPush desde la página de inicio de sesión:
 

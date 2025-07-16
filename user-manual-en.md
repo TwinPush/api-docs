@@ -683,7 +683,7 @@ Regardless of the configuration method you choose, you will need to complete the
 
 
 
-- **Provider Name:**
+#### Provider Name
 
   A descriptive name to identify your Identity Provider. This name will appear as an option on the TwinPush login screen.  
   Example: `Microsoft Entra ID`
@@ -692,7 +692,7 @@ Regardless of the configuration method you choose, you will need to complete the
 
 
 
-- **Authentication Mode:**
+#### Authentication Mode
 
   This defines how users will access TwinPush from the login screen:
 
